@@ -1,39 +1,31 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class playerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
-    public float movementSpeed;
+    private float _movementSpeed = 2.5f;
     public Rigidbody2D rb2d;
-    private Vector2 movementDirection;
-    void Start()
+    private Vector2 _movementDirection;
+
+    private void Start()
     {
-        
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
-        Movement();
+        rb2d.velocity = new Vector2(_movementDirection.x * _movementSpeed, _movementDirection.y * _movementSpeed);
     }
-    
-    void Update()
+
+    private void Update()
     {
         ProcessInputs();
     }
 
-    void Movement()
+    private void ProcessInputs()
     {
-        rb2d = GetComponent<Rigidbody2D>();
-        rb2d.velocity = new Vector2(movementDirection.x * movementSpeed, movementDirection.y * movementSpeed);
-    }
+        var moveY = Input.GetAxisRaw("Horizontal");
+        var moveX = Input.GetAxisRaw("Vertical");
 
-    void ProcessInputs()
-    {
-
-        float moveY = Input.GetAxisRaw("Horizontal");
-        float moveX = Input.GetAxisRaw("Vertical");
-
-        movementDirection = new Vector2(moveY, moveX).normalized;
+        _movementDirection = new Vector2(moveY, moveX).normalized;
     }
 }

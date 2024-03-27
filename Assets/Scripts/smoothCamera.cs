@@ -1,16 +1,16 @@
 using UnityEngine;
 
-public class smoothCamera : MonoBehaviour
+public class SmoothCamera : MonoBehaviour
 {
 
     [SerializeField] private Transform target;
-    public float smoothTime = 0.25f;
-    private Vector3 offset = new Vector3(0f, 0f, -10f);
-    private Vector3 velociy = Vector3.zero;
+    public float smoothTime = 0.75f;
+    private readonly Vector3 _offset = new(0f, 0f, -10f);
+    private Vector3 _velocity = Vector3.zero;
 
-    private void LateUpdate()
+    private void FixedUpdate()
     {
-        Vector3 targetPosition = target.position + offset;
-        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velociy, smoothTime);
+        var targetPosition = target.position + _offset;
+        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref _velocity, smoothTime);
     }
 }
