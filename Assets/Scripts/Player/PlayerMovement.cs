@@ -7,6 +7,11 @@ namespace Player
         private float _movementSpeed = 2.5f;
         public Rigidbody2D rb2d;
         private Vector2 _movementDirection;
+        private Animator _animator;
+
+        private void Awake()
+        {
+        }
 
         private void Start()
         {
@@ -20,7 +25,21 @@ namespace Player
 
         private void Update()
         {
+            PlayerMove();
+            if (Input.GetKeyDown(KeyCode.F)) Interact();
+        }
+
+        public void PlayerMove()
+        {
             _movementDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        }
+
+        public void Interact()
+        {
+            var facingDirection = new Vector3(_movementDirection.x, _movementDirection.y);
+            var interactPosition = transform.position + facingDirection;
+            
+            Debug.DrawLine(transform.position, interactPosition, Color.red, 1f);
         }
     }
 }
