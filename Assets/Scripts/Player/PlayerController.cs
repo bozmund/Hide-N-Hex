@@ -12,7 +12,7 @@ namespace Player
         {
             if (playerState == PlayerState.Walking)
             {
-                playerController.PlayerMove();
+                playerController.ProcessInputs();
             }
             else if (playerState == PlayerState.Interacting)
             {
