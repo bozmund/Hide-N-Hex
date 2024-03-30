@@ -1,18 +1,21 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class LeaveGameButtonHandler : MonoBehaviour
+namespace Player
 {
-    void Start()
+    public class LeaveGameButtonHandler : MonoBehaviour
     {
-        VisualElement root = GetComponent<UIDocument>().rootVisualElement;
+        private void Start()
+        {
+            var root = GetComponent<UIDocument>().rootVisualElement;
 
-        Button leaveGameButton = root.Q<Button>("LeaveGame");
-        leaveGameButton.clicked += LeaveGame;
-    }
+            var leaveGameButton = root.Q<Button>("LeaveGame");
+            leaveGameButton.clicked += LeaveGame;
+        }
 
-    private void LeaveGame()
-    {
-        Application.Quit();
+        private static void LeaveGame()
+        {
+            Application.Quit();
+        }
     }
 }

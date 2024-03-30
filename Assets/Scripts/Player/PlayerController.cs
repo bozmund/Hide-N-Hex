@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Player
 {
@@ -6,17 +7,19 @@ namespace Player
     {
         [SerializeField] private PlayerMovement playerController;
 
-        PlayerState playerState;
+        private PlayerState _playerState;
 
         private void Update()
         {
-            if (playerState == PlayerState.Walking)
+            switch (_playerState)
             {
-                playerController.ProcessInputs();
-            }
-            else if (playerState == PlayerState.Interacting)
-            {
-                
+                case PlayerState.Walking:
+                    playerController.ProcessInputs();
+                    break;
+                case PlayerState.Interacting:
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
         }
     }
