@@ -1,0 +1,29 @@
+.buttons {
+    color: rgb(165, 133, 220);
+    font-size: 25px;
+    -unity-font: url("project://database/Assets/UI%20Toolkit/Fonts/BACKTO1982.TTF?fileID=12800000&guid=86fc1413189cfff4cb60a320e8ca89ac&type=3#BACKTO1982");
+    -unity-font-definition: initial;
+    -unity-text-align: middle-center;
+    justify-content: flex-start;
+    align-self: center;
+    -unity-font-style: bold;
+    width: 287px;
+    height: 60px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    background-color: rgb(88, 7, 115);
+    border-left-color: rgba(255, 169, 236, 0.6);
+    border-right-color: rgba(255, 169, 236, 0.6);
+    border-top-color: rgba(255, 169, 236, 0.6);
+    border-bottom-color: rgba(255, 169, 236, 0.6);
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+}
