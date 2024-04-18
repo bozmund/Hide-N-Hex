@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace PotionSystem
 {
@@ -17,7 +18,8 @@ namespace PotionSystem
             _potions.Add(new Potion(
                 new PotionEffect("Weakness", "Makes player weak."),
                 PotionType.UsableAndThrowable,
-                new Recipe(new List<Ingredient> { Ingredient.Blandfruit }).GetRandomizedRecipes()));
+                new Recipe(new List<Ingredient> { Ingredient.Blandfruit }).GetRandomizedRecipes(),
+                new Color32()));
         }
 
         public List<Potion> GetAllPotions()
@@ -26,4 +28,3 @@ namespace PotionSystem
         }
     }
 }
-

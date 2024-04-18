@@ -1,6 +1,6 @@
 ﻿namespace PotionSystem
 {
-    public class PotionEffect
+    public record PotionEffect
     {
         public PotionEffect(string name, string description)
         {
