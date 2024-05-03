@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Hide-N-Hex\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6115DF72-3BBB-6794-8270-135B2EE64FCA}|Assembly-CSharp.csproj|c:\\hide-n-hex\\assets\\scripts\\items\\plantdisapears.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6115DF72-3BBB-6794-8270-135B2EE64FCA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\items\\plantdisapears.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6115DF72-3BBB-6794-8270-135B2EE64FCA}|Assembly-CSharp.csproj|c:\\hide-n-hex\\assets\\scripts\\items\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6115DF72-3BBB-6794-8270-135B2EE64FCA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\items\\inventorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6115DF72-3BBB-6794-8270-135B2EE64FCA}|Assembly-CSharp.csproj|c:\\hide-n-hex\\assets\\scripts\\items\\itemspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6115DF72-3BBB-6794-8270-135B2EE64FCA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\items\\itemspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6115DF72-3BBB-6794-8270-135B2EE64FCA}|Assembly-CSharp.csproj|c:\\hide-n-hex\\assets\\scripts\\items\\plantdisapears.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6115DF72-3BBB-6794-8270-135B2EE64FCA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\items\\plantdisapears.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,30 +18,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ItemSpawner.cs",
-              "DocumentMoniker": "C:\\Hide-N-Hex\\Assets\\Scripts\\Items\\ItemSpawner.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Items\\ItemSpawner.cs",
-              "ToolTip": "C:\\Hide-N-Hex\\Assets\\Scripts\\Items\\ItemSpawner.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Items\\ItemSpawner.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "InventoryManager.cs",
+              "DocumentMoniker": "C:\\Hide-N-Hex\\Assets\\Scripts\\Items\\InventoryManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Items\\InventoryManager.cs",
+              "ToolTip": "C:\\Hide-N-Hex\\Assets\\Scripts\\Items\\InventoryManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Items\\InventoryManager.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAcwDEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T17:32:27.43Z",
+              "WhenOpened": "2024-05-03T19:47:24.041Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PlantDisapears.cs",
               "DocumentMoniker": "C:\\Hide-N-Hex\\Assets\\Scripts\\Items\\PlantDisapears.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Items\\PlantDisapears.cs",
               "ToolTip": "C:\\Hide-N-Hex\\Assets\\Scripts\\Items\\PlantDisapears.cs",
               "RelativeToolTip": "Assets\\Scripts\\Items\\PlantDisapears.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAeAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAG8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-03T08:42:10.652Z",
               "EditorCaption": ""
