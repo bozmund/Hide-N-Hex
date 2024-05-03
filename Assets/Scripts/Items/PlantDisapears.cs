@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlantDisapears : MonoBehaviour
 {
+    public InventoryManager inventoryManager; // Reference to InventoryManager for updating the UI
+
     private int firebloom = 0;
     private int icecap = 0;
     private int sorrowmoss = 0;
@@ -13,55 +15,97 @@ public class PlantDisapears : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // When the player collides with an object, check the object's tag or name
         if (collision.gameObject.CompareTag("DisappearObject"))
         {
-            if (collision.gameObject.name == "FirebloomPlant(Clone)")
+            string itemName = GetItemNameFromCollision(collision.gameObject.name);
+
+            if (!string.IsNullOrEmpty(itemName))
             {
-                // Increment the collision counter
+                IncrementItemCounter(itemName);
+                inventoryManager.AddItemSprite(itemName); // Add sprite to inventory if not already there
+                inventoryManager.UpdateItemCount(itemName, GetItemCount(itemName)); // Update item count in UI
+
+                // Make the object disappear after collecting it
+                Destroy(collision.gameObject);
+            }
+        }
+    }
+
+    private string GetItemNameFromCollision(string collisionName)
+    {
+        if (collisionName.Contains("FirebloomPlant"))
+            return "firebloom";
+        if (collisionName.Contains("IcecapPlant"))
+            return "icecap";
+        if (collisionName.Contains("SorrowmossPlant"))
+            return "sorrowmoss";
+        if (collisionName.Contains("BlindweedPlant"))
+            return "blindweed";
+        if (collisionName.Contains("SungrassPlant"))
+            return "sungrass";
+        if (collisionName.Contains("EarthrootPlant"))
+            return "earthroot";
+        if (collisionName.Contains("FadeleafPlant"))
+            return "fadeleaf";
+        if (collisionName.Contains("RotberryPlant"))
+            return "rotberry";
+
+        return string.Empty; // Return empty if no match found
+    }
+
+    private void IncrementItemCounter(string itemName)
+    {
+        switch (itemName)
+        {
+            case "firebloom":
                 firebloom++;
-            }
-
-            else if(collision.gameObject.name == "IcecapPlant(Clone)")
-            {
+                break;
+            case "icecap":
                 icecap++;
-            }
-
-            else if (collision.gameObject.name == "SorrowmossPlant(Clone)")
-            {
+                break;
+            case "sorrowmoss":
                 sorrowmoss++;
-            }
-
-            else if (collision.gameObject.name == "BlindweedPlant(Clone)")
-            {
+                break;
+            case "blindweed":
                 blindweed++;
-            }
-
-            else if (collision.gameObject.name == "SungrassPlant(Clone)")
-            {
+                break;
+            case "sungrass":
                 sungrass++;
-            }
-
-            else if (collision.gameObject.name == "EarthrootPlant(Clone)")
-            {
+                break;
+            case "earthroot":
                 earthroot++;
-            }
-
-            else if (collision.gameObject.name == "FadeleafPlant(Clone)")
-            {
+                break;
+            case "fadeleaf":
                 fadeleaf++;
-            }
-
-            else if (collision.gameObject.name == "RotberryPlant(Clone)") //make basic else later but for now like this
-            {
+                break;
+            case "rotberry":
                 rotberry++;
-            }
+                break;
+        }
+    }
 
-            // Log the current count and the name of the collided object to the console
-            Debug.Log($"Collision with '{collision.gameObject.name}'. Hej total collisions with 'DisappearObject': {firebloom}");
-
-            // Make the object disappear
-            Destroy(collision.gameObject);
+    private int GetItemCount(string itemName)
+    {
+        switch (itemName)
+        {
+            case "firebloom":
+                return firebloom;
+            case "icecap":
+                return icecap;
+            case "sorrowmoss":
+                return sorrowmoss;
+            case "blindweed":
+                return blindweed;
+            case "sungrass":
+                return sungrass;
+            case "earthroot":
+                return earthroot;
+            case "fadeleaf":
+                return fadeleaf;
+            case "rotberry":
+                return rotberry;
+            default:
+                return 0;
         }
     }
 }

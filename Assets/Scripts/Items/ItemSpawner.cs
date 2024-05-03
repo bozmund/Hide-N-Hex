@@ -1,26 +1,41 @@
 using UnityEngine;
-using System.Collections.Generic; // This is needed for List<T>
+using System.Collections.Generic;
 
-public class ItemSpawner : MonoBehaviour
+public class MultiPositionSpawner : MonoBehaviour
 {
-    public GameObject collectiblePrefab; // Prefab for the collectible item
-    public List<Vector3> spawnPositions; // Positions to spawn the collectibles
-    public GameObject objectToDisable; // Reference to the GameObject to disable or destroy
+    [System.Serializable]
+    public class PrefabPosition
+    {
+        public GameObject prefab; // Prefab to spawn
+        public List<Vector3> positions; // List of positions to spawn the prefab
+    }
+
+    public List<PrefabPosition> prefabPositions; // List of prefabs with their spawn positions
+    public List<GameObject> objectsToDisable; // List of GameObjects to disable or destroy
 
     void Start()
     {
-        // Spawn collectible prefabs
-        foreach (var position in spawnPositions)
+        // Spawn prefabs at specified positions
+        foreach (var prefabPosition in prefabPositions)
         {
-            Instantiate(collectiblePrefab, position, Quaternion.identity);
+            foreach (var position in prefabPosition.positions)
+            {
+                Instantiate(prefabPosition.prefab, position, Quaternion.identity);
+            }
         }
 
-        if (objectToDisable != null)
+        // Disable or destroy multiple specified GameObjects
+        if (objectsToDisable != null)
         {
-            // Disable or destroy the specified GameObject
-            objectToDisable.SetActive(false); // Disables the GameObject
-            // Or
-            // Destroy(objectToDisable); // Destroys the GameObject
+            foreach (var obj in objectsToDisable)
+            {
+                if (obj != null) // Check if the GameObject is not null
+                {
+                    obj.SetActive(false); // Disables the GameObject
+                    // Or
+                    // Destroy(obj); // Destroys the GameObject
+                }
+            }
         }
     }
 }
