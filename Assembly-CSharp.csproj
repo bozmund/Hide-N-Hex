@@ -61,8 +61,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Menus\MainMenu\ButtonHover.cs" />
+    <Compile Include="Assets\Scripts\Day Night Cycle\WorldLight.cs" />
     <Compile Include="Assets\Scripts\Player\ToggleInventoryVisibility.cs" />
     <Compile Include="Assets\Scripts\Player\InteractionDetector.cs" />
+    <Compile Include="Assets\Scripts\Animation\AnimationStates.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IInteractable.cs" />
     <Compile Include="Assets\Scripts\Menus\MainMenu\Settings.cs" />
     <Compile Include="Assets\Scripts\PotionSystem\Helpers\HelperMethods.cs" />
@@ -74,9 +76,11 @@
     <Compile Include="Assets\Scripts\PotionSystem\PotionType.cs" />
     <Compile Include="Assets\Scriptable Objects\Items\Scripts\ItemObject.cs" />
     <Compile Include="Assets\Scriptable Objects\Items\Scripts\ItemType.cs" />
+    <Compile Include="Assets\Scripts\Day Night Cycle\WorldTime.cs" />
     <Compile Include="Assets\Scripts\PotionSystem\PotionSystem.cs" />
     <Compile Include="Assets\Scripts\PotionSystem\Ingredient.cs" />
     <Compile Include="Assets\Scripts\PotionSystem\Potion.cs" />
+    <Compile Include="Assets\Scripts\Day Night Cycle\WorldTimeConstant.cs" />
     <Compile Include="Assets\Scripts\Items\ItemSpawner.cs" />
     <Compile Include="Assets\Scripts\Player\ToggleRecipe.cs" />
     <Compile Include="Assets\Scripts\Menus\MainMenu\StartGame.cs" />
