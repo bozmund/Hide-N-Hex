@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Menus\MainMenu\Settings.cs" />
     <Compile Include="Assets\Scripts\PotionSystem\Helpers\HelperMethods.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Items\PlantDisapears.cs" />
     <Compile Include="Assets\Scripts\Menus\MainMenu\LeaveGame.cs" />
     <Compile Include="Assets\Scripts\PotionSystem\PotionEffect.cs" />
     <Compile Include="Assets\Scripts\Player\ToggleInventory.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="Assets\Scripts\PotionSystem\PotionSystem.cs" />
     <Compile Include="Assets\Scripts\PotionSystem\Ingredient.cs" />
     <Compile Include="Assets\Scripts\PotionSystem\Potion.cs" />
+    <Compile Include="Assets\Scripts\Items\ItemSpawner.cs" />
     <Compile Include="Assets\Scripts\Player\ToggleRecipe.cs" />
     <Compile Include="Assets\Scripts\Menus\MainMenu\StartGame.cs" />
     <Compile Include="Assets\Scripts\Player\SmoothCamera.cs" />
