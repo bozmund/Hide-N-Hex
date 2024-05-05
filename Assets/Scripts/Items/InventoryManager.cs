@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro; // Import TextMeshPro namespace
 using System.Collections.Generic;
 
 [System.Serializable]
@@ -9,11 +10,12 @@ public class ItemSpriteMapping
     public Sprite itemSprite; // The sprite value
 }
 
+
 [System.Serializable]
 public class InventorySlot
 {
     public Image slotImage; // The image for the slot
-    public Text slotText; // The text to display item count
+    public TextMeshProUGUI slotText; // Updated to TextMeshProUGUI
 }
 
 public class InventoryManager : MonoBehaviour
@@ -47,7 +49,6 @@ public class InventoryManager : MonoBehaviour
                 return string.Empty; // Return empty if no match is found
         }
     }
-
 
     public void AddItemSprite(string itemName)
     {
