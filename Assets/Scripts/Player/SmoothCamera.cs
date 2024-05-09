@@ -7,7 +7,7 @@ namespace Player
 
         [SerializeField] private Transform target;
         public float smoothTime = 0.1f;
-        private readonly Vector3 _offset = new(0f, 0f, -2f);
+        private readonly Vector3 _offset = new(0f, 0f, -1f);
         private Vector3 _velocity = Vector3.zero;
 
         private void FixedUpdate()
