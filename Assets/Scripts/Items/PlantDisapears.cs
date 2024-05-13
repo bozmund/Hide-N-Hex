@@ -1,17 +1,23 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlantDisapears : MonoBehaviour
 {
     public InventoryManager inventoryManager; // Reference to InventoryManager for updating the UI
+    private Dictionary<string, int> itemCounts = new Dictionary<string, int>();
 
-    private int firebloom = 0;
-    private int icecap = 0;
-    private int sorrowmoss = 0;
-    private int blindweed = 0;
-    private int sungrass = 0;
-    private int earthroot = 0;
-    private int fadeleaf = 0;
-    private int rotberry = 0;
+    private void Awake()
+    {
+        // Initialize the dictionary with default values
+        itemCounts.Add("firebloom", 0);
+        itemCounts.Add("icecap", 0);
+        itemCounts.Add("sorrowmoss", 0);
+        itemCounts.Add("blindweed", 0);
+        itemCounts.Add("sungrass", 0);
+        itemCounts.Add("earthroot", 0);
+        itemCounts.Add("fadeleaf", 0);
+        itemCounts.Add("rotberry", 0);
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -55,57 +61,39 @@ public class PlantDisapears : MonoBehaviour
 
     private void IncrementItemCounter(string itemName)
     {
-        switch (itemName)
+        if (itemCounts.ContainsKey(itemName))
         {
-            case "firebloom":
-                firebloom++;
-                break;
-            case "icecap":
-                icecap++;
-                break;
-            case "sorrowmoss":
-                sorrowmoss++;
-                break;
-            case "blindweed":
-                blindweed++;
-                break;
-            case "sungrass":
-                sungrass++;
-                break;
-            case "earthroot":
-                earthroot++;
-                break;
-            case "fadeleaf":
-                fadeleaf++;
-                break;
-            case "rotberry":
-                rotberry++;
-                break;
+            itemCounts[itemName]++;
         }
     }
 
-    private int GetItemCount(string itemName)
+    public int GetItemCount(string itemName)
     {
-        switch (itemName)
+        if (itemCounts.ContainsKey(itemName))
         {
-            case "firebloom":
-                return firebloom;
-            case "icecap":
-                return icecap;
-            case "sorrowmoss":
-                return sorrowmoss;
-            case "blindweed":
-                return blindweed;
-            case "sungrass":
-                return sungrass;
-            case "earthroot":
-                return earthroot;
-            case "fadeleaf":
-                return fadeleaf;
-            case "rotberry":
-                return rotberry;
-            default:
-                return 0;
+            return itemCounts[itemName];
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
+    public Dictionary<string, int> GetAllItemCounts()
+    {
+        return itemCounts;
+    }
+
+    public void ResetItemCount(string itemName)
+    {
+        if (itemCounts.ContainsKey(itemName))
+        {
+            itemCounts[itemName] = 0; // Set the value of the specified key to 0
+            Debug.Log($"Reset count for '{itemName}' to 0.");
+        }
+        else
+        {
+            Debug.LogWarning($"Item '{itemName}' not found in the dictionary.");
         }
     }
 }

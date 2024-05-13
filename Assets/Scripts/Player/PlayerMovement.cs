@@ -18,7 +18,7 @@ namespace Player
         private float _throwStrenghtSpeed;
         private Vector3 _startThrowPosition;
         private Vector3 _endThrowPosition;
-        private float fireLerp = 1;
+        //private float fireLerp = 1;
         private Vector2 _movementDirection;
         private Vector2 _lastMoveDirection;
 
