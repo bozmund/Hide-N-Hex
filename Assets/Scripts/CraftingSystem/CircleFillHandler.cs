@@ -13,6 +13,7 @@ namespace CraftingSystem
         public Image E;
         public Image Heat;
         public Image OptimalHeat;
+        public RecipeInformation RecipeInformation;
 
         private float fillSpeed = 0.3f;
         private float targetFillAmount = 1.0f;
@@ -42,7 +43,7 @@ namespace CraftingSystem
             if (Input.GetKeyDown(KeyCode.Q) && circleFillImage.fillAmount >= 0.1f &&
                 circleFillImage.fillAmount <= 0.25f)
             {
-                Q.color = Color.green;
+                Q = RecipeInformation.craftingSlotQImage;
             }
 
             if (Input.GetKeyDown(KeyCode.W) && circleFillImage.fillAmount >= 0.4f &&

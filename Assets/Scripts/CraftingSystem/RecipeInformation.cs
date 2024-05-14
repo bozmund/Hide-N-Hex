@@ -1,19 +1,21 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace CraftingSystem
 {
     public class RecipeInformation : MonoBehaviour
     {
-        public RecipeData recipeData; // Reference to the RecipeData scriptable object
-
+        public RecipeData recipeData;
+        public Image craftingSlotQImage;
         private void Start()
         {
             // Ensure that the RecipeData is assigned before using it
-            if (recipeData == null)
+            if (!recipeData)
             {
                 Debug.LogError("RecipeData is not assigned. Please assign it in the Inspector.");
                 return;
             }
+
 
             // Use the retrieved information as needed
             Debug.Log("Recipe Information Retrieved:");
@@ -22,8 +24,8 @@ namespace CraftingSystem
             Debug.Log("First Ingredient Sprite Name: " + recipeData.firstIngredientSpriteName);
             Debug.Log("Second Ingredient Sprite Name: " + recipeData.secondIngredientSpriteName);
             Debug.Log("Third Ingredient Sprite Name: " + recipeData.thirdIngredientSpriteName);
-
-            // You can use this information to initialize objects or perform other actions in the CriclelFill scene
+            var loadedSprite = Resources.Load<Sprite>(recipeData.firstIngredientSpriteName);
+            craftingSlotQImage.sprite = loadedSprite;
         }
     }
 }
