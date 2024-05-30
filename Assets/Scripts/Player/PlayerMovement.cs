@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace Player
@@ -8,29 +9,22 @@ namespace Player
     {
         [Header("Attributes")]
         [SerializeField] private float _movementSpeed = 2.5f;
-        private Vector2 _crosshairPosition;
         private const float _smoothing = 1f;
-        [SerializeField] private const float _potionHeight = 5f;
-        [SerializeField] private const float _potionSpeed = 2.5f;
-
-        private float _throwStrenghtPosition;
-        private float _throwStrenghtDestination;
-        private float _throwStrenghtSpeed;
+        [SerializeField] private float _potionHeight = 2.5f;
+        [SerializeField] private float _throwDuration = 1.5f;
+        [SerializeField] private float _throwCD = 1f;
+        private float lastThrowTime;
         private Vector3 _startThrowPosition;
         private Vector3 _endThrowPosition;
-        //private float fireLerp = 1;
         private Vector2 _movementDirection;
         private Vector2 _lastMoveDirection;
 
         [Space(5)]
-        [SerializeField] Transform _potion;
-        /*[SerializeField] Transform _throwStrenghtMinDestination;
-        [SerializeField] Transform _throwStrenghtMaxDestination;*/
-
-        [Space(5)]
         [Header("References")]
-        [SerializeField]private GameObject Crosshair;
-        public GameObject Potion;
+        [SerializeField] private GameObject Crosshair;
+        [SerializeField] private GameObject Potion;
+        [SerializeField] Transform _potion;
+        private Vector3 _crosshairPosition;
         public Animator _animator;
         public Rigidbody2D rb2d;
 
@@ -55,11 +49,6 @@ namespace Player
             ProcessInputs();
             Animate();
             Aim();
-
-            /*          Vector3 newProjectilePos = ThrowTrajectory(_startThrowPosition, _endThrowPosition, fireLerp);
-                        transform.position = newProjectilePos;
-
-                        fireLerp += _potionSpeed * Time.deltaTime;*/
         }
 
         public void ProcessInputs()
@@ -95,31 +84,48 @@ namespace Player
         void Aim()
         {
             _crosshairPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            _crosshairPosition.z = 0f;
             Crosshair.transform.position = _crosshairPosition;
 
-            /*_throwStrenghtDestination = Mathf.Clamp01(_throwStrenghtDestination);
-            _throwStrenghtPosition = Mathf.SmoothDamp(_throwStrenghtPosition, _throwStrenghtDestination, ref _throwStrenghtSpeed, _smoothing);
-            _potion.position = Vector2.Lerp(_throwStrenghtMinDestination.position, _throwStrenghtMaxDestination.position, _throwStrenghtPosition);
-
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Mouse0) && Time.time >= lastThrowTime + _throwCD)
             {
                 ThrowPotion(transform.position, _crosshairPosition);
-            }*/
+                lastThrowTime = Time.time;
+            }
         }
 
-            /*void ThrowPotion(Vector3 firePosition, Vector3 targetPosition)
+        void ThrowPotion(Vector3 firePosition, Vector3 targetPosition)
+        {
+            _startThrowPosition = firePosition;
+            _endThrowPosition = targetPosition;
+
+            GameObject potion = Instantiate(Potion, firePosition, Quaternion.identity);
+            StartCoroutine(AnimateThrow(potion, firePosition, targetPosition));
+        }
+
+        Vector3 ThrowTrajectory(Vector3 firePosition, Vector3 targetPosition, float t)
+        {
+            Vector3 linearProgress = Vector3.Lerp(firePosition, targetPosition, t);
+            float perspectiveOffset = Mathf.Sin(t * Mathf.PI) * _potionHeight;
+
+            Vector3 trajectoryPosition = linearProgress + (Vector3.up * perspectiveOffset);
+            return trajectoryPosition;
+        }
+        private IEnumerator AnimateThrow(GameObject potion, Vector3 firePosition, Vector3 targetPosition)
+        {
+            float elapsedTime = 0f;
+
+            while (elapsedTime < _throwDuration)
             {
-                _startThrowPosition = firePosition;
-                _endThrowPosition = targetPosition;
+                float t = elapsedTime / _throwDuration;
+                Vector3 trajectoryPosition = ThrowTrajectory(firePosition, targetPosition, t);
+                potion.transform.position = trajectoryPosition;
+
+                elapsedTime += Time.deltaTime;
+                yield return null;
             }
 
-            Vector3 ThrowTrajectory(Vector3 firePosition, Vector3 targetPosition, float t)
-            {
-                Vector3 linearProgress = Vector3.Lerp(firePosition, targetPosition, t);
-                float perspectiveOffset = Mathf.Sin(t * Mathf.PI) * _potionHeight;
-
-                Vector3 trajectoryPosition = linearProgress + (Vector3.up * perspectiveOffset);
-                return trajectoryPosition;
-            }*/
+            potion.transform.position = targetPosition;
+        }
     }
 }
