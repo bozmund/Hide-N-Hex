@@ -7,7 +7,7 @@ public class ToggleInventoryVisibility : MonoBehaviour
     public Image entireInventory;
 
     // Keeps track of whether the EntireInventory is currently visible or not
-    private bool isVisible = false;
+    private bool isVisible;
 
     void Start()
     {

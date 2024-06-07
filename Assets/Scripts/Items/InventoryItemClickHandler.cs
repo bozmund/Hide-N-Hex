@@ -1,3 +1,4 @@
+using Items;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems; // Required for event handling

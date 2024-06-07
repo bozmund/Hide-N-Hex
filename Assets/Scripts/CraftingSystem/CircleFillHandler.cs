@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using Items;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace CraftingSystem
@@ -13,22 +15,28 @@ namespace CraftingSystem
         public Image E;
         public Image Heat;
         public Image OptimalHeat;
-        public RecipeInformation RecipeInformation;
+        public RecipeData recipeData;
+        public MainInventory MainInventoryData;
+        private InventoryUIManager inventoryUI;
 
         private float fillSpeed = 0.3f;
         private float targetFillAmount = 1.0f;
         private float decreaseRate = 0.1f;
         private float increaseRate = 0.4f;
+        private float optimalHeatPercentage;
+        private float tolerance = 0.1f;
 
         private void Start()
         {
             circleFillImage.fillAmount = 0.0f;
             Heat.fillAmount = 0;
-
             // Randomly place the OptimalHeat image within 0 to 80% of the HeatBar
-            var optimalPositionY = Random.Range(0, 80);
+            float optimalPositionY = Random.Range(-25, 25);
+            optimalHeatPercentage = (optimalPositionY + 25) / 50;
             OptimalHeat.rectTransform.anchoredPosition =
                 new Vector2(OptimalHeat.rectTransform.anchoredPosition.x, optimalPositionY);
+            inventoryUI = InventoryUIManager.Instance;
+            inventoryUI.gameObject.SetActive(false);
         }
 
         private void Update()
@@ -40,22 +48,22 @@ namespace CraftingSystem
                 circleFillImage.fillAmount = 0;
             }
 
-            if (Input.GetKeyDown(KeyCode.Q) && circleFillImage.fillAmount >= 0.1f &&
-                circleFillImage.fillAmount <= 0.25f)
+            if (Mathf.Abs(Heat.fillAmount - optimalHeatPercentage) <= tolerance)
             {
-                Q = RecipeInformation.craftingSlotQImage;
-            }
+                if (Input.GetKeyDown(KeyCode.Q) && circleFillImage.fillAmount is >= 0.1f and <= 0.25f)
+                {
+                    Q.color = Color.white;
+                }
 
-            if (Input.GetKeyDown(KeyCode.W) && circleFillImage.fillAmount >= 0.4f &&
-                circleFillImage.fillAmount <= 0.6f)
-            {
-                W.color = Color.green;
-            }
+                if (Input.GetKeyDown(KeyCode.W) && circleFillImage.fillAmount is >= 0.75f and <= 0.9f)
+                {
+                    W.color = Color.white;
+                }
 
-            if (Input.GetKeyDown(KeyCode.E) && circleFillImage.fillAmount >= 0.75f &&
-                circleFillImage.fillAmount <= 0.9f)
-            {
-                E.color = Color.green;
+                if (Input.GetKeyDown(KeyCode.E) && circleFillImage.fillAmount is >= 0.4f and <= 0.6f)
+                {
+                    E.color = Color.white;
+                }
             }
 
             Heat.fillAmount -= decreaseRate * Time.deltaTime;
@@ -66,6 +74,29 @@ namespace CraftingSystem
             }
 
             Heat.fillAmount = Mathf.Clamp(Heat.fillAmount, 0, 1);
+
+            if (!E.color.Equals(Color.white) || !Q.color.Equals(Color.white) || !W.color.Equals(Color.white)) return;
+            Craft(recipeData.potionSpriteName, recipeData.firstIngredientSpriteName, recipeData.secondIngredientSpriteName, recipeData.thirdIngredientSpriteName);
+        }
+
+        private void Craft(string potionSpriteName, string firstIngredient, string secondIngredient, string thirdIngredient)
+        {
+            var potionCount = MainInventoryData.GetSlotAndCountForItem(potionSpriteName, out var itemNumber);
+            potionCount += 1;
+            MainInventoryData.UpdateMainInventory(itemNumber, potionSpriteName, potionCount);
+            SubtractIngredient(firstIngredient);
+            SubtractIngredient(secondIngredient);
+            SubtractIngredient(thirdIngredient);
+            inventoryUI.LoadInventorySprites();
+            SceneManager.LoadScene("OutsideTheCabin");
+            inventoryUI.gameObject.SetActive(true);
+        }
+
+        private void SubtractIngredient(string ingredient)
+        {
+            var countForItem = MainInventoryData.GetSlotAndCountForItem(ingredient, out var itemNumber);
+            countForItem -= 1;
+            MainInventoryData.UpdateMainInventory(itemNumber, ingredient, countForItem);
         }
     }
 }

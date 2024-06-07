@@ -1,103 +1,121 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
-public class InventoryUIManager : MonoBehaviour
+namespace Items
 {
-    public MainInventory mainInventoryData; // Reference to the ScriptableObject
-    public List<Image> itemImages; // List of UI Image components
-    public List<TextMeshProUGUI> itemCounts; // List of TextMeshProUGUI components for item counts
-    public string resourceSubfolder = "plants"; // Subfolder in the Resources folder
-
-    private void Start()
+    public class InventoryUIManager : MonoBehaviour
     {
-        LoadInventorySprites();
-    }
+        public MainInventory mainInventoryData; // Reference to the ScriptableObject
+        public List<Image> itemImages; // List of UI Image components
+        public List<TextMeshProUGUI> itemCounts; // List of TextMeshProUGUI components for item counts
+        public string resourceSubfolder = "plants"; // Subfolder in the Resources folder
+        
+        public static InventoryUIManager Instance { get; private set; }
 
-    public void LoadInventorySprites()
-    {
-        Dictionary<string, MainInventory.InventorySlot> inventory = mainInventoryData.GetMainInventory();
-
-        foreach (var slot in inventory)
+        private void Awake()
         {
-            string itemNumber = slot.Key;
-            string itemName = slot.Value.itemName;
-            int count = slot.Value.count;
-
-            if (!string.IsNullOrEmpty(itemName))
+            if (Instance == null)
             {
-                // Load the sprite by the item name, including the subfolder path
-                string resourcePath = $"{resourceSubfolder}/{itemName}";
-                Sprite itemSprite = Resources.Load<Sprite>(resourcePath);
+                Instance = this;
+                DontDestroyOnLoad(gameObject); // Keep this object when loading new scenes
+            }
+            else
+            {
+                Destroy(gameObject); // Ensure only one instance exists
+            }
+        }
 
-                if (itemSprite != null)
+        private void Start()
+        {
+            LoadInventorySprites();
+        }
+
+        public void LoadInventorySprites()
+        {
+            Dictionary<string, MainInventory.InventorySlot> inventory = mainInventoryData.GetMainInventory();
+
+            foreach (var slot in inventory)
+            {
+                string itemNumber = slot.Key;
+                string itemName = slot.Value.itemName;
+                int count = slot.Value.count;
+
+                if (!string.IsNullOrEmpty(itemName))
                 {
-                    // Find the corresponding UI Image component and set the sprite
-                    Image itemImage = GetImageBySlotName(itemNumber);
-                    if (itemImage != null)
+                    // Load the sprite by the item name, including the subfolder path
+                    string resourcePath = $"{resourceSubfolder}/{itemName}";
+                    Sprite itemSprite = Resources.Load<Sprite>(resourcePath);
+
+                    if (itemSprite != null)
                     {
-                        itemImage.sprite = itemSprite;
+                        // Find the corresponding UI Image component and set the sprite
+                        Image itemImage = GetImageBySlotName(itemNumber);
+                        if (itemImage != null)
+                        {
+                            itemImage.sprite = itemSprite;
+                        }
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"Sprite with name '{resourcePath}' not found in Resources.");
                     }
                 }
-                else
+
+                // Find the corresponding TextMeshProUGUI component and set the count
+                TextMeshProUGUI itemCountText = GetTextBySlotName(itemNumber);
+                if (itemCountText != null)
                 {
-                    Debug.LogWarning($"Sprite with name '{resourcePath}' not found in Resources.");
+                    itemCountText.text = count > 0 ? count.ToString() : "";
                 }
             }
+        }
 
-            // Find the corresponding TextMeshProUGUI component and set the count
+        public void ClearUIElement(string itemNumber)
+        {
+            Image itemImage = GetImageBySlotName(itemNumber);
+            if (itemImage != null)
+            {
+                itemImage.sprite = null;
+            }
+
             TextMeshProUGUI itemCountText = GetTextBySlotName(itemNumber);
             if (itemCountText != null)
             {
-                itemCountText.text = count > 0 ? count.ToString() : "";
+                itemCountText.text = "";
             }
         }
-    }
 
-    public void ClearUIElement(string itemNumber)
-    {
-        Image itemImage = GetImageBySlotName(itemNumber);
-        if (itemImage != null)
+        private Image GetImageBySlotName(string itemNumber)
         {
-            itemImage.sprite = null;
-        }
-
-        TextMeshProUGUI itemCountText = GetTextBySlotName(itemNumber);
-        if (itemCountText != null)
-        {
-            itemCountText.text = "";
-        }
-    }
-
-    private Image GetImageBySlotName(string itemNumber)
-    {
-        foreach (Image img in itemImages)
-        {
-            Debug.Log($"Checking image: {img.gameObject.name} against slot: {itemNumber}");
-            if (img.gameObject.name.Equals(itemNumber, System.StringComparison.OrdinalIgnoreCase))
+            foreach (Image img in itemImages)
             {
-                return img;
+                Debug.Log($"Checking image: {img.gameObject.name} against slot: {itemNumber}");
+                if (img.gameObject.name.Equals(itemNumber, System.StringComparison.OrdinalIgnoreCase))
+                {
+                    return img;
+                }
             }
+            Debug.LogWarning($"UI Image for slot '{itemNumber}' not found.");
+            return null;
         }
-        Debug.LogWarning($"UI Image for slot '{itemNumber}' not found.");
-        return null;
-    }
 
-    public TextMeshProUGUI GetTextBySlotName(string itemNumber)
-    {
-        // Adjust itemNumber to match the expected naming convention for TextMeshProUGUI components
-        string countName = $"count{char.ToUpper(itemNumber[0])}{itemNumber.Substring(1)}";
-
-        foreach (TextMeshProUGUI text in itemCounts)
+        public TextMeshProUGUI GetTextBySlotName(string itemNumber)
         {
-            Debug.Log($"Checking text: {text.gameObject.name} against slot: {countName}");
-            if (text.gameObject.name.Equals(countName, System.StringComparison.OrdinalIgnoreCase))
+            // Adjust itemNumber to match the expected naming convention for TextMeshProUGUI components
+            string countName = $"count{char.ToUpper(itemNumber[0])}{itemNumber.Substring(1)}";
+
+            foreach (TextMeshProUGUI text in itemCounts)
             {
-                return text;
+                Debug.Log($"Checking text: {text.gameObject.name} against slot: {countName}");
+                if (text.gameObject.name.Equals(countName, System.StringComparison.OrdinalIgnoreCase))
+                {
+                    return text;
+                }
             }
+            Debug.LogWarning($"TextMeshProUGUI for slot '{countName}' not found.");
+            return null;
         }
-        Debug.LogWarning($"TextMeshProUGUI for slot '{countName}' not found.");
-        return null;
     }
 }
