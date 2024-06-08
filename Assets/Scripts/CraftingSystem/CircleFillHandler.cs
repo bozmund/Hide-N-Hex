@@ -73,6 +73,11 @@ namespace CraftingSystem
                 Heat.fillAmount += increaseRate * Time.deltaTime;
             }
 
+            if (Input.GetKey(KeyCode.Escape))
+            {
+                ChangeScene();
+            }
+
             Heat.fillAmount = Mathf.Clamp(Heat.fillAmount, 0, 1);
 
             if (!E.color.Equals(Color.white) || !Q.color.Equals(Color.white) || !W.color.Equals(Color.white)) return;
@@ -89,6 +94,11 @@ namespace CraftingSystem
             SubtractIngredient(thirdIngredient);
             inventoryUI.LoadInventorySprites();
 
+            ChangeScene();
+        }
+
+        private void ChangeScene()
+        {
             SceneManager.LoadScene("OutsideTheCabin");
             inventoryUI.gameObject.SetActive(true);
         }
