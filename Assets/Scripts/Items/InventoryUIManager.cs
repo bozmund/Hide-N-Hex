@@ -10,8 +10,8 @@ namespace Items
         public MainInventory mainInventoryData; // Reference to the ScriptableObject
         public List<Image> itemImages; // List of UI Image components
         public List<TextMeshProUGUI> itemCounts; // List of TextMeshProUGUI components for item counts
-        public string resourceSubfolder = "plants"; // Subfolder in the Resources folder
-        
+        public string resourceSubfolder = "plants"; // Default subfolder in the Resources folder
+
         public static InventoryUIManager Instance { get; private set; }
 
         private void Awake()
@@ -44,8 +44,17 @@ namespace Items
 
                 if (!string.IsNullOrEmpty(itemName))
                 {
-                    // Load the sprite by the item name, including the subfolder path
-                    string resourcePath = $"{resourceSubfolder}/{itemName}";
+                    // Check if the itemName contains "Potion" and adjust the resourceSubfolder accordingly
+                    string resourcePath;
+                    if (itemName.Contains("Potion", System.StringComparison.OrdinalIgnoreCase))
+                    {
+                        resourcePath = $"Potions/{itemName}";
+                    }
+                    else
+                    {
+                        resourcePath = $"{resourceSubfolder}/{itemName}";
+                    }
+
                     Sprite itemSprite = Resources.Load<Sprite>(resourcePath);
 
                     if (itemSprite != null)

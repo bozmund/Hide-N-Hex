@@ -88,6 +88,7 @@ namespace CraftingSystem
             SubtractIngredient(secondIngredient);
             SubtractIngredient(thirdIngredient);
             inventoryUI.LoadInventorySprites();
+
             SceneManager.LoadScene("OutsideTheCabin");
             inventoryUI.gameObject.SetActive(true);
         }
@@ -96,7 +97,18 @@ namespace CraftingSystem
         {
             var countForItem = MainInventoryData.GetSlotAndCountForItem(ingredient, out var itemNumber);
             countForItem -= 1;
-            MainInventoryData.UpdateMainInventory(itemNumber, ingredient, countForItem);
+
+            if (countForItem == 0)
+            {
+                Debug.Log("Is zero");
+                Debug.Log(itemNumber);
+                MainInventoryData.UpdateMainInventory(itemNumber, "", countForItem);
+                inventoryUI.ClearUIElement(itemNumber);
+            }
+            else
+            {
+                MainInventoryData.UpdateMainInventory(itemNumber, ingredient, countForItem);
+            }
         }
     }
 }
