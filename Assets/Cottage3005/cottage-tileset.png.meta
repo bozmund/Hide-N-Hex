@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -95,7 +95,595 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: cottage-tileset_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 97
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2658c6c3091fee45ad08410c9426ad5
+      internalID: 1170206887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cottage-tileset_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 108
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee2212a5f49a95e4997a6c2ab8ba537a
+      internalID: -1412713625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cottage-tileset_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5d2a1de523929b4a88158f7b3d96c8e
+      internalID: -1889622026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cottage-tileset_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 80
+        width: 32
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 732e2cae4d8557746a5d2e3ffacb8924
+      internalID: 689965726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cottage-tileset_9
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 32
+        width: 80
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b4111c147c7cb4fa7682f7ef5bab12
+      internalID: 128929966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cottage-tileset_14
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 81
+        width: 16
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3bfb92325ee8954e950cbddd156e5f7
+      internalID: 1139275850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cottage-tileset_15
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 112
+        width: 44
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d244b6ae553cd054c8784fcf4681d9ed
+      internalID: 1109454980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cottage-tileset_33
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 48
+        width: 16
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e96635d12c36cf459cd2949575100b4
+      internalID: 758671223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cottage-tileset_34
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 85
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d71cbc73fd42a4892a888ce86ae0e2
+      internalID: 1097668575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cottage-tileset_35
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ff783641a53f094c87905b117c6dd0b
+      internalID: 1188958242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cottage-tileset_36
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32dc690c5a8563d428d67921b330463e
+      internalID: 1598719907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cottage-tileset_37
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33a2f32b25a8b3546910c824e9b3a952
+      internalID: 1017389749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cottage-tileset_38
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 981907d2b537e87459a8f9246033f65c
+      internalID: -1531810207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cottage-tileset_39
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5188155195048ed4fabc06175028e845
+      internalID: -297279394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cottage-tileset_40
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 660142d9fdcf82a409a5988e830139bb
+      internalID: -1211853071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cottage-tileset_41
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 16
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 625d1d84f9feeb24b8d3f0193f899897
+      internalID: -756574003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cottage-tileset_42
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebdf510be2f4a7846bf73c9918b0331b
+      internalID: -1089199801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cottage-tileset_54
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29ca53e98ebd0a54697e18729a7d2074
+      internalID: -1239348171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cottage-tileset_56
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 65
+        width: 32
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db75f4621e2e584dbc80a6e30541269
+      internalID: 70031736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cottage-tileset_58
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 16
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58f33e4694f353b4e8f54ab11d36c7cd
+      internalID: 1628606079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cottage-tileset_64
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 36
+        width: 16
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56bfe2735abd17b45927938144a30c7d
+      internalID: -69998615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cottage-tileset_94
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b670c3f34db1ab44eaf203b9d6de3bd0
+      internalID: 1567537264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cottage-tileset_100
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 1
+        width: 65
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 684ced81d517d0b49bd6b9ed4d13f33b
+      internalID: 5359906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cottage-tileset_111
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 0
+        width: 62
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0353578056c54a349b462924f1ef6d39
+      internalID: -1963307241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cottage-tileset_113
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 79
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b5de39219e6f34fa2eac18b49b4017
+      internalID: -1874511245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cottage-tileset_118
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 0
+        width: 80
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9618baaba16c5a54fbfd866c6acc7ca4
+      internalID: -1017048022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cottage-tileset_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 57
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ef7c50cb25c3946a6e2e8576260d59
+      internalID: -407115026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cottage-tileset_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 108
+        width: 32
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 392199a9d69c6a245b1c8f4f34740078
+      internalID: -736985193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +694,149 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cottage-tileset_0: 1170206887
+      cottage-tileset_1: -1412713625
+      cottage-tileset_10: -1341277382
+      cottage-tileset_100: 5359906
+      cottage-tileset_101: 1446336202
+      cottage-tileset_102: 1673779218
+      cottage-tileset_103: 350220756
+      cottage-tileset_104: -1255971092
+      cottage-tileset_105: 459596701
+      cottage-tileset_106: -2111706994
+      cottage-tileset_107: 179421301
+      cottage-tileset_108: -1069914379
+      cottage-tileset_109: 781633581
+      cottage-tileset_11: 1594925912
+      cottage-tileset_110: -1994118691
+      cottage-tileset_111: -1963307241
+      cottage-tileset_112: 1359204669
+      cottage-tileset_113: -1874511245
+      cottage-tileset_114: -1919079780
+      cottage-tileset_115: 2140762757
+      cottage-tileset_116: -2102077197
+      cottage-tileset_117: -13510759
+      cottage-tileset_118: -1017048022
+      cottage-tileset_119: -703571584
+      cottage-tileset_12: 752468083
+      cottage-tileset_120: -961456174
+      cottage-tileset_121: -68700684
+      cottage-tileset_122: 1524974001
+      cottage-tileset_123: 1515839961
+      cottage-tileset_124: -1459993561
+      cottage-tileset_125: 1306708687
+      cottage-tileset_126: -1095076841
+      cottage-tileset_127: -1915863395
+      cottage-tileset_128: 1190497180
+      cottage-tileset_129: 2042608579
+      cottage-tileset_13: 1533675497
+      cottage-tileset_130: 1334599808
+      cottage-tileset_131: -1402194435
+      cottage-tileset_132: 763615364
+      cottage-tileset_133: 1760612927
+      cottage-tileset_134: 1657428643
+      cottage-tileset_135: -2018486407
+      cottage-tileset_136: -1765577676
+      cottage-tileset_137: -304155317
+      cottage-tileset_138: 110548783
+      cottage-tileset_139: 322771222
+      cottage-tileset_14: 1139275850
+      cottage-tileset_140: -1670354020
+      cottage-tileset_141: -1402798464
+      cottage-tileset_15: 1109454980
+      cottage-tileset_16: -132945618
+      cottage-tileset_17: -1193637917
+      cottage-tileset_18: 455258874
+      cottage-tileset_19: 208228423
+      cottage-tileset_2: -407115026
+      cottage-tileset_20: 1300976806
+      cottage-tileset_21: 243008660
+      cottage-tileset_22: 739205147
+      cottage-tileset_23: 63991116
+      cottage-tileset_24: 165493871
+      cottage-tileset_25: 958334401
+      cottage-tileset_26: -51866381
+      cottage-tileset_27: -1638586064
+      cottage-tileset_28: 2038252489
+      cottage-tileset_29: 1464818667
+      cottage-tileset_3: -736985193
+      cottage-tileset_30: 1078715137
+      cottage-tileset_31: 1054294620
+      cottage-tileset_32: 1416106761
+      cottage-tileset_33: 758671223
+      cottage-tileset_34: 1097668575
+      cottage-tileset_35: 1188958242
+      cottage-tileset_36: 1598719907
+      cottage-tileset_37: 1017389749
+      cottage-tileset_38: -1531810207
+      cottage-tileset_39: -297279394
+      cottage-tileset_4: 971686930
+      cottage-tileset_40: -1211853071
+      cottage-tileset_41: -756574003
+      cottage-tileset_42: -1089199801
+      cottage-tileset_43: -884877280
+      cottage-tileset_44: -1275481710
+      cottage-tileset_45: -1625494947
+      cottage-tileset_46: -2072298519
+      cottage-tileset_47: -1984939982
+      cottage-tileset_48: -1183622348
+      cottage-tileset_49: 1911434277
+      cottage-tileset_5: -1889622026
+      cottage-tileset_50: -599045684
+      cottage-tileset_51: -1694005132
+      cottage-tileset_52: 1571828574
+      cottage-tileset_53: 814562844
+      cottage-tileset_54: -1239348171
+      cottage-tileset_55: 1329380584
+      cottage-tileset_56: 70031736
+      cottage-tileset_57: -1528549549
+      cottage-tileset_58: 1628606079
+      cottage-tileset_59: -2031041100
+      cottage-tileset_6: 1947969499
+      cottage-tileset_60: 1888165887
+      cottage-tileset_61: -221023019
+      cottage-tileset_62: 207732083
+      cottage-tileset_63: -975736430
+      cottage-tileset_64: -69998615
+      cottage-tileset_65: 102596867
+      cottage-tileset_66: -1989555953
+      cottage-tileset_67: 928302897
+      cottage-tileset_68: 1602979352
+      cottage-tileset_69: 207977939
+      cottage-tileset_7: 689965726
+      cottage-tileset_70: -1572748663
+      cottage-tileset_71: 673099582
+      cottage-tileset_72: 1834171050
+      cottage-tileset_73: 2002643283
+      cottage-tileset_74: -1005894425
+      cottage-tileset_75: 180153958
+      cottage-tileset_76: 372220554
+      cottage-tileset_77: 1447741241
+      cottage-tileset_78: 693662991
+      cottage-tileset_79: 643768070
+      cottage-tileset_8: 1352092286
+      cottage-tileset_80: 1561399880
+      cottage-tileset_81: -564735884
+      cottage-tileset_82: 494811045
+      cottage-tileset_83: -34217648
+      cottage-tileset_84: -1713836543
+      cottage-tileset_85: -56259652
+      cottage-tileset_86: 1956332275
+      cottage-tileset_87: -1946543814
+      cottage-tileset_88: -480791925
+      cottage-tileset_89: -1221670688
+      cottage-tileset_9: 128929966
+      cottage-tileset_90: -383251716
+      cottage-tileset_91: -1360588344
+      cottage-tileset_92: -1165598705
+      cottage-tileset_93: 1178081267
+      cottage-tileset_94: 1567537264
+      cottage-tileset_95: -2140972241
+      cottage-tileset_96: 1727951828
+      cottage-tileset_97: 946712785
+      cottage-tileset_98: -1234572909
+      cottage-tileset_99: -498605992
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

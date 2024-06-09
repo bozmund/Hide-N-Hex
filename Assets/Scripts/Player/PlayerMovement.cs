@@ -55,10 +55,10 @@ namespace Player
         private void Update()
         {
             ProcessInputs();
-            Animate();
-            Aim();
+            //Animate();
+            //Aim();
 /*            UpdateThrowLimit();*/
-            UpdateTrajectoryLine();
+            //UpdateTrajectoryLine();
         }
 
         public void ProcessInputs()
@@ -108,7 +108,7 @@ namespace Player
                 _animator.SetBool("isThrow", true);
                 isThrowing = true;
                 FaceCrosshair();
-                StartCoroutine(ResetIsThrow(0.3f));
+                //StartCoroutine(ResetIsThrow(0.3f));
             }
         }
 
