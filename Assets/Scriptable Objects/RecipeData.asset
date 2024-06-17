@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b289ae6293a348a43a92bfa037e1da86, type: 3}
   m_Name: RecipeData
   m_EditorClassIdentifier: 
-  potionName: 
-  potionSpriteName: 
-  firstIngredientSpriteName: 
-  secondIngredientSpriteName: 
-  thirdIngredientSpriteName: 
+  potionName: Bistre potion
+  potionSpriteName: WeaknessPotion
+  firstIngredientSpriteName: rotberry
+  secondIngredientSpriteName: earthroot
+  thirdIngredientSpriteName: fadeleaf

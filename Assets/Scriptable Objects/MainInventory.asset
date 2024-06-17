@@ -15,10 +15,10 @@ MonoBehaviour:
   slots:
   - itemNumber: firstItem
     itemName: firebloom
-    count: 5
+    count: 3
   - itemNumber: secondItem
     itemName: icecap
-    count: 4
+    count: 2
   - itemNumber: thirdItem
     itemName: sungrass
     count: 1
@@ -29,8 +29,8 @@ MonoBehaviour:
     itemName: fadeleaf
     count: 1
   - itemNumber: sixthItem
-    itemName: blindweed
-    count: 1
+    itemName: 
+    count: 0
   - itemNumber: seventhItem
     itemName: earthroot
     count: 1
@@ -38,8 +38,8 @@ MonoBehaviour:
     itemName: sorrowmoss
     count: 2
   - itemNumber: ninthItem
-    itemName: CrimsonPotion
-    count: 3
+    itemName: MindVisionPotion
+    count: 1
   - itemNumber: tenthItem
     itemName: 
     count: 0
