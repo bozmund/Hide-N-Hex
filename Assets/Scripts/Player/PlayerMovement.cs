@@ -1,5 +1,5 @@
-using System;
 using System.Collections;
+using PotionSystem;
 using UnityEngine;
 
 namespace Player
@@ -10,7 +10,7 @@ namespace Player
     public class PlayerMovement : MonoBehaviour
     {
         [Header("Attributes")]
-        [SerializeField] private float _movementSpeed = 2.5f;
+        [SerializeField] public float _movementSpeed = 2.5f;
         private const float _smoothing = 1f;
         [SerializeField] private float _potionHeight = 1f;
         [SerializeField] private float _throwDuration = 1f;
@@ -30,6 +30,7 @@ namespace Player
         [SerializeField] Transform _potion;
 /*        [SerializeField] private LineRenderer throwLimitRenderer;*/
         [SerializeField] private LineRenderer trajectoryRenderer;
+        [SerializeField] private PotionEffectHandler _potionEffectHandler;
         private Vector3 _crosshairPosition;
         public Animator _animator;
         public Rigidbody2D rb2d;
@@ -54,14 +55,20 @@ namespace Player
 
         private void Update()
         {
-            ProcessInputs();
+            Movement();
+            DrinkPotion();
             //Animate();
             //Aim();
 /*            UpdateThrowLimit();*/
             //UpdateTrajectoryLine();
         }
 
-        public void ProcessInputs()
+        private void DrinkPotion()
+        {
+            if (Input.GetKeyDown(KeyCode.Q) && Potion is not null) _potionEffectHandler.Handle(Potion.name);
+        }
+
+        public void Movement()
         {
             var moveX = Input.GetAxisRaw("Horizontal");
             var moveY = Input.GetAxisRaw("Vertical");

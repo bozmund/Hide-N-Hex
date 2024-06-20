@@ -14,7 +14,7 @@ namespace Player
             switch (_playerState)
             {
                 case PlayerState.Walking:
-                    playerController.ProcessInputs();
+                    playerController.Movement();
                     break;
                 case PlayerState.Interacting:
                     break;
