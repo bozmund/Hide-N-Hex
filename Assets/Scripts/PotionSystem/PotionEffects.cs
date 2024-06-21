@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using Player;
+﻿using Player;
 using UnityEngine;
 
 namespace PotionSystem
@@ -14,6 +13,7 @@ namespace PotionSystem
         }
         public void ApplyWeakness()
         {
+            
         }
 
         public void ApplyUsefulness()
@@ -23,22 +23,18 @@ namespace PotionSystem
 
         public void ApplySwiftness()
         {
-            if (_player != null)
-            {
-                var speedEffect = new Effect(
-                    "SpeedBoost",
-                    10f,
-                    player => player._movementSpeed *= 2,
-                    player => player._movementSpeed /= 2
-                );
-
-                _player.AddEffect(speedEffect);
-                Debug.Log("Speed potion consumed. Player is now faster!");
-            }
+            _player.AddEffect(new Effect(
+                "SpeedBoost",
+                10f,
+                player => player._movementSpeed *= 2,
+                player => player._movementSpeed /= 2
+            ));
+            Debug.Log("Speed potion consumed. Player is now faster!");
         }
 
         public void ApplyStrength()
         {
+            
         }
 
         public void ApplyRecall()

@@ -5,12 +5,13 @@ namespace Utilities
     public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
         private static T _instance;
+        private static bool _awakeCalled = false;
 
         public static T Instance
         {
             get
             {
-                if (_instance == null)
+                if (_instance == null && _awakeCalled)
                 {
                     _instance = FindObjectOfType<T>();
 
@@ -28,6 +29,7 @@ namespace Utilities
 
         protected virtual void Awake()
         {
+            _awakeCalled = true;
             if (_instance == null)
             {
                 _instance = this as T;

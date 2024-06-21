@@ -1,6 +1,4 @@
-﻿
-
-using Player;
+﻿using Player;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Utilities;
@@ -37,9 +35,66 @@ namespace PotionSystem
 
         public void Handle(string potionName)
         {
+            var potionEffects = new PotionEffects(_playerMovement);
             switch (potionName)
             {
-                
+                case "CatcallingPotion":
+                    potionEffects.ApplyCatcalling();
+                    break;
+                case "ClothingPotion":
+                    potionEffects.ApplyClothing();
+                    break;
+                case "ConfusionPotion":
+                    potionEffects.ApplyConfusion();
+                    break;
+                case "HealingPotion":
+                    potionEffects.ApplyHealing();
+                    break;
+                case "HolyGrailPotion":
+                    potionEffects.ApplyHolyGrail();
+                    break;
+                case "InvisibilityPotion":
+                    potionEffects.ApplyInvisibility();
+                    break;
+                case "LevitationPotion":
+                    potionEffects.ApplyLevitation();
+                    break;
+                case "LiquidFlamePotion":
+                    potionEffects.ApplyLiquidFlame();
+                    break;
+                case "LowerSusPotion":
+                    potionEffects.ApplyLowerSus();
+                    break;
+                case "MightPotion":
+                    potionEffects.ApplyMight();
+                    break;
+                case "MindVisionPotion":
+                    potionEffects.ApplyMindVision();
+                    break;
+                case "ParalyticGasPotion":
+                    potionEffects.ApplyParalyticGas();
+                    break;
+                case "PurificationPotion":
+                    potionEffects.ApplyPurification();
+                    break;
+                case "RecallPotion":
+                    potionEffects.ApplyRecall();
+                    break;
+                case "StrengthPotion":
+                    potionEffects.ApplyStrength();
+                    break;
+                case "SwiftnessPotion":
+                    potionEffects.ApplySwiftness();
+                    break;
+                case "UsefulnessPotion":
+                    potionEffects.ApplyUsefulness();
+                    break;
+                case "WeaknessPotion":
+                    potionEffects.ApplyWeakness();
+                    break;
+                default:
+                    Debug.LogError("Unknown potion: " + potionName);
+                    break;
             }
         }
     }
