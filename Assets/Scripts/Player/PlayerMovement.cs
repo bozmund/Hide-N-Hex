@@ -30,7 +30,7 @@ namespace Player
         [SerializeField] private GameObject Potion;
         [SerializeField] Transform _potion;
         [SerializeField] private LineRenderer trajectoryRenderer;
-        private readonly PotionEffectHandler _potionEffectHandler = PotionEffectHandler.Instance;
+        private PotionEffectHandler _potionEffectHandler;
         private Vector3 _crosshairPosition;
         public Animator _animator;
         public Rigidbody2D rb2d;
@@ -44,6 +44,7 @@ namespace Player
 
         private void Start()
         {
+            _potionEffectHandler = PotionEffectHandler.Instance;
             rb2d = GetComponent<Rigidbody2D>();
             _animator = GetComponent<Animator>();
             SetupTrajectoryRenderer();
