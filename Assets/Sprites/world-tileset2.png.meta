@@ -1,0 +1,1376 @@
+fileFormatVersion: 2
+guid: 48e7e8f31925a0648b370dc67c66ff9c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: world-tileset2_22
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70287a6a32ec83a4ba03d99c2c90349f
+      internalID: -1962741547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_23
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 831a1e96e1f11a84fbb887587d0502a9
+      internalID: -1847966038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_24
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a3b756bf5e70c4489bb56cea104212d
+      internalID: -1607764806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_25
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d406c7c0fe2aa04083117e3f764f1bf
+      internalID: -199931221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_26
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e691417d6e1efe45a6e1ba3534a00ab
+      internalID: -429005503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_44
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66ab286c3fb19fe4b9d3d36958e0794a
+      internalID: 1286775359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_45
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22507e046fbf2714c8c5097b8bd57e9c
+      internalID: 1697667752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_46
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e89d78781d46b64b88115c332b9b30e
+      internalID: -210375151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_47
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a82aa3ebe865fc4ba260e59e1d03b7c
+      internalID: -1377661569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_48
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 176
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1052d4197717f084e9176ea5479da40d
+      internalID: 1387137608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_64
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a2b2a6a546dbe24dacfc0be165cddf1
+      internalID: -879040904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_65
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9899ffce1af1964dbe77ca4e40c97af
+      internalID: -630703453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_66
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31a0680daeedfc64bbde71c1413e6831
+      internalID: -231205170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_67
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce53d7adb88f7a14a8bafc84d85a650b
+      internalID: -1146630400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_85
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 279e96d265493f74b9991717a58eb0d6
+      internalID: -1587000367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_86
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a8627caa6e8b546b63d6f2a8b87ec9
+      internalID: 897290549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_87
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a6bb55a2e2eb9f4caf5d50b7b85af87
+      internalID: -492481460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_88
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdb6b28cb1e5027468c01c596bcf2126
+      internalID: -122876612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_89
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aef93c67726f95c4bb0fe96cbdad3317
+      internalID: 1096520489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_107
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08ecb1a6699f203439a318415b8ad500
+      internalID: -96422116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_108
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24b855d7f3954ec4a94c380d6ff30b0b
+      internalID: -206145399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_109
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07aff63dd54e1de4790fdb5dedaeb6ea
+      internalID: 462085720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_110
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9846d04abba5994780b9c379ee4dc78
+      internalID: -1327166073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_111
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb16f089cbcb0f04a838ed355684f807
+      internalID: 2028866775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_125
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f13b8bbd9ee34a488e9ad65da2217f3
+      internalID: 308517600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_126
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7abf332490458154aa7439473f15a51a
+      internalID: -1796108397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_127
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d70daa60ebd2b64db98addc56419b8d
+      internalID: -1300598107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_128
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f504e8e2e0c2a5948b8227c2eb602e56
+      internalID: -944606797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_143
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b8688bee76f1e64f9674ef387f228c1
+      internalID: 1814607150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_144
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac5e1821ec1743940b34680184d87a5b
+      internalID: -491629324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_145
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c92a47b3b6754549a1ae4a95c290e95
+      internalID: -1191014775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_146
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abe760a00440e9a4ba96c449a6b61ee1
+      internalID: 1125122631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_158
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3583cb1f3bf08b4da9e94c42de4c120
+      internalID: 301166746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_159
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecd375cc73551dd4c9c0becebb58113a
+      internalID: 1343131430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_160
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66149a23e654c604991f3c4e7252abde
+      internalID: -1302012510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_161
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 282ea55c96fa13c4f8ea75aa1186a21c
+      internalID: 608236137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_171
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1107454d91a7877418f1fd3cdf0fce9e
+      internalID: -559941364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_172
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d34764a404532149b80d0f1d166f037
+      internalID: -212756686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_173
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5b621009d0cc8e4dace75c17ba0540f
+      internalID: -772925423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_174
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82f408c9694500e46aa6a94493394620
+      internalID: 114091801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_188
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8659e580c5a3026498b1c142430bb57f
+      internalID: -1957169507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_189
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba9f3976e055418488d18fd9e49aea41
+      internalID: 914426799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_190
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b51f740a1212cce42acbbc4721f4e8b4
+      internalID: 2129915046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_191
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c87645d8f2fbfcc44af661c672948f5d
+      internalID: -1847280720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_206
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce386d90d1e3aa14a88d57484305eda4
+      internalID: 1238031759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_207
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0801a7989bfb8c8448a050f27aea3d3a
+      internalID: -415418038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_208
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c21043fdf2bb364c9e77dca30ac4e52
+      internalID: 1394751190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: world-tileset2_209
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e50a0b3184290d4bab9a5f57ac35ddb
+      internalID: 522301345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      world-tileset2_0: 656576397
+      world-tileset2_1: -96257455
+      world-tileset2_10: 1161025583
+      world-tileset2_100: 1391967686
+      world-tileset2_101: -2129671866
+      world-tileset2_102: 911328007
+      world-tileset2_103: 1539680860
+      world-tileset2_104: -1435938428
+      world-tileset2_105: 1535520753
+      world-tileset2_106: 1665442943
+      world-tileset2_107: -96422116
+      world-tileset2_108: -206145399
+      world-tileset2_109: 462085720
+      world-tileset2_11: 97851529
+      world-tileset2_110: -1327166073
+      world-tileset2_111: 2028866775
+      world-tileset2_112: 1264703251
+      world-tileset2_113: -535118475
+      world-tileset2_114: 1268043799
+      world-tileset2_115: -1814661093
+      world-tileset2_116: -63049817
+      world-tileset2_117: -489626632
+      world-tileset2_118: 1251035195
+      world-tileset2_119: 674886500
+      world-tileset2_12: 834248802
+      world-tileset2_120: -2091489687
+      world-tileset2_121: 1034523180
+      world-tileset2_122: -1392547285
+      world-tileset2_123: -1240779629
+      world-tileset2_124: -1235089095
+      world-tileset2_125: 308517600
+      world-tileset2_126: -1796108397
+      world-tileset2_127: -1300598107
+      world-tileset2_128: -944606797
+      world-tileset2_129: 68214036
+      world-tileset2_13: -333255948
+      world-tileset2_130: 1735394732
+      world-tileset2_131: -554649164
+      world-tileset2_132: -501497421
+      world-tileset2_133: 597751231
+      world-tileset2_134: 188016927
+      world-tileset2_135: -529049941
+      world-tileset2_136: 1617455235
+      world-tileset2_137: -651384500
+      world-tileset2_138: -347557302
+      world-tileset2_139: -2030615399
+      world-tileset2_14: -1590396181
+      world-tileset2_140: 351206305
+      world-tileset2_141: 456618745
+      world-tileset2_142: 819212290
+      world-tileset2_143: 1814607150
+      world-tileset2_144: -491629324
+      world-tileset2_145: -1191014775
+      world-tileset2_146: 1125122631
+      world-tileset2_147: 435686567
+      world-tileset2_148: 1551046852
+      world-tileset2_149: -1362305665
+      world-tileset2_15: 1598588328
+      world-tileset2_150: 2120741871
+      world-tileset2_151: 603613696
+      world-tileset2_152: -477972564
+      world-tileset2_153: 991108848
+      world-tileset2_154: -271339858
+      world-tileset2_155: 440760384
+      world-tileset2_156: -1585779418
+      world-tileset2_157: -1035681685
+      world-tileset2_158: 301166746
+      world-tileset2_159: 1343131430
+      world-tileset2_16: 302671800
+      world-tileset2_160: -1302012510
+      world-tileset2_161: 608236137
+      world-tileset2_162: -678633723
+      world-tileset2_163: 353185098
+      world-tileset2_164: -116127784
+      world-tileset2_165: 1741779425
+      world-tileset2_166: -1932531662
+      world-tileset2_167: 206730855
+      world-tileset2_168: -1024534792
+      world-tileset2_169: 2021580796
+      world-tileset2_17: 1682513489
+      world-tileset2_170: 126710405
+      world-tileset2_171: -559941364
+      world-tileset2_172: -212756686
+      world-tileset2_173: -772925423
+      world-tileset2_174: 114091801
+      world-tileset2_175: 30183947
+      world-tileset2_176: 468912186
+      world-tileset2_177: -1638636586
+      world-tileset2_178: -2085021084
+      world-tileset2_179: -611050938
+      world-tileset2_18: -1025064365
+      world-tileset2_180: 1770388281
+      world-tileset2_181: -1815616379
+      world-tileset2_182: -1344101289
+      world-tileset2_183: 1098012068
+      world-tileset2_184: 1228639368
+      world-tileset2_185: 1538504271
+      world-tileset2_186: -2098310870
+      world-tileset2_187: 1490852191
+      world-tileset2_188: -1957169507
+      world-tileset2_189: 914426799
+      world-tileset2_19: 769983272
+      world-tileset2_190: 2129915046
+      world-tileset2_191: -1847280720
+      world-tileset2_192: -1702051191
+      world-tileset2_193: 830690573
+      world-tileset2_194: 1784530342
+      world-tileset2_195: -33067861
+      world-tileset2_196: -1081781277
+      world-tileset2_197: -1529945994
+      world-tileset2_198: 1583606725
+      world-tileset2_199: 1486279369
+      world-tileset2_2: 224091395
+      world-tileset2_20: -1390453518
+      world-tileset2_200: 1580178810
+      world-tileset2_201: -373426436
+      world-tileset2_202: 813572049
+      world-tileset2_203: -1593194767
+      world-tileset2_204: -1840296523
+      world-tileset2_205: 549409161
+      world-tileset2_206: 1238031759
+      world-tileset2_207: -415418038
+      world-tileset2_208: 1394751190
+      world-tileset2_209: 522301345
+      world-tileset2_21: 1616511307
+      world-tileset2_210: 88495332
+      world-tileset2_211: -969105911
+      world-tileset2_212: 1623641055
+      world-tileset2_213: -2140720797
+      world-tileset2_214: -1238300915
+      world-tileset2_215: -1876995943
+      world-tileset2_216: -1281977398
+      world-tileset2_217: -258308578
+      world-tileset2_218: 1009593542
+      world-tileset2_219: 1205733898
+      world-tileset2_22: -1962741547
+      world-tileset2_220: 1595225434
+      world-tileset2_221: -1043766431
+      world-tileset2_222: -811693231
+      world-tileset2_223: 1943076647
+      world-tileset2_224: 294662714
+      world-tileset2_225: 1692479197
+      world-tileset2_226: 1832571882
+      world-tileset2_227: -1072965047
+      world-tileset2_228: -64632286
+      world-tileset2_229: 135656592
+      world-tileset2_23: -1847966038
+      world-tileset2_230: 261489349
+      world-tileset2_231: -1154344064
+      world-tileset2_232: -984883662
+      world-tileset2_233: 1268131610
+      world-tileset2_234: -40287700
+      world-tileset2_235: -2015968997
+      world-tileset2_236: 1827882944
+      world-tileset2_237: -1997631052
+      world-tileset2_238: -2134013002
+      world-tileset2_239: 795189558
+      world-tileset2_24: -1607764806
+      world-tileset2_240: 78901022
+      world-tileset2_241: -719100376
+      world-tileset2_242: -2129769784
+      world-tileset2_243: 745018085
+      world-tileset2_244: 1537299581
+      world-tileset2_245: -1919793187
+      world-tileset2_246: -1568860452
+      world-tileset2_247: 1513110349
+      world-tileset2_248: 614201085
+      world-tileset2_249: -98584465
+      world-tileset2_25: -199931221
+      world-tileset2_250: 1854480343
+      world-tileset2_251: -1013839216
+      world-tileset2_252: -1000288476
+      world-tileset2_253: 1647601389
+      world-tileset2_26: -429005503
+      world-tileset2_27: -1922746496
+      world-tileset2_28: -1592414575
+      world-tileset2_29: 2049212148
+      world-tileset2_3: 1973111227
+      world-tileset2_30: -329227147
+      world-tileset2_31: 637203687
+      world-tileset2_32: 835580182
+      world-tileset2_33: 473947265
+      world-tileset2_34: -1323344126
+      world-tileset2_35: 248262974
+      world-tileset2_36: -576149075
+      world-tileset2_37: -1635485465
+      world-tileset2_38: -1711291672
+      world-tileset2_39: -1251894541
+      world-tileset2_4: -157757876
+      world-tileset2_40: 125239323
+      world-tileset2_41: 1121574680
+      world-tileset2_42: -1941169725
+      world-tileset2_43: -1672758514
+      world-tileset2_44: 1286775359
+      world-tileset2_45: 1697667752
+      world-tileset2_46: -210375151
+      world-tileset2_47: -1377661569
+      world-tileset2_48: 1387137608
+      world-tileset2_49: -744036472
+      world-tileset2_5: 1187586129
+      world-tileset2_50: -663852949
+      world-tileset2_51: -834182692
+      world-tileset2_52: -509877127
+      world-tileset2_53: 1290892676
+      world-tileset2_54: -64708429
+      world-tileset2_55: -1389133178
+      world-tileset2_56: 42256515
+      world-tileset2_57: 778025536
+      world-tileset2_58: -745617331
+      world-tileset2_59: 2099619436
+      world-tileset2_6: 1419871654
+      world-tileset2_60: 368042728
+      world-tileset2_61: 1260212439
+      world-tileset2_62: -20243184
+      world-tileset2_63: 1496839771
+      world-tileset2_64: -879040904
+      world-tileset2_65: -630703453
+      world-tileset2_66: -231205170
+      world-tileset2_67: -1146630400
+      world-tileset2_68: -1175807901
+      world-tileset2_69: 619824692
+      world-tileset2_7: 1224362302
+      world-tileset2_70: 562122023
+      world-tileset2_71: -640424370
+      world-tileset2_72: -724803255
+      world-tileset2_73: 1642428246
+      world-tileset2_74: 752637712
+      world-tileset2_75: -238365464
+      world-tileset2_76: -1370218244
+      world-tileset2_77: -166985254
+      world-tileset2_78: -939308395
+      world-tileset2_79: 893820691
+      world-tileset2_8: -946715093
+      world-tileset2_80: -2058870161
+      world-tileset2_81: 590607331
+      world-tileset2_82: 1136525581
+      world-tileset2_83: 1195416532
+      world-tileset2_84: 679127805
+      world-tileset2_85: -1587000367
+      world-tileset2_86: 897290549
+      world-tileset2_87: -492481460
+      world-tileset2_88: -122876612
+      world-tileset2_89: 1096520489
+      world-tileset2_9: 100584746
+      world-tileset2_90: 2014092671
+      world-tileset2_91: -2106158248
+      world-tileset2_92: 2084808664
+      world-tileset2_93: -889796901
+      world-tileset2_94: 97574721
+      world-tileset2_95: 981851544
+      world-tileset2_96: -366401590
+      world-tileset2_97: -422590619
+      world-tileset2_98: 250375894
+      world-tileset2_99: 890098153
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -7,6 +7,7 @@ public class ItemDescription : MonoBehaviour, IPointerClickHandler
 {
     private Image image;
     public Text descriptionText; // Reference to the Unity UI Text component
+    public PotionInHand potionInHand;
 
     // Dictionary to map sprite names to their descriptions
     private Dictionary<string, string> spriteDescriptions = new Dictionary<string, string>()
@@ -56,6 +57,10 @@ public class ItemDescription : MonoBehaviour, IPointerClickHandler
             // Get the sprite name
             string spriteName = image.sprite.name;
 
+            if(spriteName.Contains("Potion")){
+                potionInHand.potionName = spriteName;
+            }
+            
             // Check if the sprite name exists in the dictionary
             if (spriteDescriptions.ContainsKey(spriteName))
             {
