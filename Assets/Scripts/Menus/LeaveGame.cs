@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class ExitGame : MonoBehaviour
 {
     public PlayerPosition playerPositionData;  // Reference to the ScriptableObject
+    public GameObject gameMenu;  // Reference to the GameMenu GameObject
 
     public void QuitGame()
     {
@@ -23,6 +24,16 @@ public class ExitGame : MonoBehaviour
         else
         {
             Debug.LogWarning("Player GameObject not found with tag 'Player'. Player state not saved.");
+        }
+
+        // Set the GameMenu GameObject to inactive
+        if (gameMenu != null)
+        {
+            gameMenu.SetActive(false);
+        }
+        else
+        {
+            Debug.LogWarning("GameMenu GameObject reference is not set.");
         }
 
         // Load the main menu scene

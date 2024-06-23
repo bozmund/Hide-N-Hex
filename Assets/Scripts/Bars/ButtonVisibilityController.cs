@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class ButtonInCabinCrafting : MonoBehaviour
 {
-    public Button button;
+    public List<Button> buttons;
     private GameObject player;
     private GameObject craftingZone;
     private bool isPlayerInCraftingZone;
@@ -30,18 +31,11 @@ public class ButtonInCabinCrafting : MonoBehaviour
         if (scene.name == "Cabin")
         {
             FindPlayerAndCraftingZone();
-            if (player != null && craftingZone != null && isPlayerInCraftingZone)
-            {
-                button.gameObject.SetActive(true);
-            }
-            else
-            {
-                button.gameObject.SetActive(false);
-            }
+            ToggleButtons(player != null && craftingZone != null && isPlayerInCraftingZone);
         }
         else
         {
-            button.gameObject.SetActive(false);
+            ToggleButtons(false);
         }
     }
 
@@ -65,6 +59,17 @@ public class ButtonInCabinCrafting : MonoBehaviour
     {
         isPlayerInCraftingZone = isInZone;
         CheckSceneAndToggleButton(SceneManager.GetActiveScene(), LoadSceneMode.Single);
+    }
+
+    void ToggleButtons(bool isActive)
+    {
+        foreach (Button button in buttons)
+        {
+            if (button != null && button.gameObject != null)
+            {
+                button.gameObject.SetActive(isActive);
+            }
+        }
     }
 }
 
