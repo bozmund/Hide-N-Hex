@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Scene
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -371,9 +371,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 256.60004}
-    m_SelectedIDs: bef10100
-    m_LastClickedID: 127422
-    m_ExpandedIDs: 00000000fa97000076f10100
+    m_SelectedIDs: 189b0000
+    m_LastClickedID: 39704
+    m_ExpandedIDs: 00000000ca9a0000049b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -401,7 +401,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fa970000
+    m_ExpandedIDs: 00000000ca9a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -541,9 +541,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: f6880000
-      m_LastClickedID: 35062
-      m_ExpandedIDs: fefafffff4ffffff487b0000b47d00007a800000348600006887000018890000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: fefaffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -890,7 +890,7 @@ MonoBehaviour:
       containerId: overlay-container--right
       floating: 0
       collapsed: 0
-      displayed: 1
+      displayed: 0
       snapOffset: {x: 48, y: 48}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
@@ -936,9 +936,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3.3733568, y: -2.2569156, z: -1.0415528}
+    m_Target: {x: 3.8018866, y: -4.4761667, z: -0.99706036}
     speed: 2
-    m_Value: {x: 3.3733568, y: -2.2569156, z: -1.0415528}
+    m_Value: {x: 3.8018866, y: -4.4761667, z: -0.99706036}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -988,9 +988,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 11.127927
+    m_Target: 6.678681
     speed: 2
-    m_Value: 11.127927
+    m_Value: 6.678681
   m_Ortho:
     m_Target: 1
     speed: 2
