@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -95,7 +95,7357 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: cave-hallway_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1672
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 362ef599ee732184880865ddf2b1d8a4
+      internalID: 901322006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1672
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9077e39874e6da24f896843750254532
+      internalID: 514547524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1672
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ff84c95b51d734fb265c2d1c2b86d9
+      internalID: 2119661795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1672
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31f20b38f4151654391901ca1c6ceb41
+      internalID: 1476896910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1672
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e9b3ba7e5587514fbdc47842ea28c5d
+      internalID: -38927449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1672
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6978bce568377e49983f409e5877bf3
+      internalID: -1914887932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1672
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4d11298461f8694a982991bfab57b24
+      internalID: 475128523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_7
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1672
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee9d466bfad2ced4794b2e271eaf5cc4
+      internalID: 1081630507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1672
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711b680796f656744912805ca0bb3c2a
+      internalID: -1738107396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_9
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1672
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b272bdc4524d8643a4402732d6c21bc
+      internalID: -809808987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_10
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1672
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26e58f954ce16f04f8ac5bc25225798d
+      internalID: 1872756016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_11
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 1672
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ece025fa096fd5a47a059365da9c05bb
+      internalID: 382461272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_12
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1672
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58ac9673a56a52c44ab336759abc2834
+      internalID: 442540310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_13
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 1672
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c52c33834937ed04fbcf093ee560f71e
+      internalID: 415978213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_14
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1672
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3c16be061554114fa817badb21bddd1
+      internalID: 267612185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_15
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1672
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17d336c1eadf2d543abf8a9a184b8c5a
+      internalID: 1559564741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_16
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1672
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d57f47dc34718fc44a0653fe77b0951d
+      internalID: 672253673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_17
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 1672
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 787a83b588eec7741938ff0c2ae5a7bf
+      internalID: -80034356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_18
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1672
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76e883530df93364ab0608401793b5fb
+      internalID: -547723360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_19
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 1672
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29d2432e899729e42b8d866252283636
+      internalID: -391305283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_20
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1672
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad7b31c21dbc84742a90c15bdab72669
+      internalID: -657749716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_21
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 1672
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6910dd74777b3a4b8320cc2b8e0171a
+      internalID: -1073117556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_22
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 1672
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e90a5c55d08acf64a871b89e49461b68
+      internalID: 348521429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_23
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 1672
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76f001f2b4d2c8c478f2f0f7e58e8d52
+      internalID: -1401455723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_24
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1672
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d5d5e38a67a24845b497a0a299071cc
+      internalID: 443095504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1544
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d87e033a8504bfa4a8d51efb01b87482
+      internalID: -259145893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_26
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1544
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cb1ba0b9807d6f4e92e90c89fa16f86
+      internalID: -367335139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_27
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1544
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b9a93d7d2591ae4d84b2232b203e4e0
+      internalID: -861413562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_28
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1544
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd9d99f3ff53bc468d4ac1998844d04
+      internalID: -29907032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_29
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1544
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf611418faad848428246547682282a8
+      internalID: 161874503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_30
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1544
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fbb229b6d2051041b7b795e36cc1275
+      internalID: 1808929391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_31
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1544
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71999c2c62eb15e4b8d87bacea9344ab
+      internalID: 1536318484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_32
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1544
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18ae9294776b9cc4c9d824f80086ac4c
+      internalID: -1358165546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_33
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1544
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72277e49a5a2f8d488f61d332e341468
+      internalID: -1525433341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_34
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1544
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d84cd1ebf5d53ea4e8560d481e4ebb15
+      internalID: 580728273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_35
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1544
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e83e531741e624c97e4b08107b1e53
+      internalID: -541984727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_36
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 1544
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d680dcdf89997084ea580d98d15abb16
+      internalID: -184304054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_37
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1544
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d6514a47b461984f8901fa6e5e2d52b
+      internalID: 1813314463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_38
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 1544
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44f2bbc826a332e428f240c4d301c986
+      internalID: 634266833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_39
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1544
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d440962bf8169d649bcea671905f7803
+      internalID: 757010594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_40
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1544
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfefe81d802c12146b640aaf9c2bdd08
+      internalID: 1619949200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_41
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1544
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37db615b0bef6c0439e371a5cd0f9b40
+      internalID: 815262036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_42
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 1544
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 609c7fc1e8b2d9a46a5673b3eb40e5be
+      internalID: 1542583696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_43
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1544
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b9eb319b3cc6764cbba65a815f353b9
+      internalID: -1559596750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_44
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 1544
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f7b388ca46dbfa4cb9980f975c9e8cf
+      internalID: -943082576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_45
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1544
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8da0b84d983d344b8543f7a2e020f78
+      internalID: 261720577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_46
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 1544
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 361c1d0bd22f4c74593a407fa0b27928
+      internalID: 424408641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_47
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 1544
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f2cc0dd0c9a7c8429cb14179cd47ec4
+      internalID: -693246330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_48
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 1544
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4041f3055a856d8478490b917c5100a2
+      internalID: -81165227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_49
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1544
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73d8002dca62b604da58009de8ab3a8c
+      internalID: -1281475312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1416
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f1bddfd5e1f2824aa88f2bf0df53600
+      internalID: -970557072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_51
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1416
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60fe67e79dd95bd48ad57a14351ae1c9
+      internalID: 647863412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_52
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1416
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5cc386a57276b64a87102b2b4b26f16
+      internalID: 1334211762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_53
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1416
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2022cee1c474fd4daece91ab998314b
+      internalID: -2135318300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_54
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1416
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f17969bf74245548936995427d83961
+      internalID: -211886489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_55
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1416
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 301c595ac1c410a4499d4706d8a5c111
+      internalID: 651843170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_56
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1416
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1da664344813c494288147c513b1d77d
+      internalID: 1457401770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_57
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1416
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d5b080a40f91264d853ff06e9201d16
+      internalID: -624669880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_58
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1416
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e094e4406b92f414a8385e866737c6f9
+      internalID: 202865012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_59
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1416
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29e899da9c684c14988dbf63885ad73d
+      internalID: -1227346050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_60
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1416
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cecc02e2316084b488aae6b459cfce8e
+      internalID: 2065688890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_61
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 1416
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61dcc40f6e5fa084db7a431fa6171a05
+      internalID: -638585077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_62
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1416
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30b801d29a1a23943a5b00492c3eff45
+      internalID: 2029560147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_63
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 1416
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc3e179179ca23b4793a383f76b5ca2c
+      internalID: -2090372080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_64
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1416
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cedeb57af4680d14b9727c27e55f388a
+      internalID: 49248706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_65
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1416
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d3cc07911115e44bbc673baa01f54d2
+      internalID: -1717506177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_66
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1416
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 471b93096916bdd48aab97e813b9c533
+      internalID: 1121401291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_67
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 1416
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab58194d4a668d24ca4b438613a85960
+      internalID: -129855237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_68
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1416
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d643d08c65b80874caf0cd5a1f92eb56
+      internalID: 1657424002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_69
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 1416
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ba9cb7f659777548a146e34d0b01a1d
+      internalID: 2026322878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_70
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1416
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f39e219e2923d478a8c11675964f3e
+      internalID: 561240070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_71
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 1416
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d47d5710273ce4593394a467b09a6d
+      internalID: 496848943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_72
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 1416
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67cba2c4e2311514c9ae4b601be52807
+      internalID: 1078533421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_73
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 1416
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f78902823d7bff4ab0159bb83b7cc7a
+      internalID: 834338407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_74
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1416
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1605a9d86d39b241aa905a4f6fe0866
+      internalID: -1654386967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_75
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1288
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1028c963d99a5764aaa77c279928c79a
+      internalID: -437438549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_76
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1288
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5ae8b369f6c34847a8b108ec3ec566c
+      internalID: -1887529534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_77
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1288
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc9461f0f6aafd541956e78fbb295646
+      internalID: 1844199218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_78
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1288
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b0b727c4a4810d46ad04137c774573c
+      internalID: 1793746206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_79
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1288
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42d0a063ea9da314a98ff339fd61c51f
+      internalID: 2004648023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_80
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1288
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d928ddb919fd7a47b3853268ee22a49
+      internalID: -1541330360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_81
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1288
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7313a59f2ef9304ebf95427ea1ed825
+      internalID: 1879886958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_82
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1288
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72872de4d33608e41bd05a0199f19617
+      internalID: -2070557654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_83
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1288
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79b2c9b77017acb469ed84d50075a9da
+      internalID: -703994206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_84
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1288
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec040280d89353c46bc4e7f44cbb02ea
+      internalID: 1812307121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_85
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1288
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c24acc950697dd1408d731f8a5bf2879
+      internalID: 280652134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_86
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 1288
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a06b9ac42960df4e8c12bb85f4734a0
+      internalID: 850788563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_87
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1288
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79c4efb260f89a44b9a8f168d9787560
+      internalID: -65394505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_88
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 1288
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a6a8fa4a4b821d47b1a46f4b621e3fc
+      internalID: 139717100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_89
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1288
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c275ed4234ff0b43a0ec85d03ec0bbd
+      internalID: -1749355352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_90
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1288
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db93d24787271474495601008c39f3df
+      internalID: -2070789395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_91
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1288
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78b6125025c1bf94c83d8e7265e75c36
+      internalID: 1859773427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_92
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 1288
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 519a5d98fa3795043b28bdc00efd1427
+      internalID: 646757617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_93
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1288
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a39b96086f160147b564b99d25f559c
+      internalID: 1216285012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_94
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 1288
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3893e8e7c487af46af2d832d3b05c43
+      internalID: 785851506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_95
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1288
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca2ab784197b40c4db1c899b582f57eb
+      internalID: 9346657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_96
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 1288
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa2954f02c27163439ea694c64fc540a
+      internalID: -1707996143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_97
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 1288
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a35e907af3dce984b94802a40e15aa75
+      internalID: 1380097322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_98
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 1288
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f18a424021feb7149abba31092dc7661
+      internalID: 1115025405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_99
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1288
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e89cf7d33b2606439be7c5e4acec009
+      internalID: -1509198079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_100
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1160
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9e4f286a1f59f3428b9fe1947732d2a
+      internalID: 983059384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_101
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1160
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1cc9db8a78ffe843b392bcf780bb706
+      internalID: 1509971576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_102
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1160
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a89e9feaa54b3444d9874faff0a207e4
+      internalID: 300269614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_103
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1160
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 923ea2428e965d74dbeebdbcd116caf4
+      internalID: 1505377289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_104
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1160
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0058b4fb6225e2643a148165c20e2860
+      internalID: 1513244485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_105
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1160
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f28c0442ea2d60543897abdd5d1c4753
+      internalID: -1730129097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_106
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1160
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9608b21045b1514ab35a4c0fc56c04a
+      internalID: -1194367014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_107
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1160
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d56b9db7e7ff2754ab9f9e445a5801fa
+      internalID: 1056957960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_108
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1160
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90dc652a335d5be4c9de83a509a27456
+      internalID: -237295622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_109
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1160
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 827f25155d60a0244805c9f23fae12c7
+      internalID: 809187690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_110
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1160
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f5f6be6f6f41ac40a87f14494611bf0
+      internalID: 1424652190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_111
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 1160
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be2acd64a63ae0a4394899765918248d
+      internalID: -357508417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_112
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1160
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3406319de7a2ec4eaa2c4efda8e1af0
+      internalID: -1216741265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_113
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 1160
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b0befc7e487c2146a7be04e9d8817c8
+      internalID: -1434986637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_114
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1160
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bef1db6451f8e5247a282c6d7257c8e3
+      internalID: 244547382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_115
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1160
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc0f4a00e998c1e4ca2768d387693cdd
+      internalID: -1459291863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_116
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1160
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af82311ea1767274bae07c5e6fd21e6b
+      internalID: 457556401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_117
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 1160
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7d72dd4061e3e64f92e6e5b201724c2
+      internalID: -1815817275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_118
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1160
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8df3743b2e0f8a43a399d53a1177646
+      internalID: 673321205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_119
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 1160
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 404e6e20dd9f08d48b48428390f5a6ac
+      internalID: -449835904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_120
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1160
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2ea67270c64a1f41ad56d292826f35f
+      internalID: -142438095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_121
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 1160
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa2f2410514d7640890f3ff41eac8d3
+      internalID: 314350016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_122
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 1160
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0921dde075c6cd643b99d24b132c82af
+      internalID: -1625380487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_123
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 1160
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d35983c0e0e47488f48768274fbf1c
+      internalID: -215772932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_124
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1160
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35cec23180f649044910124728a04513
+      internalID: 616759929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_125
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1032
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2380e5664ee97f49b5c3071c248f1f4
+      internalID: -922729698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_126
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1032
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b75ae65376b957419faec92bb25f95a
+      internalID: 1637711651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_127
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1032
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 013691a3307427a44b266ea2eb850b5e
+      internalID: 1732467865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_128
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1032
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e430d7962d26c264192c49af5aee39fd
+      internalID: -378668124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_129
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1032
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ffcdf47b0c7304d8cde88cf83a805e
+      internalID: -1049133519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_130
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1032
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe04b9cf8b4ed243aabbad077a1c7a4
+      internalID: 237639086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_131
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 1032
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f74945f7c88ba340bcdc00d97ffc5a0
+      internalID: 167965352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_132
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1032
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 919b08521e91f874bbf7fa3cf8559882
+      internalID: 686827436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_133
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1032
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bda039a647bc650468ce011b110a279e
+      internalID: 1848201028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_134
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1032
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc37cfe399ba7f64f959c1617633138a
+      internalID: 1659570820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_135
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1032
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca676bfa035477429e989c4d1b01f95
+      internalID: -842332045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_136
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 1032
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08c36db241428584c9fe5db14c323f62
+      internalID: -23436548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_137
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 1032
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83667bbe0a6909a4ca0f15332961cf75
+      internalID: -1297134154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_138
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 1032
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3bebfb1c237b804e9a88e446fff40ce
+      internalID: -859660065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_139
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1032
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55f988a3a2828545bc16d149659f1af
+      internalID: 1250061335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_140
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1032
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd8a6e9aa87ce094dba72be7281f5281
+      internalID: -699060811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_141
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1032
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60a101f26d5b51d42af5f80bf8e224f2
+      internalID: 355975389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_142
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 1032
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b77813160d623bc4ab41cb9f077bf687
+      internalID: -1137669323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_143
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1032
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56c556f782f943344b0958c63f4c5bb8
+      internalID: -1101116738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_144
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 1032
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4c10c71dc5768b4080510119018bd41
+      internalID: 726182747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_145
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1032
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3e49f7fddfd8aa44afb63cf6ccb90bb
+      internalID: -1052202420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_146
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 1032
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 186689f16f699f545b5494318ddc3a59
+      internalID: -293487654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_147
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 1032
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fa8e1e3be725314e8eeb232985f93f2
+      internalID: 1755845651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_148
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 1032
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23bea051ad28b4948844424e8feb15a9
+      internalID: 1079453504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_149
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1032
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78f44699f40f42442b8cb062a1011338
+      internalID: -685766364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_150
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 904
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc476fc3abce8564694bbed508aa1532
+      internalID: -669085608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_151
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 904
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ae576f8fd5451743a7fc341b6d17fa5
+      internalID: -1451674383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_152
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 904
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d25bc4529b64a044e8f9e6bc153afcd2
+      internalID: -2105026185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_153
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 904
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d463bdf4f999f91408451aef38891748
+      internalID: -1924265371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_154
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 904
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b33f0fc22ee885143b3d40cb5508e284
+      internalID: -33393385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_155
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 904
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80c7df9f909a9d84b9a82a190ba48c6e
+      internalID: 1746815182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_156
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 904
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e355a637cb97d5744978496ceaebd075
+      internalID: -1705740512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_157
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 904
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92d0007d729734841afd4d9ab53a3291
+      internalID: 412843124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_158
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 904
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b662bd9d58f8f5d4fae6dc11c3d6ec76
+      internalID: 153800405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_159
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 904
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bee6793f1072d9418fe5726d267cec7
+      internalID: 678848658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_160
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 904
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60fc46d2e77a00e4c8b442dc2e92ad4c
+      internalID: -1259390674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_161
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 904
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82486b81d930b364894697d99e2842cd
+      internalID: 730338972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_162
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 904
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43e426fbcd6e60143ac5a88bf592e2d9
+      internalID: -33962336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_163
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 904
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77e2a8f47e48cf84fbd8633b2132ea6e
+      internalID: -446881419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_164
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 904
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b7052a9771de2e4f95849b09e36ca90
+      internalID: -1726063707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_165
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 904
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a20b7804a2d7de42b290fd5dbd68a4c
+      internalID: -806036802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_166
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 904
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79124ae2c63b4614a9911d0a09441bdd
+      internalID: 1253188509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_167
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 904
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be941f2e4c19fce4696e3a9f482e87ce
+      internalID: 1227314017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_168
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 904
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40f01d3460936d64cac237907db36a2a
+      internalID: 1378774073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_169
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 904
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91df99e66bbba1040948cded9424c009
+      internalID: -899896110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_170
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 904
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aea484fc844b0f40831edf0ab231f18
+      internalID: -864102449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_171
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 904
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 798c6c2e451406f4b9708816f3200e6d
+      internalID: 381874039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_172
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 904
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8770f625b68389f4ea43e7dc668a6118
+      internalID: 468725059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_173
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 904
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03ee52d122d0fe34ba2b631487849016
+      internalID: -885525899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_174
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 904
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33829c582055a624888279d923aadcba
+      internalID: 404929271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_175
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 776
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59bcc9b787aabf44383e0c05a8547db9
+      internalID: -1879094316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_176
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 776
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe66115f230b004087d441040a17a8b
+      internalID: 2141441336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_177
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 776
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f72232bb64a51f4282b112898e2fa22
+      internalID: -1052661776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_178
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 776
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e89234e68a1b6584e86a0fc370699d43
+      internalID: -1601118225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_179
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 776
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ea167bf8cb251949ad005ceb8a55cb9
+      internalID: -675923892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_180
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 776
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f60f37d4508c714eb141e3fbd8ffa0a
+      internalID: -1461002850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_181
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 776
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f58b47444e3b6144994181bb6abac63
+      internalID: 601314373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_182
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 776
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 953dc6b80aea6404db919eb686042966
+      internalID: -207270460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_183
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 776
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b96482c779869d140967cf8f54a61600
+      internalID: 1662893341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_184
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 776
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92ae68b85604a545ac8870938f1de5f
+      internalID: 2075278712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_185
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 776
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61ca625a277213542b51bf3b584835b9
+      internalID: 2113814771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_186
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 776
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb9857e94d2c6ae48b48ce1459118baf
+      internalID: 1850621525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_187
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 776
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d0205d8a32dd2459d8ba29facb95e8
+      internalID: -1905770034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_188
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 776
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a09ed4ae19ff86d4fb3d176ef5a01b3b
+      internalID: -214527113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_189
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 776
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5c14d384171a0e4eb99668d4f10a5a7
+      internalID: -835447206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_190
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 776
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea85223152afb5f4abbb52930cea3d88
+      internalID: 1831966665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_191
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 776
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13dfbe3ce07558a498149f8b9039f9d3
+      internalID: 414241999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_192
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 776
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7f11ad8ffff03c4394117a5f27ffc1a
+      internalID: 1866765853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_193
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 776
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2250c93b689f49047986155310390fe0
+      internalID: 842882654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_194
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 776
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f816fe663ae72324ea80da8b361c8a56
+      internalID: 736504213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_195
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 776
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4266f362572490442bf10a541940f433
+      internalID: -445113470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_196
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 776
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ab6f5fa2a5174d4fabe4bcdb7afe670
+      internalID: 1667629785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_197
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 776
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39dceba65808d104eb24bf3c5ce82226
+      internalID: -1744656607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_198
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 776
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8be0a63d3edab05419471cec3c770e95
+      internalID: -2022967723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_199
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 776
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e00b8e6449be1584b973306bcb9d3732
+      internalID: -886581871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_200
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 648
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 944ce9a556e205c4d9f7e8be5390b038
+      internalID: 1767438236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_201
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 648
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1268dd031ae49b6449929e2eab88785c
+      internalID: 1901579090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_202
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 648
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d353a851098be3346880be73224b19de
+      internalID: -4622731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_203
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 648
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c76f8681e3f93b40af88c704c7387d6
+      internalID: 1722161320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_204
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 648
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50b73f2bfbb80b94cb4ee032dcc665fc
+      internalID: 166991583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_205
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 648
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 889be2a284e65524e8dde6aba0756fd4
+      internalID: 981105372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_206
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 648
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9819259a7e970f543b8220c1b0e9e808
+      internalID: -1231776626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_207
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 648
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b43250e060c42b4caed76a409344ec1
+      internalID: -1802367116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_208
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 648
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce92ca9742919f46adc74d097aa3c7d
+      internalID: -1767557718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_209
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 648
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb08593495d883c429257f1da0ac785b
+      internalID: -522293529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_210
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 648
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2f95bd3c1c418945822e1bec7daf2e7
+      internalID: 1823321090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_211
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 648
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ab3ef3848a51d140afab16af29f6806
+      internalID: 920523828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_212
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 648
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e75907c089124c4f8069c48da1899bc
+      internalID: -1431755159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_213
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 648
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9fa7e5f21830264484799e0e98d76ca
+      internalID: 1330482462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_214
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 648
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c52dc042293768846a4dc489a5bebd52
+      internalID: 2070441690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_215
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 648
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fca96583007d3f40be9329ba035a4a8
+      internalID: 1009142968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_216
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 648
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47d51668a5979a348b6e1bcc754d24df
+      internalID: -2080399407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_217
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 648
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0508713c87fadf41b3a64cd6223232d
+      internalID: -680854474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_218
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 648
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bb03341b5a31204ea0afb67456e66ff
+      internalID: -792226018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_219
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 648
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ac87df82f74081428f2eb519587933b
+      internalID: 1361281961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_220
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 648
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9aaf4020651d1b469ed27c4e30638f8
+      internalID: 1852367058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_221
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 648
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 532e249a1cfff84408a65502371c6364
+      internalID: 803552387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_222
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 648
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6671654b15dfc84fa49a2a91675de10
+      internalID: 276031845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_223
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 648
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbd5ae13c0b29fc48860c6094f72d356
+      internalID: 599029297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_224
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 648
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2318bdd76d98ea645872869cd1dbc402
+      internalID: -592575352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_225
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 520
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25694af8c383d9447be6fc2238707410
+      internalID: 2135525526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_226
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 520
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d9fe0699c28eac40a99fb2768119866
+      internalID: 1341029567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_227
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 520
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 654e4cf25abd53d4781fdb5ac1107b3b
+      internalID: 1287778884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_228
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 520
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d52aca82f45f0c048b97004b89176e9a
+      internalID: -1488696042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_229
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 520
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5adabed7de4e6bb4086ce6f412699810
+      internalID: 1901004109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_230
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 520
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 634f21cbb10ea0a4f8c09728ae4ba359
+      internalID: -1723601796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_231
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 520
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aeb7fde52b6ead45a52af4003c150f2
+      internalID: -835908637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_232
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 520
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1de0277e0a859746aa7a224bc9b999b
+      internalID: -579525815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_233
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 520
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ad7d4087af76ec40a7687dc1bbe384f
+      internalID: -1251103090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_234
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 520
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df0a65a82c7c8484dafb794e39d17e33
+      internalID: -1206898983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_235
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 520
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf748508f39e99e49bcca4a5ee76c1e6
+      internalID: 1845215608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_236
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 520
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6d37836b8f39c0429cd6279c4fc1741
+      internalID: -1937099101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_237
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 520
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8155f162c8ca3841921007d6ef8189d
+      internalID: -388068736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_238
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 520
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3c6942d903cd44469bb9f7824d6093a
+      internalID: -1332791338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_239
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 520
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 983a71e4981ee6a42810e9376b33631c
+      internalID: 830434880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_240
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 520
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 372ccbf11eab6f34ebf6b571a0940c41
+      internalID: 469293194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_241
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 520
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae86d709d8c6bc54e9351ab07c437b03
+      internalID: -654776610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_242
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 520
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 471ecb38fab61c04bbb8b8c65f1f25aa
+      internalID: 1527600017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_243
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 520
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12833d081f2289746896839303fc4e8a
+      internalID: 1428087186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_244
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 520
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68695d0687c34e142b855156890170a0
+      internalID: 311913604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_245
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 520
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 764614d3a31f4a7489f6aed158ffcbfc
+      internalID: -2085507180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_246
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 520
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf597ec411186414caeb765641ff1f3e
+      internalID: -688808571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_247
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 520
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7b87b138c2f9b54b809dd1964c65f0a
+      internalID: -193703016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_248
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 520
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b59a82fe53a912345b42ff19b1e19123
+      internalID: -554066640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_249
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 520
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be5874637d5fb544ba81b699308083fe
+      internalID: 1826433492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_250
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 392
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64be37f7d67bdf94d9636dcd01e90c98
+      internalID: 1885556418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_251
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 392
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 472a3493c5f1165429829159abbcb34b
+      internalID: 1232238584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_252
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 392
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e4899eaa52f5a40b5d4bfeb6865c4a
+      internalID: -1239806739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_253
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 392
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 181d4a05e2c66d24cb8ef2be833025fe
+      internalID: -1210552569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_254
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 392
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8e4796173ef23c43a249323ea32f9a4
+      internalID: -1582177739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_255
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 392
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11f7f275d73292a41aeb8967bb73d810
+      internalID: -1254534858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_256
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 392
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cda3e7a62b1e8dc4092f70d1beabff51
+      internalID: 39747445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_257
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 392
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14bfb2ccbac06b44ab2890c612ab18b3
+      internalID: -1139624283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_258
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 392
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad3c9b6332db02944bc52c3b15bb1534
+      internalID: -1976630428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_259
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 392
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d7748fc8b63c024889cef59c66bfeef
+      internalID: 1190926943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_260
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 392
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f7e107fdcb26484ab07c494390f1ee7
+      internalID: -1046579027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_261
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 392
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aef4fe879f167c04595e1b90071d7ef7
+      internalID: 2004632498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_262
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 392
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72ad23deaaac8044292d8a5cbd53bf34
+      internalID: -631387624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_263
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 392
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8467da405a928284dba5ba45db1fe440
+      internalID: 169246265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_264
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 392
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45f31bc2ea69e2844b7386c3984080fd
+      internalID: 4773847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_265
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 392
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff506c4ac0bb7224a9d211b7ae2b6627
+      internalID: 606318143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_266
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 392
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8458f2a41d452d848970a838546ecb21
+      internalID: -1588862756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_267
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 392
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d278bbe382a3044cbca312def9217da
+      internalID: -1786731471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_268
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 392
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd622645a8072a4baa87912847b01eb
+      internalID: -2106020111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_269
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 392
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c03d850dfd199a64c9785fec62f89777
+      internalID: 847133081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_270
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 392
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c515b7c247f48a14cb450b0e38131a5e
+      internalID: -135522569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_271
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 392
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae96e10a3d73c9c449d8b1852ac90aa1
+      internalID: -664972169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_272
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 392
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caaf70dfc438c7a4ea46d58f48680ce8
+      internalID: -491562366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_273
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 392
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae3e98e79e63aa448a9cc513b511b8d9
+      internalID: -1650904416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_274
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 392
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbfe98f44fd7dc541b64c4a35d542a9e
+      internalID: -567460672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_275
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 264
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 985eaf30fa7ecdb489fce3de040646c2
+      internalID: -1374565054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_276
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 264
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 848c71794f464e64f9700fcc98af6144
+      internalID: -2016627810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_277
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 264
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ab55a90c89ce09468b9f6a8d50d0f83
+      internalID: 614529199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_278
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 264
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28f5330530233734083e918141b51720
+      internalID: 1401883285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_279
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 264
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47adbc53050434847a062824f2b9e9ca
+      internalID: -549963768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_280
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 264
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b382c2ba318c28246867924afa0f4eae
+      internalID: 252007197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_281
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 264
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f74177f557266324e93e369fa1b7d865
+      internalID: 1736482058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_282
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 264
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eb03ef5f0efa3d41aea2c8fafa635b3
+      internalID: 1468215533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_283
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 264
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25fccf38d00cb7d46809bd403b42abbb
+      internalID: -494406934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_284
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 264
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5080608dd3b2a24a81e2ad5d750a734
+      internalID: -706666104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_285
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 264
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52161f3f458f6604a849d8901e6bc80f
+      internalID: -1285780706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_286
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 264
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6209064f018a2b4db698ba662feaab1
+      internalID: -1092120124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_287
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 264
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4e73124296e74a4b8204dae8f3ecf30
+      internalID: -538518751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_288
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 264
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b1a262c8946fb54892fad90caa90f0f
+      internalID: -1940970417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_289
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 264
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90d4091dae650a2488c987a93937260a
+      internalID: 412663756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_290
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 264
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55cd00158c180a34497e61076e501d80
+      internalID: 1100470651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_291
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 264
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeb7477103c865345a7d0542dda083d2
+      internalID: -965943650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_292
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 264
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a87fab4027366449ad0e1516567081
+      internalID: 186722288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_293
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 264
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cadeb7e8248b184e95c0a28c7581c28
+      internalID: 819833481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_294
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 264
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18fa283e53fee1e4a99dd791930418bc
+      internalID: -2114445981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_295
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 264
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53c12b081ef1f1f439eeeabc4d3154a5
+      internalID: 1817084531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_296
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 264
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5308ccd7911bb894d8cbed3547428ed8
+      internalID: -1115400395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_297
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 264
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c67a2cc5da7b9d14d884dab9347e2ff5
+      internalID: -1115767021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_298
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 264
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ff71763019818e46a7709bff46af5f9
+      internalID: 496687083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_299
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 264
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03f4e4ea84d53dd4198b33f9b8f593da
+      internalID: 1644603582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_300
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 136
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00c7a851b4785384d81a8e0a35fe0aa6
+      internalID: 479545737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_301
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 136
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfd2861cd2f4a784d96d9e633ecbde36
+      internalID: -1639013784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_302
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 136
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c19829ab293061647aea55d29f7f07de
+      internalID: 204586292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_303
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 136
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf255e2a2f4f1ff4da457865c27e9967
+      internalID: 1278521507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_304
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 136
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 027b1c7f6eef4ee4d8886c95d653eb2d
+      internalID: 421826506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_305
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 136
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 109e48385ca377148b1df13ba556bf7b
+      internalID: -477925494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_306
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 136
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf8377e2dd95ea4c965da0e9505141a
+      internalID: 660233179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_307
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 136
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8afa92b053fc843419d51c9bc3d922fa
+      internalID: -2082824236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_308
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 136
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 986e4d5e8f944c04ea6433f3295bb3dd
+      internalID: -45737911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_309
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 136
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 243020e90eaffcd4f9807a7b9495bf6f
+      internalID: -1443237952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_310
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 136
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9baf9ddccecbddf4c85a04b346a494c5
+      internalID: 1018871233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_311
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 136
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f1b8795b7c5ed643bab333a09d4706d
+      internalID: -836046455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_312
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 136
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7502a3daa2f7484f8698b57fea8d813
+      internalID: -1952073564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_313
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 136
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9dc8f8ee5720854ca494e6c39cea38b
+      internalID: 1474221202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_314
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 136
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe33446725c110c4ebc36cb7a373033d
+      internalID: 833831325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_315
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 136
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5089808a68e8e19419d0d30b0dea1443
+      internalID: 2126949074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_316
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 136
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55caf6cab7da26d4b9148c0e90d515ea
+      internalID: -192637588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_317
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 136
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aa138e127d7cae4c843997baca851df
+      internalID: 1631512437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_318
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 136
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d01fc7a130619e9408782d0640f57d54
+      internalID: -1418508994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_319
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 136
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba4674937b445c0418ef67364f9e665f
+      internalID: -155785327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_320
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 136
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 870cce6b9ccbbdc4f85a2fe0f6859c18
+      internalID: 1606137093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_321
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 136
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10baf31e212c18047b151d69b9ac777c
+      internalID: -1649582513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_322
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 136
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a169abb1a1a17f47bebe00f50bab98f
+      internalID: 1304367786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_323
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 136
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b3b2ad0b621b824fbe22f158ab86238
+      internalID: -1061915939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_324
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 136
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c514d540ae10534c93c9363bd267709
+      internalID: -358035470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_325
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0662f475dc6e214da867238ac9dcbc6
+      internalID: 991912516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_326
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 8
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0db9fcce786bef048ac4ce570ee81364
+      internalID: -1395716025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_327
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 8
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a6ac5f42e8fa224fab8adb8ee017936
+      internalID: -1438070663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_328
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 8
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78fe0d008e03ed64586621ffa0869264
+      internalID: -985213216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_329
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 8
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5633eb549dd4f4b43b77d5f708bf95d9
+      internalID: -375222353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_330
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 8
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12751e32c3419c94d9ae557592a30bdd
+      internalID: 975248873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_331
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 8
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5308351507aab684ea0d085c522554c0
+      internalID: -2033842270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_332
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 8
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f16ce00c0b4af584cb818846e670a19a
+      internalID: -1422418991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_333
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 8
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2bd3361187323346acd44a910272028
+      internalID: 805189047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_334
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 8
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 213afac036f45634e8ec32d937a66a7a
+      internalID: -1848453556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_335
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 8
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7efbeba483b45a54e96fdb86f176876b
+      internalID: -1415399558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_336
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 8
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5711a73edc5cca140b31f3912e8a3b53
+      internalID: -527139090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_337
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 8
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66e7754804294a24ca9423061470f800
+      internalID: 399303091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_338
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 8
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8260cedfe8c802479a1b1fbfdf5cbff
+      internalID: -508811211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_339
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 8
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f8a68d3d1366b84ba11519e4a0ccd77
+      internalID: 1921926897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_340
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 8
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf97f9f65dbca0f4dbf4d4e15cbcbe76
+      internalID: -2018269987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_341
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 8
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2890fa9933539264783d4a48c5bf8a7b
+      internalID: 846826294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_342
+      rect:
+        serializedVersion: 2
+        x: 2176
+        y: 8
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 068333ab69258084295f1be2583e707b
+      internalID: 1307893753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_343
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 8
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e7b0b1e6cd7d4a4f8fd12a8cd9ff2f4
+      internalID: 716744059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_344
+      rect:
+        serializedVersion: 2
+        x: 2432
+        y: 8
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48593f736d1697e43aa79adad75ecc22
+      internalID: -698062216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_345
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 8
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa8c0a50f9e530549bfe5b6a79cc408d
+      internalID: -1873537562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_346
+      rect:
+        serializedVersion: 2
+        x: 2688
+        y: 8
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ed0abbe023958a46b16dcefb03d658a
+      internalID: 174273901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_347
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 8
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 059b9b69f6c9c4e4fbac75ddef724751
+      internalID: -32520414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_348
+      rect:
+        serializedVersion: 2
+        x: 2944
+        y: 8
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c12615d2ea2710448bc1ae4c2e2ec6ad
+      internalID: -445430760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cave-hallway_349
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 8
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43d8e2fe6aca34f42a355a2f01700e46
+      internalID: 1294303048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +7456,357 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cave-hallway_0: 901322006
+      cave-hallway_1: 514547524
+      cave-hallway_10: 1872756016
+      cave-hallway_100: 983059384
+      cave-hallway_101: 1509971576
+      cave-hallway_102: 300269614
+      cave-hallway_103: 1505377289
+      cave-hallway_104: 1513244485
+      cave-hallway_105: -1730129097
+      cave-hallway_106: -1194367014
+      cave-hallway_107: 1056957960
+      cave-hallway_108: -237295622
+      cave-hallway_109: 809187690
+      cave-hallway_11: 382461272
+      cave-hallway_110: 1424652190
+      cave-hallway_111: -357508417
+      cave-hallway_112: -1216741265
+      cave-hallway_113: -1434986637
+      cave-hallway_114: 244547382
+      cave-hallway_115: -1459291863
+      cave-hallway_116: 457556401
+      cave-hallway_117: -1815817275
+      cave-hallway_118: 673321205
+      cave-hallway_119: -449835904
+      cave-hallway_12: 442540310
+      cave-hallway_120: -142438095
+      cave-hallway_121: 314350016
+      cave-hallway_122: -1625380487
+      cave-hallway_123: -215772932
+      cave-hallway_124: 616759929
+      cave-hallway_125: -922729698
+      cave-hallway_126: 1637711651
+      cave-hallway_127: 1732467865
+      cave-hallway_128: -378668124
+      cave-hallway_129: -1049133519
+      cave-hallway_13: 415978213
+      cave-hallway_130: 237639086
+      cave-hallway_131: 167965352
+      cave-hallway_132: 686827436
+      cave-hallway_133: 1848201028
+      cave-hallway_134: 1659570820
+      cave-hallway_135: -842332045
+      cave-hallway_136: -23436548
+      cave-hallway_137: -1297134154
+      cave-hallway_138: -859660065
+      cave-hallway_139: 1250061335
+      cave-hallway_14: 267612185
+      cave-hallway_140: -699060811
+      cave-hallway_141: 355975389
+      cave-hallway_142: -1137669323
+      cave-hallway_143: -1101116738
+      cave-hallway_144: 726182747
+      cave-hallway_145: -1052202420
+      cave-hallway_146: -293487654
+      cave-hallway_147: 1755845651
+      cave-hallway_148: 1079453504
+      cave-hallway_149: -685766364
+      cave-hallway_15: 1559564741
+      cave-hallway_150: -669085608
+      cave-hallway_151: -1451674383
+      cave-hallway_152: -2105026185
+      cave-hallway_153: -1924265371
+      cave-hallway_154: -33393385
+      cave-hallway_155: 1746815182
+      cave-hallway_156: -1705740512
+      cave-hallway_157: 412843124
+      cave-hallway_158: 153800405
+      cave-hallway_159: 678848658
+      cave-hallway_16: 672253673
+      cave-hallway_160: -1259390674
+      cave-hallway_161: 730338972
+      cave-hallway_162: -33962336
+      cave-hallway_163: -446881419
+      cave-hallway_164: -1726063707
+      cave-hallway_165: -806036802
+      cave-hallway_166: 1253188509
+      cave-hallway_167: 1227314017
+      cave-hallway_168: 1378774073
+      cave-hallway_169: -899896110
+      cave-hallway_17: -80034356
+      cave-hallway_170: -864102449
+      cave-hallway_171: 381874039
+      cave-hallway_172: 468725059
+      cave-hallway_173: -885525899
+      cave-hallway_174: 404929271
+      cave-hallway_175: -1879094316
+      cave-hallway_176: 2141441336
+      cave-hallway_177: -1052661776
+      cave-hallway_178: -1601118225
+      cave-hallway_179: -675923892
+      cave-hallway_18: -547723360
+      cave-hallway_180: -1461002850
+      cave-hallway_181: 601314373
+      cave-hallway_182: -207270460
+      cave-hallway_183: 1662893341
+      cave-hallway_184: 2075278712
+      cave-hallway_185: 2113814771
+      cave-hallway_186: 1850621525
+      cave-hallway_187: -1905770034
+      cave-hallway_188: -214527113
+      cave-hallway_189: -835447206
+      cave-hallway_19: -391305283
+      cave-hallway_190: 1831966665
+      cave-hallway_191: 414241999
+      cave-hallway_192: 1866765853
+      cave-hallway_193: 842882654
+      cave-hallway_194: 736504213
+      cave-hallway_195: -445113470
+      cave-hallway_196: 1667629785
+      cave-hallway_197: -1744656607
+      cave-hallway_198: -2022967723
+      cave-hallway_199: -886581871
+      cave-hallway_2: 2119661795
+      cave-hallway_20: -657749716
+      cave-hallway_200: 1767438236
+      cave-hallway_201: 1901579090
+      cave-hallway_202: -4622731
+      cave-hallway_203: 1722161320
+      cave-hallway_204: 166991583
+      cave-hallway_205: 981105372
+      cave-hallway_206: -1231776626
+      cave-hallway_207: -1802367116
+      cave-hallway_208: -1767557718
+      cave-hallway_209: -522293529
+      cave-hallway_21: -1073117556
+      cave-hallway_210: 1823321090
+      cave-hallway_211: 920523828
+      cave-hallway_212: -1431755159
+      cave-hallway_213: 1330482462
+      cave-hallway_214: 2070441690
+      cave-hallway_215: 1009142968
+      cave-hallway_216: -2080399407
+      cave-hallway_217: -680854474
+      cave-hallway_218: -792226018
+      cave-hallway_219: 1361281961
+      cave-hallway_22: 348521429
+      cave-hallway_220: 1852367058
+      cave-hallway_221: 803552387
+      cave-hallway_222: 276031845
+      cave-hallway_223: 599029297
+      cave-hallway_224: -592575352
+      cave-hallway_225: 2135525526
+      cave-hallway_226: 1341029567
+      cave-hallway_227: 1287778884
+      cave-hallway_228: -1488696042
+      cave-hallway_229: 1901004109
+      cave-hallway_23: -1401455723
+      cave-hallway_230: -1723601796
+      cave-hallway_231: -835908637
+      cave-hallway_232: -579525815
+      cave-hallway_233: -1251103090
+      cave-hallway_234: -1206898983
+      cave-hallway_235: 1845215608
+      cave-hallway_236: -1937099101
+      cave-hallway_237: -388068736
+      cave-hallway_238: -1332791338
+      cave-hallway_239: 830434880
+      cave-hallway_24: 443095504
+      cave-hallway_240: 469293194
+      cave-hallway_241: -654776610
+      cave-hallway_242: 1527600017
+      cave-hallway_243: 1428087186
+      cave-hallway_244: 311913604
+      cave-hallway_245: -2085507180
+      cave-hallway_246: -688808571
+      cave-hallway_247: -193703016
+      cave-hallway_248: -554066640
+      cave-hallway_249: 1826433492
+      cave-hallway_25: -259145893
+      cave-hallway_250: 1885556418
+      cave-hallway_251: 1232238584
+      cave-hallway_252: -1239806739
+      cave-hallway_253: -1210552569
+      cave-hallway_254: -1582177739
+      cave-hallway_255: -1254534858
+      cave-hallway_256: 39747445
+      cave-hallway_257: -1139624283
+      cave-hallway_258: -1976630428
+      cave-hallway_259: 1190926943
+      cave-hallway_26: -367335139
+      cave-hallway_260: -1046579027
+      cave-hallway_261: 2004632498
+      cave-hallway_262: -631387624
+      cave-hallway_263: 169246265
+      cave-hallway_264: 4773847
+      cave-hallway_265: 606318143
+      cave-hallway_266: -1588862756
+      cave-hallway_267: -1786731471
+      cave-hallway_268: -2106020111
+      cave-hallway_269: 847133081
+      cave-hallway_27: -861413562
+      cave-hallway_270: -135522569
+      cave-hallway_271: -664972169
+      cave-hallway_272: -491562366
+      cave-hallway_273: -1650904416
+      cave-hallway_274: -567460672
+      cave-hallway_275: -1374565054
+      cave-hallway_276: -2016627810
+      cave-hallway_277: 614529199
+      cave-hallway_278: 1401883285
+      cave-hallway_279: -549963768
+      cave-hallway_28: -29907032
+      cave-hallway_280: 252007197
+      cave-hallway_281: 1736482058
+      cave-hallway_282: 1468215533
+      cave-hallway_283: -494406934
+      cave-hallway_284: -706666104
+      cave-hallway_285: -1285780706
+      cave-hallway_286: -1092120124
+      cave-hallway_287: -538518751
+      cave-hallway_288: -1940970417
+      cave-hallway_289: 412663756
+      cave-hallway_29: 161874503
+      cave-hallway_290: 1100470651
+      cave-hallway_291: -965943650
+      cave-hallway_292: 186722288
+      cave-hallway_293: 819833481
+      cave-hallway_294: -2114445981
+      cave-hallway_295: 1817084531
+      cave-hallway_296: -1115400395
+      cave-hallway_297: -1115767021
+      cave-hallway_298: 496687083
+      cave-hallway_299: 1644603582
+      cave-hallway_3: 1476896910
+      cave-hallway_30: 1808929391
+      cave-hallway_300: 479545737
+      cave-hallway_301: -1639013784
+      cave-hallway_302: 204586292
+      cave-hallway_303: 1278521507
+      cave-hallway_304: 421826506
+      cave-hallway_305: -477925494
+      cave-hallway_306: 660233179
+      cave-hallway_307: -2082824236
+      cave-hallway_308: -45737911
+      cave-hallway_309: -1443237952
+      cave-hallway_31: 1536318484
+      cave-hallway_310: 1018871233
+      cave-hallway_311: -836046455
+      cave-hallway_312: -1952073564
+      cave-hallway_313: 1474221202
+      cave-hallway_314: 833831325
+      cave-hallway_315: 2126949074
+      cave-hallway_316: -192637588
+      cave-hallway_317: 1631512437
+      cave-hallway_318: -1418508994
+      cave-hallway_319: -155785327
+      cave-hallway_32: -1358165546
+      cave-hallway_320: 1606137093
+      cave-hallway_321: -1649582513
+      cave-hallway_322: 1304367786
+      cave-hallway_323: -1061915939
+      cave-hallway_324: -358035470
+      cave-hallway_325: 991912516
+      cave-hallway_326: -1395716025
+      cave-hallway_327: -1438070663
+      cave-hallway_328: -985213216
+      cave-hallway_329: -375222353
+      cave-hallway_33: -1525433341
+      cave-hallway_330: 975248873
+      cave-hallway_331: -2033842270
+      cave-hallway_332: -1422418991
+      cave-hallway_333: 805189047
+      cave-hallway_334: -1848453556
+      cave-hallway_335: -1415399558
+      cave-hallway_336: -527139090
+      cave-hallway_337: 399303091
+      cave-hallway_338: -508811211
+      cave-hallway_339: 1921926897
+      cave-hallway_34: 580728273
+      cave-hallway_340: -2018269987
+      cave-hallway_341: 846826294
+      cave-hallway_342: 1307893753
+      cave-hallway_343: 716744059
+      cave-hallway_344: -698062216
+      cave-hallway_345: -1873537562
+      cave-hallway_346: 174273901
+      cave-hallway_347: -32520414
+      cave-hallway_348: -445430760
+      cave-hallway_349: 1294303048
+      cave-hallway_35: -541984727
+      cave-hallway_36: -184304054
+      cave-hallway_37: 1813314463
+      cave-hallway_38: 634266833
+      cave-hallway_39: 757010594
+      cave-hallway_4: -38927449
+      cave-hallway_40: 1619949200
+      cave-hallway_41: 815262036
+      cave-hallway_42: 1542583696
+      cave-hallway_43: -1559596750
+      cave-hallway_44: -943082576
+      cave-hallway_45: 261720577
+      cave-hallway_46: 424408641
+      cave-hallway_47: -693246330
+      cave-hallway_48: -81165227
+      cave-hallway_49: -1281475312
+      cave-hallway_5: -1914887932
+      cave-hallway_50: -970557072
+      cave-hallway_51: 647863412
+      cave-hallway_52: 1334211762
+      cave-hallway_53: -2135318300
+      cave-hallway_54: -211886489
+      cave-hallway_55: 651843170
+      cave-hallway_56: 1457401770
+      cave-hallway_57: -624669880
+      cave-hallway_58: 202865012
+      cave-hallway_59: -1227346050
+      cave-hallway_6: 475128523
+      cave-hallway_60: 2065688890
+      cave-hallway_61: -638585077
+      cave-hallway_62: 2029560147
+      cave-hallway_63: -2090372080
+      cave-hallway_64: 49248706
+      cave-hallway_65: -1717506177
+      cave-hallway_66: 1121401291
+      cave-hallway_67: -129855237
+      cave-hallway_68: 1657424002
+      cave-hallway_69: 2026322878
+      cave-hallway_7: 1081630507
+      cave-hallway_70: 561240070
+      cave-hallway_71: 496848943
+      cave-hallway_72: 1078533421
+      cave-hallway_73: 834338407
+      cave-hallway_74: -1654386967
+      cave-hallway_75: -437438549
+      cave-hallway_76: -1887529534
+      cave-hallway_77: 1844199218
+      cave-hallway_78: 1793746206
+      cave-hallway_79: 2004648023
+      cave-hallway_8: -1738107396
+      cave-hallway_80: -1541330360
+      cave-hallway_81: 1879886958
+      cave-hallway_82: -2070557654
+      cave-hallway_83: -703994206
+      cave-hallway_84: 1812307121
+      cave-hallway_85: 280652134
+      cave-hallway_86: 850788563
+      cave-hallway_87: -65394505
+      cave-hallway_88: 139717100
+      cave-hallway_89: -1749355352
+      cave-hallway_9: -809808987
+      cave-hallway_90: -2070789395
+      cave-hallway_91: 1859773427
+      cave-hallway_92: 646757617
+      cave-hallway_93: 1216285012
+      cave-hallway_94: 785851506
+      cave-hallway_95: 9346657
+      cave-hallway_96: -1707996143
+      cave-hallway_97: 1380097322
+      cave-hallway_98: 1115025405
+      cave-hallway_99: -1509198079
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
