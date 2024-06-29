@@ -1,7 +1,9 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using PotionSystem;
 using System.Collections;
+using Day_Night_Cycle;
 
 namespace Player
 {
@@ -20,7 +22,7 @@ namespace Player
         private float lastThrowTime;
         private Vector3 _startThrowPosition;
         private Vector3 _endThrowPosition;
-        private Vector2 _movementDirection;
+        public Vector2 _movementDirection;
         private Vector2 _lastMoveDirection;
         private bool isThrowing = false;
         private bool isDrinking = false;
@@ -36,7 +38,8 @@ namespace Player
         public Animator _animator;
         public Rigidbody2D rb2d;
 
-        private List<Effect> _activeEffects = new List<Effect>();
+        WorldTime.WorldTime _worldTime;
+        public List<Effect> ActiveEffects = new();
 
         private void Awake()
         {
@@ -167,29 +170,27 @@ namespace Player
 
         public void AddEffect(Effect effect)
         {
-            _activeEffects.Add(effect);
+            ActiveEffects.Add(effect);
             effect.Apply(this);
         }
 
         public void RemoveEffect(Effect effect)
         {
             effect.End(this);
-            _activeEffects.Remove(effect);
+            ActiveEffects.Remove(effect);
         }
 
         private void HandleActiveEffects()
         {
-            for (int i = _activeEffects.Count - 1; i >= 0; i--)
+            for (var i = ActiveEffects.Count - 1; i >= 0; i--)
             {
-                _activeEffects[i].duration -= Time.deltaTime;
-                if (_activeEffects[i].duration <= 0)
+                ActiveEffects[i].duration -= Time.deltaTime;
+                if (ActiveEffects[i].duration <= 0)
                 {
-                    RemoveEffect(_activeEffects[i]);
+                    RemoveEffect(ActiveEffects[i]);
                 }
             }
         }
-
-        // Other existing methods...
 
         void SetupTrajectoryRenderer()
         {

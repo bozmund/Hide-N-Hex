@@ -136,7 +136,7 @@ public class CollectRecipe : MonoBehaviour
         {
             int state = obj.activeSelf ? 1 : 0;
             PlayerPrefs.SetInt(obj.name, state);
-            Debug.Log($"Saved state of {obj.name} as {state}");
+            // Debug.Log($"Saved state of {obj.name} as {state}");
         }
     }
 
@@ -147,11 +147,11 @@ public class CollectRecipe : MonoBehaviour
         {
             bool isActive = PlayerPrefs.GetInt(obj.name) == 1;
             obj.SetActive(isActive);
-            Debug.Log($"Loaded state of {obj.name} as {isActive}");
+            // Debug.Log($"Loaded state of {obj.name} as {isActive}");
         }
         else
         {
-            Debug.Log($"No saved state found for {obj.name}");
+            // Debug.Log($"No saved state found for {obj.name}");
         }
     }
 }

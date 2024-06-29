@@ -1,19 +1,29 @@
-﻿using Player;
+﻿using Bars;
+using Day_Night_Cycle;
+using Player;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace PotionSystem
 {
     public class PotionEffects
     {
         private readonly PlayerMovement _player;
+
         public PotionEffects(PlayerMovement player)
         {
             if (!player) Debug.Log("player not exist");
             _player = player;
         }
+
         public void ApplyWeakness()
         {
-            
+            _player.AddEffect(new Effect(
+                "Weakness",
+                10f,
+                player => player.strength = 0,
+                player => player.strength = 1
+            )); 
         }
 
         public void ApplyUsefulness()
@@ -34,42 +44,50 @@ namespace PotionSystem
 
         public void ApplyStrength()
         {
-            
+            _player.strength = 1;
         }
 
         public void ApplyRecall()
         {
-            throw new System.NotImplementedException();
+            SceneManager.LoadScene("Cabin");
         }
 
         public void ApplyPurification()
         {
-            throw new System.NotImplementedException(); 
+            _player.ActiveEffects.Clear();
         }
 
         public void ApplyParalyticGas()
         {
-            throw new System.NotImplementedException();
+            _player.AddEffect(new Effect(
+                "ParalyticGas",
+                5f,
+                player => player._movementSpeed = 0,
+                player => player._movementSpeed = 2.5f
+            ));
         }
 
         public void ApplyMindVision()
         {
-            throw new System.NotImplementedException();
         }
 
         public void ApplyMight()
         {
-            throw new System.NotImplementedException();
+            _player.strength = 2;
         }
 
+        // ReSharper disable Unity.PerformanceAnalysis
         public void ApplyLowerSus()
         {
-            throw new System.NotImplementedException();
+            SuspicionBar suspicionBar = GameObject.Find("SuspicionBar").GetComponent<SuspicionBar>();
+            suspicionBar.DecreaseSuspicion();
         }
 
+        // ReSharper disable Unity.PerformanceAnalysis
         public void ApplyLiquidFlame()
         {
-            throw new System.NotImplementedException();
+            var healthBar = GameObject.Find("HealthBar").GetComponent<HealthBar>();
+            healthBar.DecreaseHealth(3f);
         }
 
         public void ApplyLevitation()
@@ -87,14 +105,16 @@ namespace PotionSystem
             throw new System.NotImplementedException();
         }
 
-        public void ApplyHealing()
+        // ReSharper disable Unity.PerformanceAnalysis
+        public static void ApplyHealing()
         {
-            throw new System.NotImplementedException();
+            var healthBar = GameObject.Find("HealthBar").GetComponent<HealthBar>();
+            healthBar.IncreaseHealth(3f);
         }
 
         public void ApplyConfusion()
         {
-            throw new System.NotImplementedException();
+            //invert player controls
         }
 
         public void ApplyClothing()

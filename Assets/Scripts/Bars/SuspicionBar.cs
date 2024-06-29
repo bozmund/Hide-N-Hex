@@ -1,16 +1,24 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SuspicionBar : MonoBehaviour
+namespace Bars
 {
-    public Image uiImage;
-    public SuspicionValue fillAmountData;
-
-    void Update()
+    public class SuspicionBar : MonoBehaviour
     {
-        if (uiImage != null && fillAmountData != null)
+        public Image uiImage;
+        public SuspicionValue fillAmountData;
+
+        void Update()
         {
-            uiImage.fillAmount = fillAmountData.fillAmount;
+            if (uiImage != null && fillAmountData != null)
+            {
+                uiImage.fillAmount = fillAmountData.fillAmount;
+            }
+        }
+
+        public void DecreaseSuspicion()
+        {
+            fillAmountData.fillAmount -= 0.1f;
         }
     }
 }

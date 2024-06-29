@@ -1,16 +1,29 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBar : MonoBehaviour
+namespace Bars
 {
-    public Image uiImage;
-    public HealthValue fillAmountData;
-
-    void Update()
+    public class HealthBar : MonoBehaviour
     {
-        if (uiImage != null && fillAmountData != null)
+        public Image uiImage;
+        public HealthValue fillAmountData;
+
+        void Update()
         {
-            uiImage.fillAmount = fillAmountData.fillAmount;
+            if (uiImage != null && fillAmountData != null)
+            {
+                uiImage.fillAmount = fillAmountData.fillAmount;
+            }
+        }
+
+        public void DecreaseHealth(float amount = 0.1f)
+        {
+            fillAmountData.fillAmount -= amount;
+        }
+
+        public void IncreaseHealth(float amount = 0.1f)
+        {
+            fillAmountData.fillAmount += amount;
         }
     }
 }

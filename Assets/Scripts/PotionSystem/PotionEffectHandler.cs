@@ -48,7 +48,7 @@ namespace PotionSystem
                     potionEffects.ApplyConfusion();
                     break;
                 case "HealingPotion":
-                    potionEffects.ApplyHealing();
+                    PotionEffects.ApplyHealing();
                     break;
                 case "HolyGrailPotion":
                     potionEffects.ApplyHolyGrail();
