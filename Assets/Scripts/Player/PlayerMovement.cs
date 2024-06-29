@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using PotionSystem;
+using System.Collections;
 
 namespace Player
 {
@@ -16,13 +17,13 @@ namespace Player
         [SerializeField] private float _throwDuration = 1f;
         [SerializeField] private float _throwCD = 1f;
         [SerializeField] private float _throwRadius = 2f;
-        private const float _smoothing = 1f;
         private float lastThrowTime;
         private Vector3 _startThrowPosition;
         private Vector3 _endThrowPosition;
         private Vector2 _movementDirection;
         private Vector2 _lastMoveDirection;
         private bool isThrowing = false;
+        private bool isDrinking = false;
 
         [Space(5)]
         [Header("References")]
@@ -58,14 +59,22 @@ namespace Player
         private void Update()
         {
             Movement();
+            Animate();
+            Aim();
+            UpdateTrajectoryLine();
             DrinkPotion();
             HandleActiveEffects();
         }
 
         private void DrinkPotion()
         {
-            if (Input.GetKeyDown(KeyCode.Q) && Potion is not null) 
+            if (Input.GetKeyDown(KeyCode.Q) && Potion is not null)
+            {
                 _potionEffectHandler.Handle(Potion.name);
+                isDrinking = true;
+                _animator.SetBool("isDrink", true);
+                StartCoroutine(ResetAnim(0.3f));
+            }
         }
 
         public void Movement()
@@ -77,6 +86,83 @@ namespace Player
                 _lastMoveDirection = _movementDirection;
 
             _movementDirection = new Vector2(moveX, moveY).normalized;
+        }
+
+        void Animate()
+        {
+            if (!isThrowing || !isDrinking)
+            {
+                if (_movementDirection != Vector2.zero)
+                {
+                    _animator.SetFloat("Horizontal", _movementDirection.x);
+                    _animator.SetFloat("Vertical", _movementDirection.y);
+                }
+                _animator.SetFloat("Speed", _movementDirection.sqrMagnitude);
+            }
+        }
+
+        void Aim()
+        {
+            _crosshairPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            _crosshairPosition.z = 0f;
+
+            crosshair.transform.position = _crosshairPosition;
+
+            if (Input.GetKeyDown(KeyCode.Mouse0) && Time.time >= lastThrowTime + _throwCD)
+            {
+                Vector3 throwTargetPosition = ClampThrowPosition(_crosshairPosition);
+                ThrowPotion(transform.position, throwTargetPosition);
+                lastThrowTime = Time.time;
+                _animator.SetBool("isThrow", true);
+                isThrowing = true;
+                FaceCrosshair();
+                StartCoroutine(ResetAnim(0.5f));
+            }
+        }
+
+        void FaceCrosshair()
+        {
+            Vector2 direction = (_crosshairPosition - transform.position).normalized;
+            _animator.SetFloat("Horizontal", direction.x);
+            _animator.SetFloat("Vertical", direction.y);
+        }
+        void ThrowPotion(Vector3 firePosition, Vector3 targetPosition)
+        {
+            _startThrowPosition = firePosition;
+            _endThrowPosition = targetPosition;
+
+            GameObject potion = Instantiate(Potion, firePosition, Quaternion.identity);
+            StartCoroutine(AnimateThrow(potion, firePosition, targetPosition));
+        }
+
+        private IEnumerator AnimateThrow(GameObject potion, Vector3 firePosition, Vector3 targetPosition)
+        {
+            float elapsedTime = 0f;
+
+            while (elapsedTime < _throwDuration)
+            {
+                float t = elapsedTime / _throwDuration;
+                Vector3 trajectoryPosition = ThrowTrajectory(firePosition, targetPosition, t);
+                potion.transform.position = trajectoryPosition;
+
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
+
+            potion.transform.position = targetPosition;
+            if (potion.transform.position == targetPosition)
+            {
+                Destroy(potion);
+            }
+        }
+
+        private IEnumerator ResetAnim(float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            isThrowing = false;
+            isDrinking = false;
+            _animator.SetBool("isThrow", false);
+            _animator.SetBool("isDrink", false);
         }
 
         public void AddEffect(Effect effect)
@@ -107,7 +193,7 @@ namespace Player
 
         void SetupTrajectoryRenderer()
         {
-            trajectoryRenderer.positionCount = 31;
+            trajectoryRenderer.positionCount = 30;
             trajectoryRenderer.startWidth = 0.05f;
             trajectoryRenderer.endWidth = 0.05f;
         }
