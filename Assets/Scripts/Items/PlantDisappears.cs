@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System.Text.RegularExpressions;
 
 namespace Items
 {
@@ -12,7 +13,8 @@ namespace Items
         {
             if (collision.gameObject.CompareTag("DisappearObject"))
             {
-                string itemName = collision.gameObject.name.Replace("(Clone)", "").Trim();
+                string itemName = collision.gameObject.name;
+                itemName = Regex.Replace(itemName, @" \(\d+\)$", "").Trim();
 
                 if (!string.IsNullOrEmpty(itemName))
                 {
@@ -28,7 +30,7 @@ namespace Items
                     inventoryUIManager.LoadInventorySprites();
 
                     // Make the object disappear after collecting it
-                    Destroy(collision.gameObject);
+                    collision.gameObject.SetActive(false);
                 }
             }
         }
@@ -38,7 +40,7 @@ namespace Items
             Dictionary<string, MainInventory.InventorySlot> inventory = MainInventoryData.GetMainInventory();
             foreach (var kvp in inventory)
             {
-                Debug.Log($"Slot: {kvp.Key}, Item: {kvp.Value.itemName}, Count: {kvp.Value.count}");
+                //Debug.Log($"Slot: {kvp.Key}, Item: {kvp.Value.itemName}, Count: {kvp.Value.count}");
             }
         }
     }

@@ -54,12 +54,12 @@ public class CheckIngredientCount : MonoBehaviour
 
             if (itemCount >= count)
             {
-                Debug.Log($"Sufficient {itemName} found. Count: {itemCount}");
+                //Debug.Log($"Sufficient {itemName} found. Count: {itemCount}");
                 imageComponent.sprite = checkSymbol;
             }
             else
             {
-                Debug.LogWarning($"Not enough {itemName}. Required: {count}, Available: {itemCount}");
+                //Debug.LogWarning($"Not enough {itemName}. Required: {count}, Available: {itemCount}");
                 imageComponent.sprite = xSymbol;
             }
         }
