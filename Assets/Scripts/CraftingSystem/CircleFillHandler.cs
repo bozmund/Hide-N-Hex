@@ -99,8 +99,31 @@ namespace CraftingSystem
 
         private void ChangeScene()
         {
-            SceneManager.LoadScene("OutsideTheCabin");
-            inventoryUI.gameObject.SetActive(true);
+            // Subscribe to the sceneLoaded event
+            SceneManager.sceneLoaded += OnSceneLoaded;
+            // Load the new scene
+            SceneManager.LoadScene("Cabin");
+        }
+
+        private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+        {
+            // Check if the loaded scene is the one we expect
+            if (scene.name == "Cabin")
+            {
+                // Set inventoryUI active
+                //inventoryUI.gameObject.SetActive(true);
+
+                // Find the Player game object
+                GameObject player = GameObject.Find("Player");
+                if (player != null)
+                {
+                    // Set the player's position
+                    player.transform.position = new Vector3(0.4401488f, 13.2805f, player.transform.position.z);
+                }
+
+                // Unsubscribe from the sceneLoaded event
+                SceneManager.sceneLoaded -= OnSceneLoaded;
+            }
         }
 
         private void SubtractIngredient(string ingredient)

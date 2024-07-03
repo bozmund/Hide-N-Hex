@@ -19,12 +19,12 @@ namespace Items
             if (Instance == null)
             {
                 Instance = this;
-                //DontDestroyOnLoad(gameObject); // Keep this object when loading new scenes
-                //Debug.Log("Object Name: " + gameObject.name, gameObject);
+                //DontDestroyOnLoad(gameObject);
             }
+
             else
             {
-                Destroy(gameObject); // Ensure only one instance exists
+                Destroy(gameObject);
             }
         }
 

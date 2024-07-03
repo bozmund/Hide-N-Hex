@@ -22,6 +22,27 @@ public class OpenBookshelf : MonoBehaviour
     public GameObject leaveCabinObject; // Reference to the LeaveCabin GameObject
 
     private bool playerInTrigger = false; // Flag to check if player is in the trigger
+    public GameObject objectToToggle;
+
+    void Start()
+    {
+        // Load the saved positions when the game starts
+        float savedBookshelfPosX = PlayerPrefs.GetFloat("BookshelfPosX", posX1); // Default to posX1 if no saved position
+        bookshelfRectTransform.anchoredPosition = new Vector2(savedBookshelfPosX, bookshelfRectTransform.anchoredPosition.y);
+        isAtPos1 = (savedBookshelfPosX == posX1);
+
+        float savedBarrierPosX = PlayerPrefs.GetFloat("BarrierPosX", barrierPosX1); // Default to barrierPosX1 if no saved position
+        bookshelfBarrierTransform.position = new Vector3(savedBarrierPosX, bookshelfBarrierTransform.position.y, bookshelfBarrierTransform.position.z);
+        isBarrierAtPos1 = (savedBarrierPosX == barrierPosX1);
+
+        float savedOpenBookshelfPosX = PlayerPrefs.GetFloat("OpenBookshelfPosX", openBookshelfPosX1); // Default to openBookshelfPosX1 if no saved position
+        openBookshelfTransform.position = new Vector3(savedOpenBookshelfPosX, openBookshelfTransform.position.y, openBookshelfTransform.position.z);
+        isOpenBookshelfAtPos1 = (savedOpenBookshelfPosX == openBookshelfPosX1);
+
+        // Load the saved active state of the leaveCabinObject
+        bool isLeaveCabinActive = PlayerPrefs.GetInt("LeaveCabinActive", 0) == 1; // Default to inactive if no saved state
+        leaveCabinObject.SetActive(isLeaveCabinActive);
+    }
 
     void Update()
     {
@@ -64,6 +85,9 @@ public class OpenBookshelf : MonoBehaviour
                     bookshelfBarrierTransform.position = newBarrierPos;
                     isBarrierAtPos1 = true;
                 }
+                // Save the new position of the BookshelfBarrier
+                PlayerPrefs.SetFloat("BarrierPosX", bookshelfBarrierTransform.position.x);
+                PlayerPrefs.Save();
             }
 
             // Toggle between two positions for the OpenBookshelf
@@ -85,12 +109,20 @@ public class OpenBookshelf : MonoBehaviour
                     openBookshelfTransform.position = newOpenBookshelfPos;
                     isOpenBookshelfAtPos1 = true;
                 }
+                // Save the new position of the OpenBookshelf
+                PlayerPrefs.SetFloat("OpenBookshelfPosX", openBookshelfTransform.position.x);
+                PlayerPrefs.Save();
             }
 
             // Toggle state of the LeaveCabin object
             if (leaveCabinObject != null)
             {
-                leaveCabinObject.SetActive(!leaveCabinObject.activeSelf);
+                bool newState = !leaveCabinObject.activeSelf;
+                leaveCabinObject.SetActive(newState);
+
+                // Save the new active state of the leaveCabinObject
+                PlayerPrefs.SetInt("LeaveCabinActive", newState ? 1 : 0);
+                PlayerPrefs.Save();
             }
         }
     }
@@ -98,18 +130,22 @@ public class OpenBookshelf : MonoBehaviour
     IEnumerator MoveBookshelf(float targetPosX)
     {
         float elapsedTime = 0;
-        Vector3 startPos = bookshelfRectTransform.anchoredPosition;
-        Vector3 targetPos = new Vector3(targetPosX, startPos.y, startPos.z);
+        Vector2 startPos = bookshelfRectTransform.anchoredPosition;
+        Vector2 targetPos = new Vector2(targetPosX, startPos.y);
 
         while (elapsedTime < transitionDuration)
         {
-            bookshelfRectTransform.anchoredPosition = Vector3.Lerp(startPos, targetPos, (elapsedTime / transitionDuration));
+            bookshelfRectTransform.anchoredPosition = Vector2.Lerp(startPos, targetPos, (elapsedTime / transitionDuration));
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
         // Ensure the bookshelf is at the target position
         bookshelfRectTransform.anchoredPosition = targetPos;
+
+        // Save the new position of the bookshelf
+        PlayerPrefs.SetFloat("BookshelfPosX", targetPosX);
+        PlayerPrefs.Save();
     }
 
     // Detect when player enters the trigger area
@@ -118,7 +154,11 @@ public class OpenBookshelf : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInTrigger = true;
-            Debug.Log("Player entered trigger area");
+            //Debug.Log("Player entered trigger area");
+            if (objectToToggle != null)
+            {
+                objectToToggle.SetActive(true); // Set the object to active when the player is in range
+            }
         }
     }
 
@@ -128,7 +168,11 @@ public class OpenBookshelf : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInTrigger = false;
-            Debug.Log("Player exited trigger area");
+            //Debug.Log("Player exited trigger area");
+            if (objectToToggle != null)
+            {
+                objectToToggle.SetActive(false); // Set the object to inactive when the player is not in range
+            }
         }
     }
 }

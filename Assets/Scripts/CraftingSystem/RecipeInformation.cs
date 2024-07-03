@@ -27,12 +27,12 @@ namespace CraftingSystem
 
 
             // Use the retrieved information as needed
-            Debug.Log("Recipe Information Retrieved:");
-            Debug.Log("Potion Name: " + recipeData.potionName);
-            Debug.Log("Potion Sprite Name: " + recipeData.potionSpriteName);
-            Debug.Log("First Ingredient Sprite Name: " + recipeData.firstIngredientSpriteName);
-            Debug.Log("Second Ingredient Sprite Name: " + recipeData.secondIngredientSpriteName);
-            Debug.Log("Third Ingredient Sprite Name: " + recipeData.thirdIngredientSpriteName);
+            //Debug.Log("Recipe Information Retrieved:");
+            //Debug.Log("Potion Name: " + recipeData.potionName);
+            //Debug.Log("Potion Sprite Name: " + recipeData.potionSpriteName);
+            //Debug.Log("First Ingredient Sprite Name: " + recipeData.firstIngredientSpriteName);
+            //Debug.Log("Second Ingredient Sprite Name: " + recipeData.secondIngredientSpriteName);
+            //Debug.Log("Third Ingredient Sprite Name: " + recipeData.thirdIngredientSpriteName);
 
             craftingSlotQImage.sprite = Resources.Load<Sprite>("Plants/" + recipeData.firstIngredientSpriteName);
             craftingSlotWImage.sprite = Resources.Load<Sprite>("Plants/" + recipeData.secondIngredientSpriteName);
