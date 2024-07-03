@@ -1,12 +1,13 @@
-﻿using Bars;
-using Day_Night_Cycle;
+﻿using System.Collections;
+using Bars;
 using Player;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Tilemaps;
 
 namespace PotionSystem
 {
-    public class PotionEffects
+    public class PotionEffects : MonoBehaviour
     {
         private readonly PlayerMovement _player;
 
@@ -36,8 +37,8 @@ namespace PotionSystem
             _player.AddEffect(new Effect(
                 "SpeedBoost",
                 10f,
-                player => player._movementSpeed *= 2,
-                player => player._movementSpeed /= 2
+                player => player.movementSpeed *= 2,
+                player => player.movementSpeed /= 2
             ));
             Debug.Log("Speed potion consumed. Player is now faster!");
         }
@@ -47,7 +48,7 @@ namespace PotionSystem
             _player.strength = 1;
         }
 
-        public void ApplyRecall()
+        public static void ApplyRecall()
         {
             SceneManager.LoadScene("Cabin");
         }
@@ -62,8 +63,8 @@ namespace PotionSystem
             _player.AddEffect(new Effect(
                 "ParalyticGas",
                 5f,
-                player => player._movementSpeed = 0,
-                player => player._movementSpeed = 2.5f
+                player => player.movementSpeed = 0,
+                player => player.movementSpeed = 2.5f
             ));
         }
 
@@ -77,27 +78,69 @@ namespace PotionSystem
         }
 
         // ReSharper disable Unity.PerformanceAnalysis
-        public void ApplyLowerSus()
+        public static void ApplyLowerSus()
         {
-            SuspicionBar suspicionBar = GameObject.Find("SuspicionBar").GetComponent<SuspicionBar>();
-            suspicionBar.DecreaseSuspicion();
+            GameObject.Find("SuspicionBar").GetComponent<SuspicionBar>().DecreaseSuspicion();
+        }
+        
+        // ReSharper disable Unity.PerformanceAnalysis
+        public static void ApplyMoreSus(bool isCrafting)
+        {
+            var suspicionBar = GameObject.Find("SuspicionBar").GetComponent<SuspicionBar>();
+            suspicionBar.IncreaseSuspicion();
+            switch (suspicionBar.fillAmountData.fillAmount)
+            {
+                case >= 1f when isCrafting:
+                    //explode
+                    break;
+                case >= 1f:
+                    //game over
+                    break;
+            }
         }
 
+
         // ReSharper disable Unity.PerformanceAnalysis
-        public void ApplyLiquidFlame()
+        public static void ApplyLiquidFlame()
         {
-            var healthBar = GameObject.Find("HealthBar").GetComponent<HealthBar>();
-            healthBar.DecreaseHealth(3f);
+            GameObject.Find("HealthBar").GetComponent<HealthBar>().DecreaseHealth(3f);
         }
 
         public void ApplyLevitation()
         {
-            throw new System.NotImplementedException();
+            var top = GameObject.Find("Top");
+            var playerGoesBehind = GameObject.Find("PlayerGoesBehind");
+
+            top.GetComponent<TilemapCollider2D>().enabled = false;
+            playerGoesBehind.GetComponent<TilemapRenderer>().sortingOrder = 1;
+
+            StartCoroutine(RevertLevitation(top, playerGoesBehind));
+        }
+
+        // ReSharper disable Unity.PerformanceAnalysis
+        private static IEnumerator RevertLevitation(GameObject top, GameObject playerGoesBehind)
+        {
+            yield return new WaitForSeconds(60);
+
+            top.GetComponent<TilemapCollider2D>().enabled = true;
+            playerGoesBehind.GetComponent<TilemapRenderer>().sortingOrder = 2;
         }
 
         public void ApplyInvisibility()
         {
-            throw new System.NotImplementedException();
+            var color = GameObject.Find("Player").GetComponent<SpriteRenderer>().color;
+            color.a = 0.5f;
+            GameObject.Find("Player").GetComponent<SpriteRenderer>().color = color;
+            
+            StartCoroutine(RevertInvisibility(color));
+        }
+
+        // ReSharper disable Unity.PerformanceAnalysis
+        private IEnumerator RevertInvisibility(Color color)
+        {
+            yield return new WaitForSeconds(2);
+            color.a = 1f;
+            GameObject.Find("Player").GetComponent<SpriteRenderer>().color = color;
         }
 
         public void ApplyHolyGrail()
@@ -115,6 +158,7 @@ namespace PotionSystem
         public void ApplyConfusion()
         {
             //invert player controls
+            
         }
 
         public void ApplyClothing()
@@ -124,7 +168,7 @@ namespace PotionSystem
 
         public void ApplyCatcalling()
         {
-            throw new System.NotImplementedException();
+            //the player will summon a cat
         }
     }
 }

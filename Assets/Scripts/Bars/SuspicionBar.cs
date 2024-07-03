@@ -20,5 +20,11 @@ namespace Bars
         {
             fillAmountData.fillAmount -= 0.1f;
         }
+        
+        public void IncreaseSuspicion()
+        {
+            fillAmountData.fillAmount += 0.05f;
+        }
+
     }
 }

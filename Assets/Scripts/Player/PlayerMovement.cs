@@ -1,9 +1,7 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using PotionSystem;
 using System.Collections;
-using Day_Night_Cycle;
 
 namespace Player
 {
@@ -13,19 +11,19 @@ namespace Player
     public class PlayerMovement : MonoBehaviour
     {
         [Header("Attributes")]
-        [SerializeField] public float _movementSpeed = 2.5f;
+        [SerializeField] public float movementSpeed = 2.5f;
         [SerializeField] public int strength;
-        [SerializeField] private float _potionHeight = 1f;
-        [SerializeField] private float _throwDuration = 1f;
-        [SerializeField] private float _throwCD = 1f;
-        [SerializeField] private float _throwRadius = 2f;
-        private float lastThrowTime;
+        [SerializeField] private float potionHeight = 1f;
+        [SerializeField] private float throwDuration = 1f;
+        [SerializeField] private float throwCd = 1f;
+        [SerializeField] private float throwRadius = 2f;
+        private float _lastThrowTime;
         private Vector3 _startThrowPosition;
         private Vector3 _endThrowPosition;
-        public Vector2 _movementDirection;
+        public Vector2 movementDirection;
         private Vector2 _lastMoveDirection;
-        private bool isThrowing = false;
-        private bool isDrinking = false;
+        private bool _isThrowing = false;
+        private bool _isDrinking = false;
 
         [Space(5)]
         [Header("References")]
@@ -35,11 +33,15 @@ namespace Player
         [SerializeField] private LineRenderer trajectoryRenderer;
         private PotionEffectHandler _potionEffectHandler;
         private Vector3 _crosshairPosition;
-        public Animator _animator;
+        public Animator animator;
         public Rigidbody2D rb2d;
-
-        WorldTime.WorldTime _worldTime;
+        
         public List<Effect> ActiveEffects = new();
+        private static readonly int Horizontal = Animator.StringToHash("Horizontal");
+        private static readonly int Vertical = Animator.StringToHash("Vertical");
+        private static readonly int Speed = Animator.StringToHash("Speed");
+        private static readonly int IsThrow = Animator.StringToHash("isThrow");
+        private static readonly int IsDrink = Animator.StringToHash("isDrink");
 
         private void Awake()
         {
@@ -50,13 +52,13 @@ namespace Player
         {
             _potionEffectHandler = PotionEffectHandler.Instance;
             rb2d = GetComponent<Rigidbody2D>();
-            _animator = GetComponent<Animator>();
+            animator = GetComponent<Animator>();
             SetupTrajectoryRenderer();
         }
 
         private void FixedUpdate()
         {
-            rb2d.velocity = new Vector2(_movementDirection.x * _movementSpeed, _movementDirection.y * _movementSpeed);
+            rb2d.velocity = new Vector2(movementDirection.x * movementSpeed, movementDirection.y * movementSpeed);
         }
 
         private void Update()
@@ -74,8 +76,8 @@ namespace Player
             if (Input.GetKeyDown(KeyCode.Q) && Potion is not null)
             {
                 _potionEffectHandler.Handle(Potion.name);
-                isDrinking = true;
-                _animator.SetBool("isDrink", true);
+                _isDrinking = true;
+                animator.SetBool(IsDrink, true);
                 StartCoroutine(ResetAnim(0.3f));
             }
         }
@@ -85,39 +87,39 @@ namespace Player
             var moveX = Input.GetAxisRaw("Horizontal");
             var moveY = Input.GetAxisRaw("Vertical");
 
-            if (moveX == 0 && moveY == 0 && (_movementDirection.x != 0 || _movementDirection.y != 0))
-                _lastMoveDirection = _movementDirection;
+            if (moveX == 0 && moveY == 0 && (movementDirection.x != 0 || movementDirection.y != 0))
+                _lastMoveDirection = movementDirection;
 
-            _movementDirection = new Vector2(moveX, moveY).normalized;
+            movementDirection = new Vector2(moveX, moveY).normalized;
         }
 
         void Animate()
         {
-            if (!isThrowing || !isDrinking)
+            if (!_isThrowing || !_isDrinking)
             {
-                if (_movementDirection != Vector2.zero)
+                if (movementDirection != Vector2.zero)
                 {
-                    _animator.SetFloat("Horizontal", _movementDirection.x);
-                    _animator.SetFloat("Vertical", _movementDirection.y);
+                    animator.SetFloat(Horizontal, movementDirection.x);
+                    animator.SetFloat(Vertical, movementDirection.y);
                 }
-                _animator.SetFloat("Speed", _movementDirection.sqrMagnitude);
+                animator.SetFloat(Speed, movementDirection.sqrMagnitude);
             }
         }
 
-        void Aim()
+        private void Aim()
         {
             _crosshairPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             _crosshairPosition.z = 0f;
 
             crosshair.transform.position = _crosshairPosition;
 
-            if (Input.GetKeyDown(KeyCode.Mouse0) && Time.time >= lastThrowTime + _throwCD)
+            if (Input.GetKeyDown(KeyCode.Mouse0) && Time.time >= _lastThrowTime + throwCd)
             {
                 Vector3 throwTargetPosition = ClampThrowPosition(_crosshairPosition);
                 ThrowPotion(transform.position, throwTargetPosition);
-                lastThrowTime = Time.time;
-                _animator.SetBool("isThrow", true);
-                isThrowing = true;
+                _lastThrowTime = Time.time;
+                animator.SetBool(IsThrow, true);
+                _isThrowing = true;
                 FaceCrosshair();
                 StartCoroutine(ResetAnim(0.5f));
             }
@@ -126,8 +128,8 @@ namespace Player
         void FaceCrosshair()
         {
             Vector2 direction = (_crosshairPosition - transform.position).normalized;
-            _animator.SetFloat("Horizontal", direction.x);
-            _animator.SetFloat("Vertical", direction.y);
+            animator.SetFloat(Horizontal, direction.x);
+            animator.SetFloat(Vertical, direction.y);
         }
         void ThrowPotion(Vector3 firePosition, Vector3 targetPosition)
         {
@@ -142,9 +144,9 @@ namespace Player
         {
             float elapsedTime = 0f;
 
-            while (elapsedTime < _throwDuration)
+            while (elapsedTime < throwDuration)
             {
-                float t = elapsedTime / _throwDuration;
+                float t = elapsedTime / throwDuration;
                 Vector3 trajectoryPosition = ThrowTrajectory(firePosition, targetPosition, t);
                 potion.transform.position = trajectoryPosition;
 
@@ -162,10 +164,10 @@ namespace Player
         private IEnumerator ResetAnim(float delay)
         {
             yield return new WaitForSeconds(delay);
-            isThrowing = false;
-            isDrinking = false;
-            _animator.SetBool("isThrow", false);
-            _animator.SetBool("isDrink", false);
+            _isThrowing = false;
+            _isDrinking = false;
+            animator.SetBool(IsThrow, false);
+            animator.SetBool(IsDrink, false);
         }
 
         public void AddEffect(Effect effect)
@@ -202,7 +204,7 @@ namespace Player
         Vector3 ThrowTrajectory(Vector3 firePosition, Vector3 targetPosition, float t)
         {
             Vector3 linearProgress = Vector3.Lerp(firePosition, targetPosition, t);
-            float perspectiveOffset = Mathf.Sin(t * Mathf.PI) * _potionHeight;
+            float perspectiveOffset = Mathf.Sin(t * Mathf.PI) * potionHeight;
 
             Vector3 trajectoryPosition = linearProgress + (Vector3.up * perspectiveOffset);
             return trajectoryPosition;
@@ -224,9 +226,9 @@ namespace Player
         Vector3 ClampThrowPosition(Vector3 targetPosition)
         {
             Vector3 clampedPosition = targetPosition - transform.position;
-            if (clampedPosition.magnitude > _throwRadius)
+            if (clampedPosition.magnitude > throwRadius)
             {
-                clampedPosition = clampedPosition.normalized * _throwRadius;
+                clampedPosition = clampedPosition.normalized * throwRadius;
                 targetPosition = transform.position + clampedPosition;
             }
             return targetPosition;

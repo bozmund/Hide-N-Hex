@@ -1,4 +1,5 @@
 ﻿using Items;
+using PotionSystem;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -51,19 +52,19 @@ namespace CraftingSystem
             if (Mathf.Abs(Heat.fillAmount - optimalHeatPercentage) <= tolerance)
             {
                 if (Input.GetKeyDown(KeyCode.Q) && circleFillImage.fillAmount is >= 0.1f and <= 0.25f)
-                {
                     Q.color = Color.white;
-                }
+                else
+                    PotionEffects.ApplyMoreSus(true);
 
                 if (Input.GetKeyDown(KeyCode.W) && circleFillImage.fillAmount is >= 0.75f and <= 0.9f)
-                {
                     W.color = Color.white;
-                }
+                else
+                    PotionEffects.ApplyMoreSus(true);
 
                 if (Input.GetKeyDown(KeyCode.E) && circleFillImage.fillAmount is >= 0.4f and <= 0.6f)
-                {
                     E.color = Color.white;
-                }
+                else
+                    PotionEffects.ApplyMoreSus(true);
             }
 
             Heat.fillAmount -= decreaseRate * Time.deltaTime;
