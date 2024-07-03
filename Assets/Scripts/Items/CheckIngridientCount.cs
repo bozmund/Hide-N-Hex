@@ -1,72 +1,74 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CheckIngredientCount : MonoBehaviour
+namespace Items
 {
-    // Public variables to be set in the Inspector
-    public string itemName;
-    public int count;
-
-    // Reference to the MainInventory ScriptableObject
-    public MainInventory mainInventory;
-
-    // Reference to the Image component
-    private Image imageComponent;
-
-    // Sprites
-    private Sprite checkSymbol;
-    private Sprite xSymbol;
-
-    // Start is called before the first frame update
-    void Start()
+    public class CheckIngredientCount : MonoBehaviour
     {
-        // Load the sprites from the Resources folder
-        checkSymbol = Resources.Load<Sprite>("Icons/checksymbol");
-        xSymbol = Resources.Load<Sprite>("Icons/xsymbol");
+        // Public variables to be set in the Inspector
+        public string itemName;
+        public int count;
 
-        // Get the Image component attached to the GameObject
-        imageComponent = GetComponent<Image>();
+        // Reference to the MainInventory ScriptableObject
+        public MainInventory mainInventory;
 
-        if (imageComponent == null)
+        // Reference to the Image component
+        private Image _imageComponent;
+
+        // Sprites
+        private Sprite _checkSymbol;
+        private Sprite _xSymbol;
+
+        // Start is called before the first frame update
+        private void Start()
         {
-            Debug.LogError("No Image component found on this GameObject.");
-            return;
+            // Load the sprites from the Resources folder
+            _checkSymbol = Resources.Load<Sprite>("Icons/checksymbol");
+            _xSymbol = Resources.Load<Sprite>("Icons/xsymbol");
+
+            // Get the Image component attached to the GameObject
+            _imageComponent = GetComponent<Image>();
+
+            if (_imageComponent == null)
+            {
+                Debug.LogError("No Image component found on this GameObject.");
+                return;
+            }
+
+            // Check the ingredient count at the start
+            CheckIngredient();
         }
 
-        // Check the ingredient count at the start
-        CheckIngredient();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        // Continuously check the ingredient count
-        CheckIngredient();
-    }
-
-    // Method to check the ingredient count
-    void CheckIngredient()
-    {
-        if (mainInventory != null)
+        // Update is called once per frame
+        private void Update()
         {
-            string itemNumber;
-            int itemCount = mainInventory.GetSlotAndCountForItem(itemName, out itemNumber);
+            // Continuously check the ingredient count
+            CheckIngredient();
+        }
 
-            if (itemCount >= count)
+        // Method to check the ingredient count
+        private void CheckIngredient()
+        {
+            if (mainInventory != null)
             {
-                //Debug.Log($"Sufficient {itemName} found. Count: {itemCount}");
-                imageComponent.sprite = checkSymbol;
+                int itemCount = mainInventory.GetSlotAndCountForItem(itemName, out _);
+
+                if (itemCount >= count)
+                {
+                    // Debug.Log($"Sufficient {itemName} found. Count: {itemCount}");
+                    _imageComponent.sprite = _checkSymbol;
+                }
+                else
+                {
+                    Debug.LogWarning($"Not enough {itemName}. Required: {count}, Available: {itemCount}");
+                    _imageComponent.sprite = _xSymbol;
+                }
             }
             else
             {
-                //Debug.LogWarning($"Not enough {itemName}. Required: {count}, Available: {itemCount}");
-                imageComponent.sprite = xSymbol;
+                Debug.LogError("MainInventory ScriptableObject is not assigned.");
+                _imageComponent.sprite = _xSymbol;
             }
-        }
-        else
-        {
-            Debug.LogError("MainInventory ScriptableObject is not assigned.");
-            imageComponent.sprite = xSymbol;
         }
     }
 }

@@ -40,7 +40,7 @@ namespace Items
             Dictionary<string, MainInventory.InventorySlot> inventory = MainInventoryData.GetMainInventory();
             foreach (var kvp in inventory)
             {
-                //Debug.Log($"Slot: {kvp.Key}, Item: {kvp.Value.itemName}, Count: {kvp.Value.count}");
+                // Debug.Log($"Slot: {kvp.Key}, Item: {kvp.Value.itemName}, Count: {kvp.Value.count}");
             }
         }
     }

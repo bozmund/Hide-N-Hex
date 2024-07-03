@@ -33,9 +33,10 @@ namespace PotionSystem
             }
         }
 
+        // ReSharper disable Unity.PerformanceAnalysis
         public void Handle(string potionName)
         {
-            var potionEffects = new PotionEffects(_playerMovement);
+            var potionEffects = gameObject.AddComponent<PotionEffects>();
             switch (potionName)
             {
                 case "CatcallingPotion":
@@ -60,10 +61,10 @@ namespace PotionSystem
                     potionEffects.ApplyLevitation();
                     break;
                 case "LiquidFlamePotion":
-                    potionEffects.ApplyLiquidFlame();
+                    PotionEffects.ApplyLiquidFlame();
                     break;
                 case "LowerSusPotion":
-                    potionEffects.ApplyLowerSus();
+                    PotionEffects.ApplyLowerSus();
                     break;
                 case "MightPotion":
                     potionEffects.ApplyMight();
@@ -78,7 +79,7 @@ namespace PotionSystem
                     potionEffects.ApplyPurification();
                     break;
                 case "RecallPotion":
-                    potionEffects.ApplyRecall();
+                    PotionEffects.ApplyRecall();
                     break;
                 case "StrengthPotion":
                     potionEffects.ApplyStrength();

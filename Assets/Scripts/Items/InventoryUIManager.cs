@@ -101,7 +101,7 @@ namespace Items
         {
             foreach (Image img in itemImages)
             {
-                //Debug.Log($"Checking image: {img.gameObject.name} against slot: {itemNumber}");
+                // Debug.Log($"Checking image: {img.gameObject.name} against slot: {itemNumber}");
                 if (img.gameObject.name.Equals(itemNumber, System.StringComparison.OrdinalIgnoreCase))
                 {
                     return img;
@@ -118,7 +118,7 @@ namespace Items
 
             foreach (TextMeshProUGUI text in itemCounts)
             {
-                //Debug.Log($"Checking text: {text.gameObject.name} against slot: {countName}");
+                // Debug.Log($"Checking text: {text.gameObject.name} against slot: {countName}");
                 if (text.gameObject.name.Equals(countName, System.StringComparison.OrdinalIgnoreCase))
                 {
                     return text;
