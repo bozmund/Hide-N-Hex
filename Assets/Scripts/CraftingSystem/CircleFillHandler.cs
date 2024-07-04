@@ -36,8 +36,10 @@ namespace CraftingSystem
             optimalHeatPercentage = (optimalPositionY + 25) / 50;
             OptimalHeat.rectTransform.anchoredPosition =
                 new Vector2(OptimalHeat.rectTransform.anchoredPosition.x, optimalPositionY);
-            inventoryUI = InventoryUIManager.Instance;
-            inventoryUI.gameObject.SetActive(false);
+            var mainInventory = GameObject.Find("MainInventory");
+            var entireInventory = GameObject.Find("EntireInventory");
+            mainInventory.SetActive(false);
+            entireInventory.SetActive(false);
         }
 
         private void Update()
