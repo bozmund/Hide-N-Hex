@@ -14,17 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slots:
   - itemNumber: firstItem
-    itemName: firebloom
-    count: 33
+    itemName: RecallPotion
+    count: 1
   - itemNumber: secondItem
-    itemName: icecap
-    count: 24
+    itemName: PurificationPotion
+    count: 1
   - itemNumber: thirdItem
-    itemName: MindVisionPotion
-    count: 1
+    itemName: firebloom
+    count: 23
   - itemNumber: fourthItem
-    itemName: ConfusionPotion
-    count: 1
+    itemName: icecap
+    count: 31
   - itemNumber: fifthItem
     itemName: 
     count: 0

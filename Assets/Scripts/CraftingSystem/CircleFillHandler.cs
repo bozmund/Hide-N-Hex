@@ -37,11 +37,16 @@ namespace CraftingSystem
             optimalHeatPercentage = (optimalPositionY + 25) / 50;
             OptimalHeat.rectTransform.anchoredPosition =
                 new Vector2(OptimalHeat.rectTransform.anchoredPosition.x, optimalPositionY);
+<<<<<<< Updated upstream
             var mainInventory = GameObject.Find("MainInventory");
             var entireInventory = GameObject.Find("EntireInventory");
             mainInventory.SetActive(false);
             entireInventory.SetActive(false);
             _hasCrafted = false;
+=======
+            inventoryUI = InventoryUIManager.Instance;
+            inventoryUI.gameObject.SetActive(false);
+>>>>>>> Stashed changes
         }
 
         private void Update()
@@ -109,31 +114,8 @@ namespace CraftingSystem
 
         private void ChangeScene()
         {
-            // Subscribe to the sceneLoaded event
-            SceneManager.sceneLoaded += OnSceneLoaded;
-            // Load the new scene
-            SceneManager.LoadScene("Cabin");
-        }
-
-        private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-        {
-            // Check if the loaded scene is the one we expect
-            if (scene.name == "Cabin")
-            {
-                // Set inventoryUI active
-                //inventoryUI.gameObject.SetActive(true);
-
-                // Find the Player game object
-                GameObject player = GameObject.Find("Player");
-                if (player != null)
-                {
-                    // Set the player's position
-                    player.transform.position = new Vector3(0.4401488f, 13.2805f, player.transform.position.z);
-                }
-
-                // Unsubscribe from the sceneLoaded event
-                SceneManager.sceneLoaded -= OnSceneLoaded;
-            }
+            SceneManager.LoadScene("OutsideTheCabin");
+            inventoryUI.gameObject.SetActive(true);
         }
 
         private void SubtractIngredient(string ingredient)
