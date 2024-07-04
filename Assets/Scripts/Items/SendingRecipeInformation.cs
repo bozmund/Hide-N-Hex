@@ -1,10 +1,10 @@
-using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 using CraftingSystem;
+using TMPro;
+using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-namespace ItemSystem
+namespace Items
 {
     public class SendingRecipeInformation : MonoBehaviour
     {
@@ -64,11 +64,11 @@ namespace ItemSystem
             }
 
             // Log the gathered information
-            Debug.Log("Potion Name: " + recipeData.potionName);
-            Debug.Log("Potion Sprite Name: " + recipeData.potionSpriteName);
-            Debug.Log("First Ingredient Sprite Name: " + recipeData.firstIngredientSpriteName);
-            Debug.Log("Second Ingredient Sprite Name: " + recipeData.secondIngredientSpriteName);
-            Debug.Log("Third Ingredient Sprite Name: " + recipeData.thirdIngredientSpriteName);
+            // Debug.Log("Potion Name: " + recipeData.potionName);
+            // Debug.Log("Potion Sprite Name: " + recipeData.potionSpriteName);
+            // Debug.Log("First Ingredient Sprite Name: " + recipeData.firstIngredientSpriteName);
+            // Debug.Log("Second Ingredient Sprite Name: " + recipeData.secondIngredientSpriteName);
+            // Debug.Log("Third Ingredient Sprite Name: " + recipeData.thirdIngredientSpriteName);
 
             SceneManager.LoadScene("CriclelFill");
         }

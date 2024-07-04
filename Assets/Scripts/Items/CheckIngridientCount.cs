@@ -60,7 +60,7 @@ namespace Items
                 }
                 else
                 {
-                    Debug.LogWarning($"Not enough {itemName}. Required: {count}, Available: {itemCount}");
+                    // Debug.LogWarning($"Not enough {itemName}. Required: {count}, Available: {itemCount}");
                     _imageComponent.sprite = _xSymbol;
                 }
             }

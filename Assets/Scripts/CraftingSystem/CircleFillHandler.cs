@@ -26,6 +26,7 @@ namespace CraftingSystem
         private float increaseRate = 0.4f;
         private float optimalHeatPercentage;
         private float tolerance = 0.1f;
+        private bool _hasCrafted;
 
         private void Start()
         {
@@ -40,6 +41,7 @@ namespace CraftingSystem
             var entireInventory = GameObject.Find("EntireInventory");
             mainInventory.SetActive(false);
             entireInventory.SetActive(false);
+            _hasCrafted = false;
         }
 
         private void Update()
@@ -55,17 +57,17 @@ namespace CraftingSystem
             {
                 if (Input.GetKeyDown(KeyCode.Q) && circleFillImage.fillAmount is >= 0.1f and <= 0.25f)
                     Q.color = Color.white;
-                else
+                else if (Input.GetKeyDown(KeyCode.Q) && circleFillImage.fillAmount is < 0.1f or > 0.25f)
                     PotionEffects.ApplyMoreSus(true);
 
                 if (Input.GetKeyDown(KeyCode.W) && circleFillImage.fillAmount is >= 0.75f and <= 0.9f)
                     W.color = Color.white;
-                else
+                else if (Input.GetKeyDown(KeyCode.W) && circleFillImage.fillAmount is < 0.75f or > 0.9f)
                     PotionEffects.ApplyMoreSus(true);
 
                 if (Input.GetKeyDown(KeyCode.E) && circleFillImage.fillAmount is >= 0.4f and <= 0.6f)
                     E.color = Color.white;
-                else
+                else if (Input.GetKeyDown(KeyCode.E) && circleFillImage.fillAmount is < 0.4f or > 0.6f)
                     PotionEffects.ApplyMoreSus(true);
             }
 
@@ -84,19 +86,24 @@ namespace CraftingSystem
             Heat.fillAmount = Mathf.Clamp(Heat.fillAmount, 0, 1);
 
             if (!E.color.Equals(Color.white) || !Q.color.Equals(Color.white) || !W.color.Equals(Color.white)) return;
-            Craft(recipeData.potionSpriteName, recipeData.firstIngredientSpriteName, recipeData.secondIngredientSpriteName, recipeData.thirdIngredientSpriteName);
+            Craft(recipeData.potionSpriteName, recipeData.firstIngredientSpriteName,
+                recipeData.secondIngredientSpriteName, recipeData.thirdIngredientSpriteName);
         }
 
-        private void Craft(string potionSpriteName, string firstIngredient, string secondIngredient, string thirdIngredient)
+        private void Craft(string potionSpriteName, string firstIngredient, string secondIngredient,
+            string thirdIngredient)
         {
+            if (_hasCrafted) return;
+            
             var potionCount = MainInventoryData.GetSlotAndCountForItem(potionSpriteName, out var itemNumber);
             potionCount += 1;
             MainInventoryData.UpdateMainInventory(itemNumber, potionSpriteName, potionCount);
             SubtractIngredient(firstIngredient);
             SubtractIngredient(secondIngredient);
             SubtractIngredient(thirdIngredient);
-            inventoryUI.LoadInventorySprites();
 
+            _hasCrafted = true;
+            
             ChangeScene();
         }
 
