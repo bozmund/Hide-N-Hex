@@ -277,6 +277,8 @@ GameObject:
   - component: {fileID: 1745927567}
   - component: {fileID: 1745927568}
   - component: {fileID: 1745927569}
+  - component: {fileID: 1745927570}
+  - component: {fileID: 1745927571}
   m_Layer: 5
   m_Name: MenuUI
   m_TagString: Untagged
@@ -352,6 +354,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dda20529964f6aa4b9ecfcb65103ce9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1745927570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745927564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eefd767d6b2ca2a459a579a1eb2c6a7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1745927571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745927564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ade6853556282a44e8526872434000cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableStartButtonStatus: {fileID: 11400000, guid: 6bad3eef1ca444546996f6dff5d4579b, type: 2}
 --- !u!1 &1827304339
 GameObject:
   m_ObjectHideFlags: 0

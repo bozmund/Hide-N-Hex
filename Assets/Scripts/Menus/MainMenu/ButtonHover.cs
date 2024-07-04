@@ -5,6 +5,9 @@ namespace MainMenu
 {
     public class ButtonHoverHandler : MonoBehaviour
     {
+        private float newGameButtonHoverWidth = 300f;
+        private float newGameButtonHoverHeight = 100f;
+
         private float startGameButtonHoverWidth = 300f;
         private float startGameButtonHoverHeight = 100f;
 
@@ -17,14 +20,17 @@ namespace MainMenu
         private float buttonOriginalWidth = 287f;
         private float buttonOriginalHeight = 60f;
 
-
         private void Start()
         {
             var root = GetComponent<UIDocument>().rootVisualElement;
 
+            var newGameButton = root.Q<Button>("NewGame");
             var startGameButton = root.Q<Button>("StartGame");
             var settingsButton = root.Q<Button>("Settings");
             var leaveGameButton = root.Q<Button>("LeaveGame");
+
+            newGameButton.RegisterCallback<MouseOverEvent>(evt => OnButtonHover(evt, newGameButton, newGameButtonHoverWidth, newGameButtonHoverHeight));
+            newGameButton.RegisterCallback<MouseOutEvent>(evt => OnButtonHoverEnd(evt, newGameButton));
 
             startGameButton.RegisterCallback<MouseOverEvent>(evt => OnButtonHover(evt, startGameButton, startGameButtonHoverWidth, startGameButtonHoverHeight));
             startGameButton.RegisterCallback<MouseOutEvent>(evt => OnButtonHoverEnd(evt, startGameButton));

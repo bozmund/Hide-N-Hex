@@ -267,7 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 888360111}
+  m_Material: {fileID: 1155330292}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -293,7 +293,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836169125}
   m_CullTransparentMesh: 1
---- !u!21 &888360111
+--- !u!21 &1155330292
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -346,6 +346,7 @@ GameObject:
   - component: {fileID: 1286823266}
   - component: {fileID: 1286823268}
   - component: {fileID: 1286823267}
+  - component: {fileID: 1286823269}
   m_Layer: 5
   m_Name: DialogText
   m_TagString: Untagged
@@ -415,6 +416,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1286823265}
   m_CullTransparentMesh: 1
+--- !u!114 &1286823269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286823265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe727a034e8f13644a275d76967fce61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1708303243
 GameObject:
   m_ObjectHideFlags: 0
