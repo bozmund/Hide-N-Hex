@@ -1,4 +1,5 @@
 using System;
+using Scriptable_Objects.WorldTime;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using WorldTime;
@@ -13,30 +14,34 @@ namespace Day_Night_Cycle
         [SerializeField] private WorldTime.WorldTime _worldTime;
         [SerializeField] private Gradient _gradient;
 
-        public static float percentOfDay;
+        public static float _percentOfDay;
+        private static TimeSpan _timeSpan;
+        private WorldTimeSO _worldTimeSO;
 
         private void Awake()
         {
             _light = GetComponent<Light2D>();
             _worldTime.WorldTimeChanged += OnWorldTimeChanged;
-            percentOfDay = 0f;
         }
 
         private void OnDestroy()
         {
             _worldTime.WorldTimeChanged -= OnWorldTimeChanged;
+            _worldTimeSO.TimeSpan += _timeSpan;
         }
 
         private void OnWorldTimeChanged(object sender, TimeSpan newTime)
         {
-            percentOfDay = PercentOfDay(newTime);
-            _light.color = _gradient.Evaluate(percentOfDay);
+            _percentOfDay = PercentOfDay(newTime);
+            _light.color = _gradient.Evaluate(_percentOfDay);
         }
 
         private float PercentOfDay(TimeSpan timeSpan)
         {
-            percentOfDay = (float)(timeSpan.TotalMinutes % WorldTimeConstant.MinutesInDay) / WorldTimeConstant.MinutesInDay;
-            return percentOfDay;
+            var realTimePassed = timeSpan.TotalMinutes + _worldTimeSO.TimeSpan.TotalMinutes;
+            _percentOfDay = (float)(realTimePassed % WorldTimeConstant.MinutesInDay) / WorldTimeConstant.MinutesInDay;
+            _timeSpan = timeSpan;
+            return _percentOfDay;
         }
     }
 }
