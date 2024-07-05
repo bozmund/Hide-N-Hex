@@ -61,6 +61,7 @@ public class ChangeTextAndImageOnSpace : MonoBehaviour
         }
     }
 
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -113,19 +114,24 @@ public class ChangeTextAndImageOnSpace : MonoBehaviour
                     {
                         healthValue.fillAmount = 1; // Set fillAmount to 1
                     }
+
                     if (suspicionValue != null)
                     {
                         suspicionValue.fillAmount = 0; // Set fillAmount to 0
                     }
+
                     if (potionInHand != null)
                     {
                         potionInHand.potionName = ""; // Set potionName to empty
                     }
+
+
                     if (playerPosition != null)
                     {
                         playerPosition.sceneName = ""; // Set sceneName to empty
                         playerPosition.position = Vector3.zero; // Set position to (0, 0, 0)
                     }
+
                     if (mainInventory != null)
                     {
                         foreach (var slot in mainInventory.slots)
@@ -134,10 +140,49 @@ public class ChangeTextAndImageOnSpace : MonoBehaviour
                             slot.count = 0; // Set count to 0
                         }
                     }
+
                     if (enableStartButtonStatus != null)
                     {
                         enableStartButtonStatus.StartButtonStatus = "enabled"; // Set StartButtonStatus to "enabled"
+                        //Debug.Log("Enabled");
                     }
+
+                    if (PlayerPrefs.HasKey("UnlockPurification"))
+                    {
+                        PlayerPrefs.SetInt("UnlockPurification", 1);
+                        PlayerPrefs.SetInt("UnlockUsefulness", 1);
+                        PlayerPrefs.SetInt("UnlockClothing", 1);
+                        PlayerPrefs.SetInt("UnlockMindVision", 1);
+                        PlayerPrefs.SetInt("UnlockToxicGas", 1);
+                        PlayerPrefs.SetInt("UnlockLiquidFlame", 1);
+                        PlayerPrefs.SetInt("UnlockUselessness", 1);
+                        PlayerPrefs.SetInt("UnlockCatcalling", 1);
+                        PlayerPrefs.SetInt("UnlockMight", 1);
+                        PlayerPrefs.SetInt("UnlockRepair", 1);
+                        PlayerPrefs.SetInt("UnlockHolyGrail", 1);
+
+                        //Debug.Log("Keys are set");
+                    }
+
+                    if (PlayerPrefs.HasKey("recipeUsefulnessClothingAndPurification"))
+                    {
+                        PlayerPrefs.SetInt("recipeUsefulnessClothingAndPurification", 1);
+                        PlayerPrefs.SetInt("recipeLiquidFlameToxicGasAndMindVision", 1);
+                        PlayerPrefs.SetInt("recipeUselessnessAndCatcalling", 1);
+                        PlayerPrefs.SetInt("recipeMightAndRepair", 1);
+                        PlayerPrefs.SetInt("recipeHolyGrail", 1);
+                        //Debug.Log("Keys are set");
+                    }
+
+                    if (PlayerPrefs.HasKey("BookshelfPosX"))
+                    {
+                        PlayerPrefs.SetFloat("BookshelfPosX", 113f);
+                        PlayerPrefs.SetFloat("BarrierPosX", 7.2f);
+                        PlayerPrefs.SetFloat("OpenBookshelfPosX", 7.2f);
+                        PlayerPrefs.SetInt("LeaveCabinActive", 1);
+                        Debug.Log("Keys are set");
+                    }
+
                     SceneManager.LoadScene("OutsideTheCabin");
                     break;
 

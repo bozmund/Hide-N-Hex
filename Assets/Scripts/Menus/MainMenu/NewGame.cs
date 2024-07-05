@@ -16,6 +16,17 @@ namespace MainMenu
 
         private static void NewGame()
         {
+            // Find the GameObject named "BackgroundMusicCutscene"
+            GameObject musicObject = GameObject.Find("BackgroundMusicMain");
+
+            // Check if the object exists
+            if (musicObject != null)
+            {
+                // Destroy the GameObject
+                Destroy(musicObject);
+                Debug.Log("BackgroundMusic has been destroyed.");
+            }
+
             SceneManager.LoadScene("InitialCutscene");
         }
     }

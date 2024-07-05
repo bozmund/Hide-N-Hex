@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 1245098043}
   - component: {fileID: 1245098044}
   m_Layer: 0
-  m_Name: BackgroundMusic
+  m_Name: BackgroundMusicMain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1245098041}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e80d488e89b886344ac32536f624376f, type: 3}
+  m_Script: {fileID: 11500000, guid: 916ad9511494a0b4494081452d829818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1745927564

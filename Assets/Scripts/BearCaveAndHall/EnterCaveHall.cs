@@ -12,6 +12,12 @@ public class EnterCaveHall : MonoBehaviour
         if (playerInTrigger && Input.GetKeyDown(KeyCode.F))
         {
             // Load the BearCave scene
+            GameObject musicObject = GameObject.Find("BackgroundMusicMain");
+            if (musicObject != null)
+            {
+                // Destroy the GameObject
+                Destroy(musicObject);
+            }
             SceneManager.LoadScene("BearCave");
         }
     }

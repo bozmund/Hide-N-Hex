@@ -108,7 +108,7 @@ namespace CraftingSystem
 
         private void ChangeScene()
         {
-            SceneManager.LoadScene("OutsideTheCabin");
+            SceneManager.LoadScene("Cabin");
             inventoryUI.gameObject.SetActive(true);
         }
 
