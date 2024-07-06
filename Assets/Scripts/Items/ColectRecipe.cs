@@ -26,8 +26,37 @@ public class CollectRecipe : MonoBehaviour
     public GameObject recipeMightAndRepair;
     public GameObject recipeHolyGrail;
 
+    private AudioSource colectSoundAudio;
+
     private void Start()
     {
+        // Find the "MinorSounds" GameObject
+        GameObject minorSounds = GameObject.Find("MinorSounds");
+
+        if (minorSounds != null)
+        {
+            // Find the "ColectSound" GameObject inside "MinorSounds"
+            Transform colectSoundTransform = minorSounds.transform.Find("ColectSound");
+
+            if (colectSoundTransform != null)
+            {
+                colectSoundAudio = colectSoundTransform.GetComponent<AudioSource>();
+
+                if (colectSoundAudio == null)
+                {
+                    Debug.LogWarning("ColectSound GameObject does not have an AudioSource component.");
+                }
+            }
+            else
+            {
+                Debug.LogWarning("Could not find GameObject named 'ColectSound' inside 'MinorSounds'.");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("Could not find GameObject named 'MinorSounds'.");
+        }
+
         LoadStates();
     }
 
@@ -47,6 +76,9 @@ public class CollectRecipe : MonoBehaviour
 
             // Save the state of the collided recipe GameObject
             SaveState(collision.gameObject);
+
+            // Play the collect sound
+            PlayColectSound();
 
             // Check the name of the collided recipe GameObject and deactivate the corresponding GameObjects
             switch (collision.gameObject.name)
@@ -70,6 +102,18 @@ public class CollectRecipe : MonoBehaviour
                     }
                     break;
             }
+        }
+    }
+
+    private void PlayColectSound()
+    {
+        if (colectSoundAudio != null)
+        {
+            colectSoundAudio.Play();
+        }
+        else
+        {
+            Debug.LogWarning("No AudioSource found to play ColectSound.");
         }
     }
 

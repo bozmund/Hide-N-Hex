@@ -98,7 +98,7 @@ public class ChangeTextAndImageOnSpace : MonoBehaviour
                     break;
 
                 case 4:
-                    uiText.text = "In some areas you will be able to make a interaction by clicking \"F\". WASD is used for moving.";
+                    uiText.text = "In some areas you will be able to make an interaction by clicking \"F\". WASD is used for moving. ESC is used to control some game options.";
                     break;
 
                 case 5:

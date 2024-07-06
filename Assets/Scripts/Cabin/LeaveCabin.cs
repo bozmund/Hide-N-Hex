@@ -53,6 +53,38 @@ public class LeaveCabin : MonoBehaviour
                 player.transform.position = new Vector3(0.3726141f, -0.7669999f, player.transform.position.z);
             }
 
+            GameObject minorSounds = GameObject.Find("MinorSounds");
+
+            if (minorSounds != null)
+            {
+                // Find the "DoorSound" GameObject inside "MinorSounds"
+                GameObject doorSound = minorSounds.transform.Find("DoorSound").gameObject;
+
+                if (doorSound != null)
+                {
+                    // Get the AudioSource component
+                    AudioSource audioSource = doorSound.GetComponent<AudioSource>();
+
+                    if (audioSource != null)
+                    {
+                        // Play the audio
+                        audioSource.Play();
+                    }
+                    else
+                    {
+                        Debug.LogWarning("DoorSound GameObject does not have an AudioSource component.");
+                    }
+                }
+                else
+                {
+                    Debug.LogWarning("Could not find GameObject named 'DoorSound' inside 'MinorSounds'.");
+                }
+            }
+            else
+            {
+                Debug.LogWarning("Could not find GameObject named 'MinorSounds'.");
+            }
+
             // Unsubscribe from the sceneLoaded event
             SceneManager.sceneLoaded -= OnSceneLoaded;
         }
