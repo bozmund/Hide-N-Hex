@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slots:
   - itemNumber: firstItem
-    itemName: firebloom
-    count: 32
-  - itemNumber: secondItem
     itemName: icecap
-    count: 21
+    count: 16
+  - itemNumber: secondItem
+    itemName: goldenLotus
+    count: 32
   - itemNumber: thirdItem
     itemName: 
     count: 0
@@ -48,7 +48,7 @@ MonoBehaviour:
     count: 0
   - itemNumber: twelfthItem
     itemName: 
-    count: 1
+    count: 0
   - itemNumber: thirteenthItem
     itemName: 
     count: 0
@@ -107,8 +107,8 @@ MonoBehaviour:
     itemName: 
     count: 0
   - itemNumber: thirtySecondItem
-    itemName: 
-    count: 0
+    itemName: firebloom
+    count: 23
   - itemNumber: thirtyThirdItem
     itemName: 
     count: 0
