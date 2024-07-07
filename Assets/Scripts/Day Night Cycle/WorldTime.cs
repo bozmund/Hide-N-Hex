@@ -8,8 +8,7 @@ namespace WorldTime
     {
         public event EventHandler<TimeSpan> WorldTimeChanged;
         [SerializeField] private float _dayLength;
-
-        private TimeSpan _currentTime;
+        public TimeSpan _currentTime;
         private float _minuteLength => _dayLength / WorldTimeConstant.MinutesInDay;
 
         private void Start()

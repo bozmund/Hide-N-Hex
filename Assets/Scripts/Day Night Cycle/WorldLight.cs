@@ -11,14 +11,14 @@ namespace Day_Night_Cycle
     {
         private Light2D _light;
 
-        [SerializeField] private WorldTime.WorldTime _worldTime;
-        [SerializeField] private Gradient _gradient;
+        public WorldTime.WorldTime _worldTime;
+        public Gradient _gradient;
 
-        public static float _percentOfDay;
+        public static float percentOfDay;
         private static TimeSpan _timeSpan;
-        private WorldTimeSO _worldTimeSO;
+        public WorldTimeSO _worldTimeSO;
 
-        private void Awake()
+        private void Awake() 
         {
             _light = GetComponent<Light2D>();
             _worldTime.WorldTimeChanged += OnWorldTimeChanged;
@@ -32,16 +32,16 @@ namespace Day_Night_Cycle
 
         private void OnWorldTimeChanged(object sender, TimeSpan newTime)
         {
-            _percentOfDay = PercentOfDay(newTime);
-            _light.color = _gradient.Evaluate(_percentOfDay);
+            percentOfDay = PercentOfDay(newTime);
+            _light.color = _gradient.Evaluate(percentOfDay);
         }
 
         private float PercentOfDay(TimeSpan timeSpan)
         {
             var realTimePassed = timeSpan.TotalMinutes + _worldTimeSO.TimeSpan.TotalMinutes;
-            _percentOfDay = (float)(realTimePassed % WorldTimeConstant.MinutesInDay) / WorldTimeConstant.MinutesInDay;
+            percentOfDay = (float)(realTimePassed % WorldTimeConstant.MinutesInDay) / WorldTimeConstant.MinutesInDay;
             _timeSpan = timeSpan;
-            return _percentOfDay;
+            return percentOfDay;
         }
     }
 }
