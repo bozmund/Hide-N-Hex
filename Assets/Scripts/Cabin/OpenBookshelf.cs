@@ -49,6 +49,38 @@ public class OpenBookshelf : MonoBehaviour
         // Check if player is in the trigger area and the "F" key is pressed
         if (playerInTrigger && Input.GetKeyDown(KeyCode.F))
         {
+            GameObject minorSounds = GameObject.Find("MinorSounds");
+
+            if (minorSounds != null)
+            {
+                // Find the "BookshelfSound" GameObject inside "MinorSounds"
+                GameObject BookshelfSound = minorSounds.transform.Find("BookshelfSound").gameObject;
+
+                if (BookshelfSound != null)
+                {
+                    // Get the AudioSource component
+                    AudioSource audioSource = BookshelfSound.GetComponent<AudioSource>();
+
+                    if (audioSource != null)
+                    {
+                        // Play the audio
+                        audioSource.Play();
+                    }
+                    else
+                    {
+                        Debug.LogWarning("DoorSound GameObject does not have an AudioSource component.");
+                    }
+                }
+                else
+                {
+                    Debug.LogWarning("Could not find GameObject named 'DoorSound' inside 'MinorSounds'.");
+                }
+            }
+            else
+            {
+                Debug.LogWarning("Could not find GameObject named 'MinorSounds'.");
+            }
+
             // Toggle between two positions for the Bookshelf
             if (bookshelfRectTransform != null)
             {
