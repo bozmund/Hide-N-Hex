@@ -37,11 +37,9 @@ namespace NPC
                     rb2d.velocity = Vector2.zero;
                     yield return new WaitForSeconds(waitTime);
 
-                    if (_firstInList)
-                    {
-                        Forward();
-                    }
+                    if (_firstInList) Forward();
                     else Backward();
+
                     isWaiting = false;
                 }
             }
@@ -49,23 +47,23 @@ namespace NPC
 
         private void Forward()
         {
-            currentWaypointIndex++;
+            
             if (currentWaypointIndex == _arraySize)
             {
                 _lastInList = true;
                 _firstInList = false;
             }
-        
+            else currentWaypointIndex++;
         }
 
         private void Backward()
-        {
-            currentWaypointIndex--;
+        {       
             if (currentWaypointIndex == 0)
             {
                 _firstInList = false;
                 _lastInList = true;
             }
+            else currentWaypointIndex--;
         }
     }
 }

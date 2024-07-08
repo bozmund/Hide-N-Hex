@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using PotionSystem;
 using System.Collections;
+using System;
 
 namespace Player
 {
@@ -28,15 +29,17 @@ namespace Player
 
         [Space(5)]
         [Header("References")]
-        [SerializeField] public GameObject crosshair;
-        [SerializeField] private GameObject Potion;
-        [SerializeField] Transform _potion;
-        [SerializeField] private LineRenderer trajectoryRenderer;
+        public GameObject Potion;
+        public LineRenderer trajectoryRenderer;
         private PotionEffectHandler _potionEffectHandler;
         private Vector3 _crosshairPosition;
         public Animator animator;
         public Rigidbody2D rb2d;
-        
+        public SpriteRenderer spriteRenderer;
+        public Sprite[] potionDrinkSprites;
+        public Sprite[] potionThrowSprites;
+        public Sprite[] walkSprites;
+
         public List<Effect> ActiveEffects = new();
         private static readonly int Horizontal = Animator.StringToHash("Horizontal");
         private static readonly int Vertical = Animator.StringToHash("Vertical");
@@ -54,6 +57,7 @@ namespace Player
             _potionEffectHandler = PotionEffectHandler.Instance;
             rb2d = GetComponent<Rigidbody2D>();
             animator = GetComponent<Animator>();
+            spriteRenderer = GetComponent<SpriteRenderer>();
             SetupTrajectoryRenderer();
         }
 
@@ -70,7 +74,61 @@ namespace Player
             UpdateTrajectoryLine();
             DrinkPotion();
             HandleActiveEffects();
+            CheckActiveSprite();
         }
+
+        private void CheckActiveSprite()
+        {
+
+            Sprite currentSprite = spriteRenderer.sprite;
+
+            // Check if the current sprite is in the potionDrinkSprites array
+            foreach (Sprite sprite in potionDrinkSprites)
+            {
+                if (currentSprite == sprite)
+                {
+                    GameObject napitak = GameObject.Find("Potion");
+                    napitak.GetComponent<SpriteRenderer>().sortingOrder = 2;
+                }
+                else
+                {
+                    GameObject napitak = GameObject.Find("Potion");
+                    napitak.GetComponent<SpriteRenderer>().sortingOrder = 3;
+                }
+            }
+
+            // Check if the current sprite is in the potionThrowSprites array
+            foreach (Sprite sprite in potionThrowSprites)
+            {
+                if (currentSprite == sprite)
+                {
+                    GameObject napitak = GameObject.Find("Potion");
+                    napitak.GetComponent<SpriteRenderer>().sortingOrder = 2;
+                }
+                else
+                {
+                    GameObject napitak = GameObject.Find("Potion");
+                    napitak.GetComponent<SpriteRenderer>().sortingOrder = 3;
+                }
+            }
+
+            // Check if the current sprite is in the walkSprites array
+            foreach (Sprite sprite in walkSprites)
+            {
+                if (currentSprite == sprite)
+                {
+                    GameObject napitak = GameObject.Find("Potion");
+                    napitak.GetComponent<SpriteRenderer>().sortingOrder = 2;
+                }
+                else
+                {
+                    GameObject napitak = GameObject.Find("Potion");
+                    napitak.GetComponent<SpriteRenderer>().sortingOrder = 3;
+                }
+            }
+        }
+
+
 
         // ReSharper disable Unity.PerformanceAnalysis
         private void DrinkPotion()
@@ -119,8 +177,6 @@ namespace Player
             _crosshairPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             _crosshairPosition.z = 0f;
 
-            crosshair.transform.position = _crosshairPosition;
-
             if (Input.GetKeyDown(KeyCode.Mouse0) && Time.time >= _lastThrowTime + throwCd)
             {
                 Vector3 throwTargetPosition = ClampThrowPosition(_crosshairPosition);
@@ -144,7 +200,8 @@ namespace Player
             _startThrowPosition = firePosition;
             _endThrowPosition = targetPosition;
 
-            GameObject potion = Instantiate(Potion, firePosition, Quaternion.identity);
+            GameObject potion = Instantiate(Potion, firePosition, Quaternion.identity) as GameObject;
+            potion.transform.localScale = new Vector2(0.4f, 0.4f);
             StartCoroutine(AnimateThrow(potion, firePosition, targetPosition));
         }
 

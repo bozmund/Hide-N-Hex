@@ -5,12 +5,14 @@ using Player;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
+using CatSystem;
 
 namespace PotionSystem
 {
     public class PotionEffects : MonoBehaviour
     {
         private PlayerMovement _player;
+        private Cat cat;
 
         private void Awake()
         {
@@ -171,7 +173,7 @@ namespace PotionSystem
 
         public void ApplyCatcalling()
         {
-            //the player will summon a cat
+            cat.hasItem = true;
         }
     }
 }

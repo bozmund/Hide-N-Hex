@@ -81,8 +81,8 @@ public class NightTime : MonoBehaviour
         setHodanje.isWaiting = false;
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D other)
     {
-        if (WorldLight.percentOfDay >= 0.2f || WorldLight.percentOfDay <= 0.7f) sus.fillAmount += 0.01f;
+        if ((WorldLight.percentOfDay < 0.2f || WorldLight.percentOfDay > 0.7f) && other.CompareTag("Player")) sus.fillAmount += 0.005f * Time.deltaTime;
     }
 }
