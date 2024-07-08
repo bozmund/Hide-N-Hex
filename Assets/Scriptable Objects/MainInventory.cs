@@ -16,11 +16,15 @@ public class MainInventory : ScriptableObject
 
     private readonly string[] common = {
         "blindweed", "dewcatcher", "earthroot", "fadeleaf", "firebloom", "icecap",
-        "mageroyal", "rotberry", "sorrowmoss", "sungrass", "swiftthistle"
+        "mageroyal", "rotberry", "sorrowmoss", "sungrass", "swiftthistle", "ConfusionPotion", "WeaknessPotion", "Potion",
+        "Potion", "Potion", "Potion", "Potion", "Potion", "PurificationPotion", "LevitationPotion", "RecallPotion", "UsefulnessPotion",
+        "ClothingPotion", "HealingPotion", "StrengthPotion", "InvisibilityPotion", "MindVisionPotion", "LowerSusPotion", "ToxicGasPotion",
+        "LiquidFlamePotion", "FrostPotion"
     };
 
     private readonly string[] rare = {
-        "starflower", "goldenLotus", "blandfruit", "stormvine"
+        "starflower", "goldenLotus", "blandfruit", "stormvine", "bearPoop", "ParalyticGasPotion", "UselessnessPotion", "CatcallingPotion",
+        "SwiftnessPotion", "MightPotion", "RepairPotion", "HolyGrailPotion"
     };
 
     private void OnEnable()

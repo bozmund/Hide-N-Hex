@@ -140,7 +140,7 @@ namespace CraftingSystem
                 Debug.Log("Is zero");
                 Debug.Log(itemNumber);
                 MainInventoryData.UpdateMainInventory(itemNumber, "", countForItem);
-                inventoryUI.ClearUIElement(itemNumber);
+                //inventoryUI.ClearUIElement(itemNumber);
             }
             else
             {

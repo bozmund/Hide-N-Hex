@@ -71,8 +71,8 @@ public class InventoryItemClickHandler : MonoBehaviour, IPointerClickHandler
                 SpriteRenderer spriteRenderer = newObject.AddComponent<SpriteRenderer>();
                 spriteRenderer.sprite = itemImage.sprite;
 
-                // Set the order in layer
-                spriteRenderer.sortingOrder = 1;
+                // Set the order in layer to 2
+                spriteRenderer.sortingOrder = 2;
 
                 // Set the tag to "DisappearObject"
                 newObject.tag = "DisappearObject";
@@ -92,4 +92,5 @@ public class InventoryItemClickHandler : MonoBehaviour, IPointerClickHandler
             }
         }
     }
+
 }
