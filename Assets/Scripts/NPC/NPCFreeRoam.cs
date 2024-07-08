@@ -3,43 +3,46 @@ using UnityEngine;
 
 public class NPCFreeRoam : MonoBehaviour
 {
-    public float moveSpeed = 1f;
-    private float minX = -2f;
-    private float maxX = 2f;
-    private float minY = -2f;
-    private float maxY = 2f;
-    public bool isMoving = true;
-
-    private Vector2 targetPosition;
-    private Vector2 _villagePosition;
-
+    [Header("References")]
     public Rigidbody2D rb2d;
+
+    [Header("Variables")]
+    public float moveSpeed = 1f;
+    [SerializeField] private float minX = -22f;
+    [SerializeField] private float maxX = 22f;
+    [SerializeField] private float minY = -15f;
+    [SerializeField] private float maxY = 20f;
+    public bool isMoving = true;
+    [SerializeField]private float waitTime = 2f;
+
+    [SerializeField]private Vector2 targetPosition;
+    [SerializeField]private Vector2 _villagePosition;
+
+
 
     void Start()
     {
+        rb2d = GetComponent<Rigidbody2D>();
         _villagePosition = new Vector2(71, 8);
         SetRandomTargetPosition();
     }
 
     public IEnumerator MoveAndWait()
     {
-        while (true)
+        if (isMoving)
         {
-            if (isMoving)
-            {
-                rb2d.FreeRoam(targetPosition, moveSpeed);
+            Vector2 direction = (targetPosition - rb2d.position).normalized;
+            rb2d.velocity = direction * moveSpeed;
 
-                if (Vector2.Distance(transform.position, targetPosition) < 0.1f)
-                {
-                    isMoving = false;
-                    rb2d.velocity = Vector2.zero;
-                    yield return new WaitForSeconds(Random.Range(1f, 3f));
-                    SetRandomTargetPosition();
-                    isMoving = true;
-                }
+            if (Vector2.Distance(transform.position, targetPosition) < 0.1f)
+            {
+                isMoving = false;
+                rb2d.velocity = Vector2.zero;
+                yield return new WaitForSeconds(waitTime);
+                SetRandomTargetPosition();
+                isMoving = true;
             }
-            yield return null;
-        }
+        }        
     }
 
     public void SetRandomTargetPosition()
