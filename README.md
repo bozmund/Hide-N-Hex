@@ -113,19 +113,19 @@ Within the chamber lay the ancient potion book of her grandmother, its pages fil
 
 * Animation  
 
-* AI  
+* AI
 
-* Combat  
+* Combat
 
  
 
 **David Kovačević**  
 
-* Programmer  
+* Programmer
 
-* User interface  
+* User interface 
 
-* Sound design  
+* Sound design
 
-* Worldbuilding, lighting, visual effects  
+* Worldbuilding
 
