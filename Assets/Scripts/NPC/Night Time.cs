@@ -2,13 +2,14 @@ using UnityEngine;
 using Day_Night_Cycle;
 using System.Collections;
 using System;
+using NPC;
 
 public class NightTime : MonoBehaviour
 {
     [Header("References")]
     public Rigidbody2D rb2d;
     public NPCFreeRoam randomHodanje;
-    public NPCWaypoint setHodanje;
+    public NpcWaypoint setHodanje;
     public GameObject[] npcs;
     public SuspicionValue sus;
 

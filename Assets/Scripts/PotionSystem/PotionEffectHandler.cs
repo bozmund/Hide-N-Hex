@@ -14,9 +14,6 @@ namespace PotionSystem
                 case "CatcallingPotion":
                     potionEffects.ApplyCatcalling();
                     break;
-                case "ClothingPotion":
-                    potionEffects.ApplyClothing();
-                    break;
                 case "ConfusionPotion":
                     potionEffects.ApplyConfusion();
                     break;
@@ -40,9 +37,6 @@ namespace PotionSystem
                     break;
                 case "MightPotion":
                     potionEffects.ApplyMight();
-                    break;
-                case "MindVisionPotion":
-                    potionEffects.ApplyMindVision();
                     break;
                 case "ParalyticGasPotion":
                     potionEffects.ApplyParalyticGas();

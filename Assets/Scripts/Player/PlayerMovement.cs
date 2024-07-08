@@ -24,6 +24,7 @@ namespace Player
         private Vector2 _lastMoveDirection;
         private bool _isThrowing = false;
         private bool _isDrinking = false;
+        public bool _invertControls;
 
         [Space(5)]
         [Header("References")]
@@ -71,11 +72,12 @@ namespace Player
             HandleActiveEffects();
         }
 
+        // ReSharper disable Unity.PerformanceAnalysis
         private void DrinkPotion()
         {
             if (Input.GetKeyDown(KeyCode.Q) && Potion is not null)
             {
-                _potionEffectHandler.Handle(Potion.name);
+                _potionEffectHandler.Handle(Potion.GetComponent<SpriteRenderer>().sprite.name);
                 _isDrinking = true;
                 animator.SetBool(IsDrink, true);
                 StartCoroutine(ResetAnim(0.3f));
@@ -87,6 +89,12 @@ namespace Player
             var moveX = Input.GetAxisRaw("Horizontal");
             var moveY = Input.GetAxisRaw("Vertical");
 
+            if (_invertControls)
+            {
+                moveX = Input.GetAxisRaw("Vertical");
+                moveY = Input.GetAxisRaw("Horizontal");
+            }
+            
             if (moveX == 0 && moveY == 0 && (movementDirection.x != 0 || movementDirection.y != 0))
                 _lastMoveDirection = movementDirection;
 

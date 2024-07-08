@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using Bars;
 using Player;
 using UnityEngine;
@@ -9,12 +10,17 @@ namespace PotionSystem
 {
     public class PotionEffects : MonoBehaviour
     {
-        private readonly PlayerMovement _player;
+        private PlayerMovement _player;
 
-        public PotionEffects(PlayerMovement player)
+        private void Awake()
         {
-            if (!player) Debug.Log("player not exist");
-            _player = player;
+            // If the player is not assigned in the inspector, try to find it.
+            if (_player) return;
+            _player = GameObject.Find("Player").GetComponent<PlayerMovement>();
+            if (!_player)
+            {
+                Debug.LogError("PlayerMovement component not found on 'Player' GameObject.");
+            }
         }
 
         public void ApplyWeakness()
@@ -24,7 +30,7 @@ namespace PotionSystem
                 10f,
                 player => player.strength = 0,
                 player => player.strength = 1
-            )); 
+            ));
         }
 
         public void ApplyUsefulness()
@@ -68,10 +74,6 @@ namespace PotionSystem
             ));
         }
 
-        public void ApplyMindVision()
-        {
-        }
-
         public void ApplyMight()
         {
             _player.strength = 2;
@@ -82,7 +84,7 @@ namespace PotionSystem
         {
             GameObject.Find("SuspicionBar").GetComponent<SuspicionBar>().DecreaseSuspicion();
         }
-        
+
         // ReSharper disable Unity.PerformanceAnalysis
         public static void ApplyMoreSus(bool isCrafting)
         {
@@ -91,10 +93,10 @@ namespace PotionSystem
             switch (suspicionBar.fillAmountData.fillAmount)
             {
                 case >= 1f when isCrafting:
-                    //explode
+                    SceneManager.LoadScene("GameOverHealth");
                     break;
                 case >= 1f:
-                    //game over
+                    SceneManager.LoadScene("GameOverSuspicion");
                     break;
             }
         }
@@ -131,7 +133,7 @@ namespace PotionSystem
             var color = GameObject.Find("Player").GetComponent<SpriteRenderer>().color;
             color.a = 0.5f;
             GameObject.Find("Player").GetComponent<SpriteRenderer>().color = color;
-            
+
             StartCoroutine(RevertInvisibility(color));
         }
 
@@ -145,7 +147,7 @@ namespace PotionSystem
 
         public void ApplyHolyGrail()
         {
-            throw new System.NotImplementedException();
+            SceneManager.LoadScene("WinScreen");
         }
 
         // ReSharper disable Unity.PerformanceAnalysis
@@ -157,13 +159,14 @@ namespace PotionSystem
 
         public void ApplyConfusion()
         {
-            //invert player controls
-            
+            _player._invertControls = true;
+            StartCoroutine(RevertConfusion());
         }
 
-        public void ApplyClothing()
+        private IEnumerator RevertConfusion()
         {
-            throw new System.NotImplementedException();
+            yield return new WaitForSeconds(10);
+            _player._invertControls = false;
         }
 
         public void ApplyCatcalling()
