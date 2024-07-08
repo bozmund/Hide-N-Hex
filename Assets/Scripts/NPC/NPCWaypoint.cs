@@ -48,7 +48,7 @@ namespace NPC
         private void Forward()
         {
             
-            if (currentWaypointIndex == _arraySize)
+            if (currentWaypointIndex == _arraySize - 1)
             {
                 _lastInList = true;
                 _firstInList = false;

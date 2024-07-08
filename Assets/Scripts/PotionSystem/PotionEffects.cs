@@ -12,7 +12,8 @@ namespace PotionSystem
     public class PotionEffects : MonoBehaviour
     {
         private PlayerMovement _player;
-        private Cat cat;
+        public Cat cat;
+        public bool flying;
 
         private void Awake()
         {
@@ -112,6 +113,7 @@ namespace PotionSystem
 
         public void ApplyLevitation()
         {
+            flying = true;
             var top = GameObject.Find("Top");
             var playerGoesBehind = GameObject.Find("PlayerGoesBehind");
 
@@ -122,12 +124,13 @@ namespace PotionSystem
         }
 
         // ReSharper disable Unity.PerformanceAnalysis
-        private static IEnumerator RevertLevitation(GameObject top, GameObject playerGoesBehind)
+        private IEnumerator RevertLevitation(GameObject top, GameObject playerGoesBehind)
         {
             yield return new WaitForSeconds(60);
 
             top.GetComponent<TilemapCollider2D>().enabled = true;
             playerGoesBehind.GetComponent<TilemapRenderer>().sortingOrder = 2;
+            flying = false;
         }
 
         public void ApplyInvisibility()

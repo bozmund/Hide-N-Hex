@@ -3,6 +3,7 @@ using UnityEngine;
 using PotionSystem;
 using System.Collections;
 using System;
+using PotionSystem;
 
 namespace Player
 {
@@ -35,6 +36,7 @@ namespace Player
         private Vector3 _crosshairPosition;
         public Animator animator;
         public Rigidbody2D rb2d;
+        public PotionEffects potionEffects;
         public SpriteRenderer spriteRenderer;
         public Sprite[] potionDrinkSprites;
         public Sprite[] potionThrowSprites;
@@ -161,8 +163,21 @@ namespace Player
 
         void Animate()
         {
-            if (!_isThrowing || !_isDrinking)
+            if (!potionEffects.flying)
             {
+                if (!_isThrowing || !_isDrinking)
+                {
+                    if (movementDirection != Vector2.zero)
+                    {
+                        animator.SetFloat(Horizontal, movementDirection.x);
+                        animator.SetFloat(Vertical, movementDirection.y);
+                    }
+                    animator.SetFloat(Speed, movementDirection.sqrMagnitude);
+                }
+            }
+            else
+            {
+                animator.SetBool("isFly", true);
                 if (movementDirection != Vector2.zero)
                 {
                     animator.SetFloat(Horizontal, movementDirection.x);
