@@ -83,8 +83,6 @@ namespace Player
         {
 
             Sprite currentSprite = spriteRenderer.sprite;
-
-            // Check if the current sprite is in the potionDrinkSprites array
             foreach (Sprite sprite in potionDrinkSprites)
             {
                 if (currentSprite == sprite)
@@ -99,7 +97,6 @@ namespace Player
                 }
             }
 
-            // Check if the current sprite is in the potionThrowSprites array
             foreach (Sprite sprite in potionThrowSprites)
             {
                 if (currentSprite == sprite)
@@ -114,7 +111,6 @@ namespace Player
                 }
             }
 
-            // Check if the current sprite is in the walkSprites array
             foreach (Sprite sprite in walkSprites)
             {
                 if (currentSprite == sprite)
@@ -218,6 +214,7 @@ namespace Player
 
             GameObject potion = Instantiate(Potion, firePosition, Quaternion.identity) as GameObject;
             potion.transform.localScale = new Vector2(0.4f, 0.4f);
+            potion.GetComponent<PotionHitCollision>().Init(targetPosition);
             StartCoroutine(AnimateThrow(potion, firePosition, targetPosition));
         }
 
@@ -227,18 +224,27 @@ namespace Player
 
             while (elapsedTime < throwDuration)
             {
+                if (potion == null)
+                {
+                    yield break;
+                }
+
                 float t = elapsedTime / throwDuration;
                 Vector3 trajectoryPosition = ThrowTrajectory(firePosition, targetPosition, t);
-                potion.transform.position = trajectoryPosition;
+
+                if (potion != null)
+                {
+                    potion.transform.position = trajectoryPosition;
+                }
 
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }
 
-            potion.transform.position = targetPosition;
-            if (potion.transform.position == targetPosition)
+            if (potion != null)
             {
-                Destroy(potion);
+                potion.transform.position = targetPosition;
+                potion.GetComponent<PotionHitCollision>().Init(targetPosition);
             }
         }
 
