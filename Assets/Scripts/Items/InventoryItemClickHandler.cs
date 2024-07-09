@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class InventoryItemClickHandler : MonoBehaviour, IPointerClickHandler
 {
     public MainInventory mainInventoryData; // Reference to the ScriptableObject
+    public PotionInHand potionInHand;
 
     // This function is called when the user clicks on the UI element
     public void OnPointerClick(PointerEventData eventData)
@@ -15,6 +16,14 @@ public class InventoryItemClickHandler : MonoBehaviour, IPointerClickHandler
         if (eventData.button == PointerEventData.InputButton.Right)
         {
             string itemNumber = gameObject.name;
+
+            string itemName = mainInventoryData.GetItemNameByItemNumber(itemNumber);
+            
+            if (itemName == potionInHand.potionName)
+            {
+                potionInHand.potionName = null;
+            }
+
             // Find the inventory slot by item number and update it
             mainInventoryData.UpdateMainInventory(itemNumber, "", 0);
 

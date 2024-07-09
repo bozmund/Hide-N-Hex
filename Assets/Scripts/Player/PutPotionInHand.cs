@@ -26,8 +26,19 @@ public class PotionSpriteManager : MonoBehaviour
 
     void UpdateSprite()
     {
-        if (potionInHand != null && potionInHand.potionName.Contains("Potion"))
+        if (potionInHand == null)
         {
+            Debug.LogWarning("PotionInHand is null. Setting sprite to none.");
+            spriteRenderer.sprite = null;
+        }
+        else if (potionInHand.potionName == null)
+        {
+            Debug.LogWarning("PotionInHand.potionName is null. Setting sprite to none.");
+            spriteRenderer.sprite = null;
+        }
+        else if (potionInHand.potionName.Contains("Potion"))
+        {
+            // Construct the path to the sprite in the Resources folder
             string spritePath = spriteSubfolder + "/" + potionInHand.potionName;
             Sprite newSprite = Resources.Load<Sprite>(spritePath);
 
@@ -38,7 +49,13 @@ public class PotionSpriteManager : MonoBehaviour
             else
             {
                 Debug.LogError("Sprite not found in Resources with the path: " + spritePath);
+                spriteRenderer.sprite = null;
             }
+        }
+        else
+        {
+            // Set the sprite to none if potionInHand does not contain "Potion"
+            spriteRenderer.sprite = null;
         }
     }
 }

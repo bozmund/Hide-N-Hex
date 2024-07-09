@@ -3,6 +3,9 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 using Items;
+using Unity.VisualScripting;
+using UnityEditorInternal.VersionControl;
+using System.Linq;
 
 public class UIDragHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
 {
@@ -177,20 +180,61 @@ public class UIDragHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
     {
         if (draggedItem == null)
         {
+            Debug.Log("draggedItem is null, returning.");
             return;
         }
 
         // Convert the world position of the game object to screen position
         Vector3 screenPosition = mainCamera.WorldToScreenPoint(draggedItem.transform.position);
+        Debug.Log("Screen position of draggedItem: " + screenPosition);
 
         // Get all UI elements in the scene
         Canvas[] canvases = FindObjectsOfType<Canvas>();
+        Debug.Log("Found " + canvases.Length + " canvases in the scene.");
 
         bool collided = false;
+
+        var aceptAll = new string[]
+        {
+        "firstItem", "secondItem", "thirdItem", "fourthItem", "fifthItem", "sixthItem", "seventhItem", "eighthItem"
+        };
+
+        var common = new string[]
+        {
+        "ninthItem", "tenthItem", "eleventhItem", "twelfthItem", "thirteenthItem", "fourteenthItem", "fifteenthItem",
+        "sixteenthItem", "seventeenthItem", "eighteenthItem", "nineteenthItem", "twentiethItem", "twentyFirstItem",
+        "twentySecondItem", "twentyThirdItem", "twentyFourthItem", "twentyFifthItem", "twentySixthItem",
+        "twentySeventhItem", "twentyEighthItem", "twentyNinthItem", "thirtiethItem", "thirtyFirstItem",
+        "thirtySecondItem", "thirtyThirdItem", "thirtyFourthItem", "thirtyFifthItem", "thirtySixthItem"
+        };
+
+        var rare = new string[]
+        {
+        "thirtySeventhItem", "thirtyEighthItem", "thirtyNinthItem", "fortiethItem", "fortyFirstItem", "fortySecondItem",
+        "fortyThirdItem", "fortyFourthItem", "fortyFifthItem", "fortySixthItem", "fortySeventhItem", "fortyEighthItem",
+        "fortyNinthItem", "fiftiethItem", "fiftyFirstItem", "fiftySecondItem", "fiftyThirdItem", "fiftyFourthItem",
+        "fiftyFifthItem", "fiftySixthItem"
+        };
+
+        var commonSprite = new string[]
+        {
+        "blindweed", "dewcatcher", "earthroot", "fadeleaf", "firebloom", "icecap", "mageroyal", "rotberry", "sorrowmoss",
+        "sungrass", "swiftthistle", "ConfusionPotion", "WeaknessPotion", "Potion", "Potion", "Potion", "Potion", "Potion",
+        "PurificationPotion", "LevitationPotion", "RecallPotion", "UsefulnessPotion", "ClothingPotion", "HealingPotion",
+        "StrengthPotion", "InvisibilityPotion", "MindVisionPotion", "LowerSusPotion", "ToxicGasPotion",
+        "LiquidFlamePotion", "FrostPotion"
+        };
+
+        var rareSprite = new string[]
+        {
+        "starflower", "goldenLotus", "blandfruit", "stormvine", "bearPoop", "ParalyticGasPotion", "UselessnessPotion",
+        "CatcallingPotion", "SwiftnessPotion", "MightPotion", "RepairPotion", "HolyGrailPotion"
+        };
 
         foreach (Canvas canvas in canvases)
         {
             Image[] images = canvas.GetComponentsInChildren<Image>();
+            Debug.Log("Found " + images.Length + " images in canvas: " + canvas.name);
 
             foreach (Image image in images)
             {
@@ -199,40 +243,70 @@ public class UIDragHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
                 {
                     Debug.Log("Collision detected with UI element: " + image.name);
 
-                    // Find the TextMeshPro child object
-                    TextMeshProUGUI textMeshProChild = image.GetComponentInChildren<TextMeshProUGUI>();
+                    bool collision = false;
 
-                    var SecondNull = false;
-
-                    if (textMeshProChild != null)
+                    // Check if the image.name is in aceptAll
+                    if (aceptAll.Contains(image.name))
                     {
-                        Debug.Log("TextMeshPro child object name: " + textMeshProChild.gameObject.name);
+                        collision = true;
+                    }
+                    // Check if the image.name is in common and imageComponent.sprite.name is in commonSprite
+                    else if (common.Contains(image.name) && commonSprite.Contains(imageComponent.sprite.name))
+                    {
+                        collision = true;
+                    }
+                    // Check if the image.name is in rare and imageComponent.sprite.name is in rareSprite
+                    else if (rare.Contains(image.name) && rareSprite.Contains(imageComponent.sprite.name))
+                    {
+                        collision = true;
                     }
 
-                    if (image.sprite == null)
+                    if (collision)
                     {
-                        MainInventoryData.UpdateMainInventory(imageComponent.name, "", 0);
-                        SecondNull = true;
+                        // Find the TextMeshPro child object
+                        TextMeshProUGUI textMeshProChild = image.GetComponentInChildren<TextMeshProUGUI>();
+                        Debug.Log("TextMeshPro child object found: " + (textMeshProChild != null));
+
+                        var SecondNull = false;
+
+                        if (textMeshProChild != null)
+                        {
+                            Debug.Log("TextMeshPro child object name: " + textMeshProChild.gameObject.name);
+                        }
+
+                        if (image.sprite == null)
+                        {
+                            Debug.Log("Image sprite is null, updating inventory with empty data.");
+                            MainInventoryData.UpdateMainInventory(imageComponent.name, "", 0);
+                            SecondNull = true;
+                        }
+                        else if (int.TryParse(textMeshProChild.text, out int itemCountSecond))
+                        {
+                            Debug.Log("Parsed item count from TextMeshPro child: " + itemCountSecond);
+                            MainInventoryData.UpdateMainInventory(imageComponent.name, image.sprite.name, itemCountSecond);
+                        }
+
+                        if (int.TryParse(textMeshPro.text, out int itemCount))
+                        {
+                            Debug.Log("Parsed item count from TextMeshPro: " + itemCount);
+                            MainInventoryData.UpdateMainInventory(image.name, imageComponent.sprite.name, itemCount);
+                        }
+
+                        inventoryUIManager.LoadInventorySprites();
+
+                        if (SecondNull == true)
+                        {
+                            Debug.Log("SecondNull is true, setting imageComponent sprite to null.");
+                            imageComponent.sprite = null;
+                        }
+
+                        collided = true;
+                        break;
                     }
-                    else if (int.TryParse(textMeshProChild.text, out int itemCountSecond))
+                    else
                     {
-                        MainInventoryData.UpdateMainInventory(imageComponent.name, image.sprite.name, itemCountSecond);
+                        Debug.Log("No collision: names or sprites are not in the appropriate arrays.");
                     }
-
-                    if (int.TryParse(textMeshPro.text, out int itemCount))
-                    {
-                        MainInventoryData.UpdateMainInventory(image.name, imageComponent.sprite.name, itemCount);
-                    }
-
-                    inventoryUIManager.LoadInventorySprites();
-
-                    if (SecondNull == true)
-                    {
-                        imageComponent.sprite = null;
-                    }
-
-                    collided = true;
-                    break;
                 }
             }
 
@@ -244,9 +318,13 @@ public class UIDragHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
 
         // Destroy the draggedItem if collision detected or not
         Destroy(draggedItem);
+        Debug.Log("Dragged item destroyed.");
         draggedItem = null; // Clear draggedItem reference
         isDragging = false; // Reset dragging state
     }
+
+
+
 
     private Vector3 GetMouseWorldPosition()
     {

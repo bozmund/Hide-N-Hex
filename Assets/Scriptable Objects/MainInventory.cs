@@ -121,6 +121,19 @@ public class MainInventory : ScriptableObject
         }
     }
 
+    public string GetItemNameByItemNumber(string itemNumber)
+    {
+        foreach (var slot in slots)
+        {
+            if (slot.itemNumber == itemNumber)
+            {
+                return slot.itemName;
+            }
+        }
+        return null;
+    }
+
+
     public int GetSlotAndCountForItem(string itemName, out string itemNumber)
     {
         itemNumber = null;
