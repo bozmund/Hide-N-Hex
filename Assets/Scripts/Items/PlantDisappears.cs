@@ -8,13 +8,28 @@ namespace Items
     {
         public MainInventory MainInventoryData; // Reference to the ScriptableObject
         public InventoryUIManager inventoryUIManager; // Reference to the InventoryUIManager script
+        public HealthValue healthValue;
+
+        private void Start()
+        {
+            PlayerPrefs.SetInt("canColect", 0);
+        }
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
             if (collision.gameObject.CompareTag("DisappearObject"))
             {
+                
+
                 string itemName = collision.gameObject.name;
                 itemName = Regex.Replace(itemName, @" \(\d+\)$", "").Trim();
+
+                int canColect = PlayerPrefs.GetInt("canColect");
+
+                if (canColect == 0 && (itemName == "sungrass" || itemName == "dewcatcher"))
+                {
+                    healthValue.fillAmount -= 0.08f * Time.deltaTime;
+                }
 
                 if (!string.IsNullOrEmpty(itemName))
                 {

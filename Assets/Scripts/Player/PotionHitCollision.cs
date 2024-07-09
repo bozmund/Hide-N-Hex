@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Player;
 using UnityEngine;
@@ -36,7 +37,6 @@ namespace PotionSystem
 
                 foreach (var hitCollider in hitColliders)
                 {
-
                     if (hitCollider.gameObject != null)
                     {
                         ApplyPotionEffect(hitCollider.gameObject);
@@ -50,7 +50,11 @@ namespace PotionSystem
                     Destroy(particles, 0.5f);
                 }
 
-                Destroy(gameObject);
+                gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                if (hitColliders.Length == 0)
+                {
+                    Invoke(nameof(DeletePotions), 5f);
+                }
             }
 
             //wait 5 seconds
@@ -70,11 +74,51 @@ namespace PotionSystem
                     Invoke(nameof(aliveIt), 5f);
                 }
             }
+
+            else if (gameObject.CompareTag("DisappearObject"))
+            {
+                PlayerPrefs.SetInt("canColect", 1);
+                StartCoroutine(TimerColect());
+                Invoke(nameof(DeletePotions), 5f);
+            }
+
+            else
+            {
+                Invoke(nameof(DeletePotions), 6f);
+            }
+        }
+
+        private IEnumerator TimerColect()
+        {
+            yield return new WaitForSeconds(4f);
+            PlayerPrefs.SetInt("canColect", 0);
+            Destroy(gameObject);
         }
 
         void aliveIt()
         {
             dead = false;
+        }
+
+        public void DeletePotions()
+        {
+            // Find all game objects in the scene
+            GameObject[] allObjects = FindObjectsOfType<GameObject>();
+
+            int count = 0;
+
+            // Loop through each game object to check its name
+            foreach (GameObject obj in allObjects)
+            {
+                if (obj.name == "Potion(Clone)")
+                {
+                    Destroy(obj);
+                    count++;
+                }
+            }
+
+            // Optional: log the number of potions destroyed for debugging
+            Debug.Log(count + " potions destroyed.");
         }
     }
 }
