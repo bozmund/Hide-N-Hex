@@ -4,9 +4,10 @@ using UnityEngine;
 
 namespace Scriptable_Objects.WorldTime
 {
+    [Serializable]
     [CreateAssetMenu(fileName = "WorldTimeSO", menuName = "ScriptableObjects/WorldTimeSO", order = 1)]
-    public class WorldTimeSO : ScriptableObject
+    public class WorldTimeSo : ScriptableObject
     {
-        public TimeSpan TimeSpan = new ();
+        public TimeSpan TimeSpan;
     }
 }

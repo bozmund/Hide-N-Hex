@@ -2,8 +2,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using PotionSystem;
 using System.Collections;
-using System;
-using PotionSystem;
 
 namespace Player
 {
@@ -28,6 +26,8 @@ namespace Player
         private bool _isDrinking = false;
         public bool _invertControls;
         public bool flying;
+        public bool flamable;
+        public bool frozen;
 
         [Space(5)]
         [Header("References")]
@@ -319,6 +319,12 @@ namespace Player
                 targetPosition = transform.position + clampedPosition;
             }
             return targetPosition;
+        }
+
+        public static PlayerMovement GetPlayer()
+        {
+            //gets player object
+            return GameObject.Find("Player").GetComponent<PlayerMovement>();
         }
     }
 }

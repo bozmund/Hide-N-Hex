@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+using Player;
 using UnityEngine;
 
 namespace PotionSystem
@@ -19,6 +19,7 @@ namespace PotionSystem
 
         private IEnumerator DetectCollision(Vector3 targetPosition)
         {
+            var playerMovement = PlayerMovement.GetPlayer();
             while (Vector3.Distance(transform.position, targetPosition) > 0.1f)
             {
                 yield return null;
@@ -33,7 +34,7 @@ namespace PotionSystem
                     Target target = hitCollider.GetComponent<Target>();
                     if (target != null)
                     {
-                        target.ApplyPotionEffect();
+                        target.ApplyPotionEffect(playerMovement);
                     }
                 }
 
@@ -44,15 +45,46 @@ namespace PotionSystem
 
                 Destroy(gameObject);
             }
+
+            //wait 5 seconds
+            yield return new WaitForSeconds(5);
+            playerMovement.flamable = false;
+            playerMovement.frozen = false;
         }
     }
 
     public class Target : MonoBehaviour
     {
-        public void ApplyPotionEffect()
+        public void ApplyPotionEffect(PlayerMovement playerMovement)
         {
-            // Placeholder for applying the potion effect to the target
-            Debug.Log("Potion effect applied to " + gameObject.name);
+            if (gameObject.CompareTag("Player"))
+            {
+                // Apply potion effect to the player
+            }
+            else if (gameObject.CompareTag("Enemy"))
+            {
+                // Apply potion effect to the enemy
+            }
+            else if (gameObject.CompareTag("NPC"))
+            {
+                // Apply potion effect to the NPC
+            }
+            else if (gameObject.CompareTag("Object"))
+            {
+                // Apply potion effect to the object
+            }
+            else if (gameObject.CompareTag("Pickup"))
+            {
+                // Apply potion effect to the pickup
+            }
+            else if (gameObject.CompareTag("Collectible"))
+            {
+                // Apply potion effect to the collectible
+            }
+            else if (gameObject.CompareTag("Consumable"))
+            {
+                // Apply potion effect to the consumable
+            }
         }
     }
 }

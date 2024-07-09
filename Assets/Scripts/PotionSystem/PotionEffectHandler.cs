@@ -12,7 +12,7 @@ namespace PotionSystem
             switch (potionName)
             {
                 case "CatcallingPotion":
-                    potionEffects.ApplyCatcalling(GetComponent<CatCalled>());
+                    potionEffects.ApplyCatcalling(null);
                     break;
                 case "ConfusionPotion":
                     potionEffects.ApplyConfusion();

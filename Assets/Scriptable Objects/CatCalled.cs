@@ -1,7 +1,11 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "CatCalled", menuName = "ScriptableObjects/CatCalled", order = 1)]
-public class CatCalled : ScriptableObject
+namespace Scriptable_Objects
 {
-    public bool exists;
+    [System.Serializable]
+    [CreateAssetMenu(fileName = "CatCalled", menuName = "ScriptableObjects/CatCalled", order = 1)]
+    public class CatCalled : ScriptableObject
+    {
+        public bool exists;
+    }
 }

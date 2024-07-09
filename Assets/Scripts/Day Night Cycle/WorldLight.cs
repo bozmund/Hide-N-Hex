@@ -16,7 +16,7 @@ namespace Day_Night_Cycle
 
         public static float percentOfDay;
         private static TimeSpan _timeSpan;
-        public WorldTimeSO _worldTimeSO;
+        public WorldTimeSo _worldTimeSO;
 
         private void Awake() 
         {

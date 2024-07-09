@@ -48,7 +48,6 @@ public class PotionSpriteManager : MonoBehaviour
             }
             else
             {
-                Debug.LogError("Sprite not found in Resources with the path: " + spritePath);
                 spriteRenderer.sprite = null;
             }
         }

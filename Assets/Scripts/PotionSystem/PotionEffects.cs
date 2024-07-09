@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 using CatSystem;
+using Scriptable_Objects;
 
 namespace PotionSystem
 {
@@ -173,9 +174,9 @@ namespace PotionSystem
             _player._invertControls = false;
         }
 
-        public void ApplyCatcalling()
+        public void ApplyCatcalling(CatCalled cat)
         {
-            catExists.exists = true;
+            cat.exists = true;
         }
     }
 }
