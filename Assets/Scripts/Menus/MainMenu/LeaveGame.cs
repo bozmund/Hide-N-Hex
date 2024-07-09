@@ -1,5 +1,6 @@
 using CraftingSystem;
 using Player;
+using Scriptable_Objects;
 using Scriptable_Objects.WorldTime;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -17,7 +18,7 @@ namespace MainMenu
         public PotionInHand potionInHand;
         public CatCalled catCalled;
         public RecipeData recipeData;
-        public WorldTimeSO worldTimeSO;
+        public WorldTimeSo worldTimeSO;
         public NPCWaypoints nPCWaypointsFirst;
         public NPCWaypoints nPCWaypointsSecond;
         public NPCWaypoints nPCWaypointsThird;
