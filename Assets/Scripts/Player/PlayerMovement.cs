@@ -27,6 +27,7 @@ namespace Player
         private bool _isThrowing = false;
         private bool _isDrinking = false;
         public bool _invertControls;
+        public bool flying;
 
         [Space(5)]
         [Header("References")]
@@ -163,8 +164,9 @@ namespace Player
 
         void Animate()
         {
-            if (!potionEffects.flying)
+            if (!flying)
             {
+                animator.SetBool("isFly", false);
                 if (!_isThrowing || !_isDrinking)
                 {
                     if (movementDirection != Vector2.zero)

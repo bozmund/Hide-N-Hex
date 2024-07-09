@@ -12,8 +12,7 @@ namespace PotionSystem
     public class PotionEffects : MonoBehaviour
     {
         private PlayerMovement _player;
-        public Cat cat;
-        public bool flying;
+        private CatCalled catExists;
 
         private void Awake()
         {
@@ -113,7 +112,7 @@ namespace PotionSystem
 
         public void ApplyLevitation()
         {
-            flying = true;
+            _player.flying = true;
             var top = GameObject.Find("Top");
             var playerGoesBehind = GameObject.Find("PlayerGoesBehind");
 
@@ -130,7 +129,7 @@ namespace PotionSystem
 
             top.GetComponent<TilemapCollider2D>().enabled = true;
             playerGoesBehind.GetComponent<TilemapRenderer>().sortingOrder = 2;
-            flying = false;
+            _player.flying = false;
         }
 
         public void ApplyInvisibility()
@@ -176,7 +175,7 @@ namespace PotionSystem
 
         public void ApplyCatcalling()
         {
-            cat.hasItem = true;
+            catExists.exists = true;
         }
     }
 }

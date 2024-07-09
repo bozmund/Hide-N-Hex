@@ -13,9 +13,12 @@ namespace CatSystem
     {
         public MainInventory MainInventoryData;
         public InventoryUIManager inventoryUIManager;
+        public CatCalled catExists;
 
         public bool hasItem = true;
         private bool isInTrigger = false;
+        public bool exists => catExists.exists;
+
 
         private Animator animator;
         private SpriteRenderer prikaz;
@@ -54,24 +57,29 @@ namespace CatSystem
 
         void Update()
         {
-            if (WorldLight.percentOfDay >= 0.2f && WorldLight.percentOfDay <= 0.8f)
+
+            if (exists)
             {
-                ShowCat();
-                if (hasItem)
+                if (WorldLight.percentOfDay >= 0.2f && WorldLight.percentOfDay <= 0.8f)
                 {
-                    animator.SetBool("hasItem", true);
+                    ShowCat();
+                    if (hasItem)
+                    {
+                        animator.SetBool("hasItem", true);
+                    }
+                    if (Input.GetKeyUp(KeyCode.F) && hasItem && isInTrigger)
+                    {
+                        GetIngredient();
+                    }
                 }
-                if (Input.GetKeyUp(KeyCode.F) && hasItem && isInTrigger)
+                else
                 {
-                    GetIngredient();
+                    HideCat();
+                    hasItem = true;
+                    animator.SetBool("hasItem", false);
                 }
             }
-            else
-            {
-                HideCat();
-                hasItem = true;
-                animator.SetBool("hasItem", false);
-            }
+            else HideCat();
         }
 
         private void HideCat()
