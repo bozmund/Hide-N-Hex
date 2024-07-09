@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObjectToToggle: {fileID: 1455268630}
---- !u!21 &506563027
+--- !u!21 &407958413
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -453,6 +453,68 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &890925476
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 890925477}
+  - component: {fileID: 890925478}
+  m_Layer: 0
+  m_Name: SaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &890925477
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890925476}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 33.636288, y: 0.85944015, z: -0.6886526}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &890925478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890925476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03fab2fdeaa6ab84a91e21ababedeba8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataToLoad:
+  - {fileID: 11400000, guid: 6bad3eef1ca444546996f6dff5d4579b, type: 2}
+  - {fileID: 11400000, guid: 7e417f71e170e2846bacd370c7c26cc1, type: 2}
+  - {fileID: 11400000, guid: b0e7c566854aec54991dc1679e176edc, type: 2}
+  - {fileID: 11400000, guid: 7c75a0f79836cf8438c1a4edaf45b411, type: 2}
+  - {fileID: 11400000, guid: bb8e612469ded2140b5b373879ce5779, type: 2}
+  - {fileID: 11400000, guid: fe5543b02bc256542b7e9d4cfe876ad8, type: 2}
+  - {fileID: 11400000, guid: 88ffcc87380f8c8488a3286e3dc64b4e, type: 2}
+  - {fileID: 11400000, guid: ebcd35b48651fc54bb1be1f9dda1de9e, type: 2}
+  - {fileID: 11400000, guid: 5086abeba16db9c4cadfefb4743df9f5, type: 2}
+  - {fileID: 11400000, guid: 4f7d8e3ee75a3ca4594bea3372e1c2ce, type: 2}
+  - {fileID: 11400000, guid: 369b2a05d88458d40986ce9ee42da23a, type: 2}
+  - {fileID: 11400000, guid: 2b3d4fdccecce0c4d81dde17183e4f53, type: 2}
+  - {fileID: 11400000, guid: d3b7f833be13ba347860c3257d91be5c, type: 2}
+  - {fileID: 11400000, guid: ca56af83d890e364bb987cd379086750, type: 2}
+  - {fileID: 11400000, guid: 95dec6c39f10101419e7c9876ccbc4fe, type: 2}
+  - {fileID: 11400000, guid: 8debb21cfe26b214e86d127415200a01, type: 2}
+  - {fileID: 11400000, guid: 401f57582566f574ca2ae4b0e92515a4, type: 2}
 --- !u!1 &1150982427
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,7 +941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 506563027}
+  m_Material: {fileID: 407958413}
   m_Color: {r: 0, g: 0.16862746, b: 0.5058824, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -1316,6 +1378,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1301f6983af37304f8292e107a310bde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enableStartButtonStatus: {fileID: 11400000, guid: 6bad3eef1ca444546996f6dff5d4579b, type: 2}
+  healthValue: {fileID: 11400000, guid: 7e417f71e170e2846bacd370c7c26cc1, type: 2}
+  suspicionValue: {fileID: 11400000, guid: b0e7c566854aec54991dc1679e176edc, type: 2}
+  playerPosition: {fileID: 11400000, guid: 7c75a0f79836cf8438c1a4edaf45b411, type: 2}
+  volumeValue: {fileID: 11400000, guid: bb8e612469ded2140b5b373879ce5779, type: 2}
+  mainInventory: {fileID: 11400000, guid: fe5543b02bc256542b7e9d4cfe876ad8, type: 2}
+  potionInHand: {fileID: 11400000, guid: 88ffcc87380f8c8488a3286e3dc64b4e, type: 2}
+  catCalled: {fileID: 11400000, guid: ebcd35b48651fc54bb1be1f9dda1de9e, type: 2}
+  recipeData: {fileID: 11400000, guid: 5086abeba16db9c4cadfefb4743df9f5, type: 2}
+  worldTimeSO: {fileID: 11400000, guid: 4f7d8e3ee75a3ca4594bea3372e1c2ce, type: 2}
+  nPCWaypointsFirst: {fileID: 11400000, guid: 369b2a05d88458d40986ce9ee42da23a, type: 2}
+  nPCWaypointsSecond: {fileID: 11400000, guid: 2b3d4fdccecce0c4d81dde17183e4f53, type: 2}
+  nPCWaypointsThird: {fileID: 11400000, guid: d3b7f833be13ba347860c3257d91be5c, type: 2}
+  nPCWaypointsFourth: {fileID: 11400000, guid: ca56af83d890e364bb987cd379086750, type: 2}
+  nPCWaypointsFifth: {fileID: 11400000, guid: 95dec6c39f10101419e7c9876ccbc4fe, type: 2}
+  nPCWaypointsSixth: {fileID: 11400000, guid: 8debb21cfe26b214e86d127415200a01, type: 2}
+  pathToForest: {fileID: 11400000, guid: 401f57582566f574ca2ae4b0e92515a4, type: 2}
 --- !u!114 &1745927568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1818,3 +1897,4 @@ SceneRoots:
   - {fileID: 1245098042}
   - {fileID: 1523839484}
   - {fileID: 768105511}
+  - {fileID: 890925477}
