@@ -6,6 +6,7 @@ namespace MainMenu
 {
     public class NewGameButtonHandler : MonoBehaviour
     {
+        public EnableStartButtonStatus statusObject;
         private void Start()
         {
             var root = GetComponent<UIDocument>().rootVisualElement;
@@ -14,7 +15,7 @@ namespace MainMenu
             newGameButton.clicked += NewGame;
         }
 
-        private static void NewGame()
+        private void NewGame()
         {
             // Find the GameObject named "BackgroundMusicCutscene"
             GameObject musicObject = GameObject.Find("BackgroundMusicMain");
@@ -27,6 +28,7 @@ namespace MainMenu
                 Debug.Log("BackgroundMusic has been destroyed.");
             }
 
+            statusObject.StartButtonStatus = "enabled";
             SceneManager.LoadScene("InitialCutscene");
         }
     }
