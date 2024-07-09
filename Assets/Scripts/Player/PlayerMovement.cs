@@ -37,7 +37,6 @@ namespace Player
         private Vector3 _crosshairPosition;
         public Animator animator;
         public Rigidbody2D rb2d;
-        public PotionEffects potionEffects;
         public SpriteRenderer spriteRenderer;
         public Sprite[] potionDrinkSprites;
         public Sprite[] potionThrowSprites;

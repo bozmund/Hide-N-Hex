@@ -12,7 +12,7 @@ namespace PotionSystem
     public class PotionEffects : MonoBehaviour
     {
         private PlayerMovement _player;
-        private CatCalled catExists;
+        public CatCalled catExists;
 
         private void Awake()
         {
