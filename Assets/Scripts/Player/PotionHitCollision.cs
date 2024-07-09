@@ -7,10 +7,14 @@ namespace PotionSystem
     public class PotionHitCollision : MonoBehaviour
     {
         [Header("Potion Attributes")]
-        public float explosionRadius = 1f;
+        public float explosionRadius;
         public LayerMask targetLayer;
         private bool hasCollided = false;
         public GameObject explosionEffect;
+        public ParticleSystem particle;
+        public PotionInHand _potionInHand;
+
+        public bool dead;
 
         public void Init(Vector3 targetPosition)
         {
@@ -29,18 +33,21 @@ namespace PotionSystem
             {
                 hasCollided = true;
                 Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius, targetLayer);
+
                 foreach (var hitCollider in hitColliders)
                 {
-                    Target target = hitCollider.GetComponent<Target>();
-                    if (target != null)
+
+                    if (hitCollider.gameObject != null)
                     {
-                        target.ApplyPotionEffect(playerMovement);
+                        ApplyPotionEffect(hitCollider.gameObject);
                     }
                 }
 
                 if (explosionEffect != null)
                 {
-                    Instantiate(explosionEffect, transform.position, Quaternion.identity);
+                    particle.playOnAwake = true;
+                    GameObject particles = Instantiate(explosionEffect, transform.position, Quaternion.identity);
+                    Destroy(particles, 0.5f);
                 }
 
                 Destroy(gameObject);
@@ -51,40 +58,23 @@ namespace PotionSystem
             playerMovement.flamable = false;
             playerMovement.frozen = false;
         }
-    }
 
-    public class Target : MonoBehaviour
-    {
-        public void ApplyPotionEffect(PlayerMovement playerMovement)
+        public void ApplyPotionEffect(GameObject gameObject)
         {
-            if (gameObject.CompareTag("Player"))
+            if (gameObject.CompareTag("NPC"))
             {
-                // Apply potion effect to the player
+                if (_potionInHand.potionName == "ToxicGasPotion")
+                {
+                    dead = true;
+                    gameObject.SetActive(false);
+                    Invoke(nameof(aliveIt), 5f);
+                }
             }
-            else if (gameObject.CompareTag("Enemy"))
-            {
-                // Apply potion effect to the enemy
-            }
-            else if (gameObject.CompareTag("NPC"))
-            {
-                // Apply potion effect to the NPC
-            }
-            else if (gameObject.CompareTag("Object"))
-            {
-                // Apply potion effect to the object
-            }
-            else if (gameObject.CompareTag("Pickup"))
-            {
-                // Apply potion effect to the pickup
-            }
-            else if (gameObject.CompareTag("Collectible"))
-            {
-                // Apply potion effect to the collectible
-            }
-            else if (gameObject.CompareTag("Consumable"))
-            {
-                // Apply potion effect to the consumable
-            }
+        }
+
+        void aliveIt()
+        {
+            dead = false;
         }
     }
 }

@@ -244,7 +244,8 @@ namespace Player
             if (potion != null)
             {
                 potion.transform.position = targetPosition;
-                potion.GetComponent<PotionHitCollision>().Init(targetPosition);
+                PotionHitCollision potionHitCollision = potion.GetComponent<PotionHitCollision>();
+                potionHitCollision.Init(targetPosition);
             }
         }
 

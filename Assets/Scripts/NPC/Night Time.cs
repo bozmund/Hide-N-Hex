@@ -3,6 +3,7 @@ using Day_Night_Cycle;
 using System.Collections;
 using System;
 using NPC;
+using PotionSystem;
 
 public class NightTime : MonoBehaviour
 {
@@ -12,15 +13,19 @@ public class NightTime : MonoBehaviour
     public NpcWaypoint setHodanje;
     public GameObject[] npcs;
     public SuspicionValue sus;
+    public PotionHitCollision potionHit;
 
     [Header("Variables")]
     [SerializeField] private float waitTime = 1.5f;
     private int chosenNPCIndex;
     private bool npcIsChosen;
+    [SerializeField] private float detectionRadius = 5f;
+    [SerializeField] private LayerMask playerLayer;
 
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        potionHit = GetComponent<PotionHitCollision>();
         npcs = new GameObject[6];
         npcs[0] = GameObject.Find("FirstNPC");
         npcs[1] = GameObject.Find("SecondNPC");
@@ -37,12 +42,12 @@ public class NightTime : MonoBehaviour
     {
         if (WorldLight.percentOfDay >= 0.2f && WorldLight.percentOfDay <= 0.7f)
         {
-            SetAllNPCsActive(true);
+            if(potionHit.dead) SetAllNPCsActive(true);
             npcIsChosen = false;
             StopCoroutine(randomHodanje.MoveAndWait());
             StartCoroutine(setHodanje.MoveToNextWaypoint());
         }
-        else if (!npcIsChosen && (WorldLight.percentOfDay >= 0.2f || WorldLight.percentOfDay <= 0.7f))
+        else if (!npcIsChosen && (WorldLight.percentOfDay < 0.2f || WorldLight.percentOfDay > 0.7f))
         {
             StopCoroutine(setHodanje.MoveToNextWaypoint());
             chosenNPCIndex = UnityEngine.Random.Range(0, npcs.Length);
@@ -51,6 +56,15 @@ public class NightTime : MonoBehaviour
             npcs[chosenNPCIndex].SetActive(true);
             if (npcs[chosenNPCIndex] == isActiveAndEnabled) StartCoroutine(randomHodanje.MoveAndWait());
             npcIsChosen = true;
+        }
+
+        if (WorldLight.percentOfDay < 0.2f || WorldLight.percentOfDay > 0.7f)
+        {
+            Collider2D playerCollider = Physics2D.OverlapCircle(transform.position, detectionRadius, playerLayer);
+            if (playerCollider != null && playerCollider.CompareTag("Player"))
+            {
+                sus.fillAmount += 0.05f * Time.deltaTime;
+            }
         }
     }
 
@@ -79,10 +93,5 @@ public class NightTime : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
         randomHodanje.isMoving = true;
         setHodanje.isWaiting = false;
-    }
-
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        if ((WorldLight.percentOfDay < 0.2f || WorldLight.percentOfDay > 0.7f) && other.CompareTag("Player")) sus.fillAmount += 0.05f * Time.deltaTime;
     }
 }
