@@ -15,7 +15,7 @@ namespace NPC
         [SerializeField]private int currentWaypointIndex;
         private int _arraySize;
         public bool isWaiting;
-        private bool _firstInList = true, _lastInList = false;
+        private bool _firstInList = true;
 
         private void Start()
         {
@@ -46,11 +46,9 @@ namespace NPC
         }
 
         private void Forward()
-        {
-            
+        {           
             if (currentWaypointIndex == _arraySize - 1)
             {
-                _lastInList = true;
                 _firstInList = false;
             }
             else currentWaypointIndex++;
@@ -60,8 +58,7 @@ namespace NPC
         {       
             if (currentWaypointIndex == 0)
             {
-                _firstInList = false;
-                _lastInList = true;
+                _firstInList = true;
             }
             else currentWaypointIndex--;
         }
