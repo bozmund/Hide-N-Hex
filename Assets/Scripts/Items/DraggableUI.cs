@@ -4,7 +4,6 @@ using UnityEngine.UI;
 using TMPro;
 using Items;
 using Unity.VisualScripting;
-using UnityEditorInternal.VersionControl;
 using System.Linq;
 
 public class UIDragHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
@@ -244,12 +243,29 @@ public class UIDragHandler : MonoBehaviour, IPointerDownHandler, IPointerUpHandl
                     Debug.Log("Collision detected with UI element: " + image.name);
 
                     bool collision = false;
+                    Debug.Log("OVO" + image.sprite);
 
                     // Check if the image.name is in aceptAll
-                    if (aceptAll.Contains(image.name))
+                    if (aceptAll.Contains(image.name) && aceptAll.Contains(imageComponent.name))
                     {
                         collision = true;
                     }
+
+                    else if (aceptAll.Contains(image.name) && image.sprite == null)
+                    {
+                        collision = true;
+                    }
+
+                    else if (aceptAll.Contains(image.name) && commonSprite.Contains(image.sprite.name) && commonSprite.Contains(imageComponent.sprite.name))
+                    {
+                        collision = true;
+                    }
+
+                    else if (aceptAll.Contains(image.name) && rareSprite.Contains(image.sprite.name) && rareSprite.Contains(imageComponent.sprite.name))
+                    {
+                        collision = true;
+                    }
+
                     // Check if the image.name is in common and imageComponent.sprite.name is in commonSprite
                     else if (common.Contains(image.name) && commonSprite.Contains(imageComponent.sprite.name))
                     {
