@@ -63,13 +63,11 @@ namespace Player
             animator = GetComponent<Animator>();
             spriteRenderer = GetComponent<SpriteRenderer>();
             SetupTrajectoryRenderer();
-            lineRenderer.enabled = false;
         }
 
         private void FixedUpdate()
         {
             rb2d.velocity = new Vector2(movementDirection.x * movementSpeed, movementDirection.y * movementSpeed);
-            if (PotionInHand.potionName != "") lineRenderer.enabled = true;
         }
 
         private void Update()
@@ -80,7 +78,9 @@ namespace Player
             {
                 DrinkPotion();
                 Aim();
+                lineRenderer.sortingOrder = 2;
             }
+            else lineRenderer.sortingOrder = -1;
             UpdateTrajectoryLine();
             HandleActiveEffects();
             CheckActiveSprite();
@@ -191,7 +191,6 @@ namespace Player
 
         private void Aim()
         {
-            lineRenderer.enabled = true;
             _crosshairPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             _crosshairPosition.z = 0f;
 
