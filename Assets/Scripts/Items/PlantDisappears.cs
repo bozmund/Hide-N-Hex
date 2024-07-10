@@ -13,29 +13,39 @@ namespace Items
         private void Start()
         {
             PlayerPrefs.SetInt("canColect", 0);
+            PlayerPrefs.SetInt("canMultiply", 0);
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
             if (collision.gameObject.CompareTag("DisappearObject"))
             {
-                
-
                 string itemName = collision.gameObject.name;
                 itemName = Regex.Replace(itemName, @" \(\d+\)$", "").Trim();
 
                 int canColect = PlayerPrefs.GetInt("canColect");
+                int canMultiply = PlayerPrefs.GetInt("canMultiply");
 
                 if (canColect == 0 && (itemName == "sungrass" || itemName == "dewcatcher"))
                 {
-                    healthValue.fillAmount -= 0.08f * Time.deltaTime;
+                    healthValue.fillAmount -= 0.1f;
                 }
 
                 if (!string.IsNullOrEmpty(itemName))
                 {
                     string itemNumber;
                     int itemCount = MainInventoryData.GetSlotAndCountForItem(itemName, out itemNumber);
-                    itemCount += 1;
+
+                    if (canMultiply == 1)
+                    {
+                        itemCount += 2;
+                    }
+
+                    else
+                    {
+                        itemCount += 1;
+                    }
+
                     MainInventoryData.UpdateMainInventory(itemNumber, itemName, itemCount);
 
                     // Log the entire dictionary

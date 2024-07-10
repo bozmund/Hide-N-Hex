@@ -4,6 +4,7 @@ using System.Drawing;
 using Player;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace PotionSystem
 {
@@ -73,7 +74,7 @@ namespace PotionSystem
                 gameObject.GetComponent<SpriteRenderer>().enabled = false;
                 if (hitColliders.Length == 0)
                 {
-                    Invoke(nameof(DeletePotions), 5f);
+                    DeletePotion();
                 }
             }
 
@@ -97,9 +98,27 @@ namespace PotionSystem
 
             else if (gameObject.CompareTag("DisappearObject"))
             {
-                PlayerPrefs.SetInt("canColect", 1);
-                StartCoroutine(TimerColect());
-                Invoke(nameof(DeletePotions), 5f);
+                if (_potionInHand.potionName == "FrostPotion")
+                {
+                    PlayerPrefs.SetInt("canColect", 1);
+                    StartCoroutine(TimerColect());
+                    Invoke(nameof(DeletePotion), 10f);
+                }
+
+                if (_potionInHand.potionName == "UsefulnessPotion")
+                {
+                    PlayerPrefs.SetInt("canMultiply", 1);
+                    StartCoroutine(TimerMultiply());
+                    Invoke(nameof(DeletePotion), 9f);
+                }
+            }
+
+            else if (gameObject.CompareTag("House"))
+            {
+                if (_potionInHand.potionName == "RepairPotion")
+                {
+                    SceneManager.LoadScene("WinScreen");
+                }
             }
 
             else if (gameObject.CompareTag("BossMan"))
@@ -188,9 +207,14 @@ namespace PotionSystem
 
         private IEnumerator TimerColect()
         {
-            yield return new WaitForSeconds(4f);
+            yield return new WaitForSeconds(9f);
             PlayerPrefs.SetInt("canColect", 0);
-            Destroy(gameObject);
+        }
+
+        private IEnumerator TimerMultiply()
+        {
+            yield return new WaitForSeconds(8f);
+            PlayerPrefs.SetInt("canMultiply", 0);
         }
 
         void aliveIt()
@@ -198,25 +222,9 @@ namespace PotionSystem
             dead = false;
         }
 
-        public void DeletePotions()
+        public void DeletePotion()
         {
-            // Find all game objects in the scene
-            GameObject[] allObjects = FindObjectsOfType<GameObject>();
-
-            int count = 0;
-
-            // Loop through each game object to check its name
-            foreach (GameObject obj in allObjects)
-            {
-                if (obj.name == "Potion(Clone)")
-                {
-                    Destroy(obj);
-                    count++;
-                }
-            }
-
-            // Optional: log the number of potions destroyed for debugging
-            Debug.Log(count + " potions destroyed.");
+            Destroy(gameObject);
         }
     }
 }
