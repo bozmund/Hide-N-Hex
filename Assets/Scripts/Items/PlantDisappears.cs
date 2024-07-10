@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Text.RegularExpressions;
+using Player;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 namespace Items
 {
@@ -9,11 +11,13 @@ namespace Items
         public MainInventory MainInventoryData; // Reference to the ScriptableObject
         public InventoryUIManager inventoryUIManager; // Reference to the InventoryUIManager script
         public HealthValue healthValue;
+        private PlayerMovement _player;
 
         private void Start()
         {
             PlayerPrefs.SetInt("canColect", 0);
             PlayerPrefs.SetInt("canMultiply", 0);
+            _player = GameObject.Find("Player").GetComponent<PlayerMovement>();
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
@@ -26,7 +30,7 @@ namespace Items
                 int canColect = PlayerPrefs.GetInt("canColect");
                 int canMultiply = PlayerPrefs.GetInt("canMultiply");
 
-                if (canColect == 0 && (itemName == "sungrass" || itemName == "dewcatcher"))
+                if (canColect == 0 && (itemName == "firebloom" || itemName == "stormvine" || itemName == "sorrowmoss"))
                 {
                     healthValue.fillAmount -= 0.1f;
                 }
@@ -46,6 +50,10 @@ namespace Items
                         itemCount += 1;
                     }
 
+                    if (_player.strength == 2)   // 0,1(strength) and 2(might)  
+                    {
+                        Debug.Log("STRONG");
+                    }
                     MainInventoryData.UpdateMainInventory(itemNumber, itemName, itemCount);
 
                     // Log the entire dictionary
