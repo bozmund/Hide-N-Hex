@@ -15,7 +15,8 @@ namespace Items
 
         private void Start()
         {
-            PlayerPrefs.SetInt("canColect", 0);
+            PlayerPrefs.SetInt("canColectFire", 0);
+            PlayerPrefs.SetInt("canColectFrozen", 0);
             PlayerPrefs.SetInt("canMultiply", 0);
             _player = GameObject.Find("Player").GetComponent<PlayerMovement>();
         }
@@ -27,10 +28,16 @@ namespace Items
                 string itemName = collision.gameObject.name;
                 itemName = Regex.Replace(itemName, @" \(\d+\)$", "").Trim();
 
-                int canColect = PlayerPrefs.GetInt("canColect");
+                int canColectFire = PlayerPrefs.GetInt("canColectFire");
+                int canColectFrozen = PlayerPrefs.GetInt("canColectFrozen");
                 int canMultiply = PlayerPrefs.GetInt("canMultiply");
+                
+                if (canColectFire == 0 && (itemName == "firebloom" || itemName == "stormvine"))
+                {
+                    healthValue.fillAmount -= 0.1f;
+                }
 
-                if (canColect == 0 && (itemName == "firebloom" || itemName == "stormvine" || itemName == "sorrowmoss"))
+                if (canColectFrozen == 0 && (itemName == "icecap" || itemName == "mageroyal"))
                 {
                     healthValue.fillAmount -= 0.1f;
                 }
@@ -52,12 +59,10 @@ namespace Items
 
                     if (_player.strength == 2)   // 0,1(strength) and 2(might)  
                     {
-                        Debug.Log("STRONG");
+                        
                     }
-                    MainInventoryData.UpdateMainInventory(itemNumber, itemName, itemCount);
 
-                    // Log the entire dictionary
-                    LogMainInventory();
+                    MainInventoryData.UpdateMainInventory(itemNumber, itemName, itemCount);
 
                     // Refresh the inventory UI
                     inventoryUIManager.LoadInventorySprites();

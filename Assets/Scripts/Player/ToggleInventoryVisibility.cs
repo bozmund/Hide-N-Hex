@@ -5,6 +5,7 @@ public class ToggleInventoryVisibility : MonoBehaviour
 {
     // Reference to the EntireInventory Image
     public Image entireInventory;
+    public PotionInHand potionInHand;
 
     // Keeps track of whether the EntireInventory is currently visible or not
     private bool isVisible;
@@ -25,6 +26,11 @@ public class ToggleInventoryVisibility : MonoBehaviour
 
             // Set the active state of the EntireInventory image
             entireInventory.gameObject.SetActive(isVisible);
+        }
+
+        if (isVisible)
+        {
+            potionInHand.potionName = null;
         }
     }
 }

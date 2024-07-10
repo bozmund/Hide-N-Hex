@@ -28,12 +28,12 @@ public class PotionSpriteManager : MonoBehaviour
     {
         if (potionInHand == null)
         {
-            Debug.LogWarning("PotionInHand is null. Setting sprite to none.");
+            //Debug.LogWarning("PotionInHand is null. Setting sprite to none.");
             spriteRenderer.sprite = null;
         }
         else if (potionInHand.potionName == null)
         {
-            Debug.LogWarning("PotionInHand.potionName is null. Setting sprite to none.");
+            //Debug.LogWarning("PotionInHand.potionName is null. Setting sprite to none.");
             spriteRenderer.sprite = null;
         }
         else if (potionInHand.potionName.Contains("Potion"))

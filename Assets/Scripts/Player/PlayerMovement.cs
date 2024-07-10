@@ -53,7 +53,7 @@ namespace Player
 
         private void Awake()
         {
-            Cursor.visible = false;
+            //Cursor.visible = false;
         }
 
         private void Start()

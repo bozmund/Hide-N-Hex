@@ -101,16 +101,23 @@ namespace PotionSystem
             {
                 if (_potionInHand.potionName == "FrostPotion")
                 {
-                    PlayerPrefs.SetInt("canColect", 1);
-                    StartCoroutine(TimerColect());
-                    Invoke(nameof(DeletePotion), 10f);
+                    PlayerPrefs.SetInt("canColectFire", 1);
+                    StartCoroutine(TimerColectFire());
+                    Invoke(nameof(DeletePotion), 31f);
+                }
+
+                if (_potionInHand.potionName == "LiquidFlamePotion")
+                {
+                    PlayerPrefs.SetInt("canColectFrozen", 1);
+                    StartCoroutine(TimerColectFrozen());
+                    Invoke(nameof(DeletePotion), 31f);
                 }
 
                 if (_potionInHand.potionName == "UsefulnessPotion")
                 {
                     PlayerPrefs.SetInt("canMultiply", 1);
                     StartCoroutine(TimerMultiply());
-                    Invoke(nameof(DeletePotion), 9f);
+                    Invoke(nameof(DeletePotion), 21f);
                 }
             }
 
@@ -206,15 +213,21 @@ namespace PotionSystem
             bossMan.confused = false;
         }
 
-        private IEnumerator TimerColect()
+        private IEnumerator TimerColectFrozen()
         {
-            yield return new WaitForSeconds(9f);
-            PlayerPrefs.SetInt("canColect", 0);
+            yield return new WaitForSeconds(30f);
+            PlayerPrefs.SetInt("canColectFrozen", 0);
+        }
+
+        private IEnumerator TimerColectFire()
+        {
+            yield return new WaitForSeconds(30f);
+            PlayerPrefs.SetInt("canColectFire", 0);
         }
 
         private IEnumerator TimerMultiply()
         {
-            yield return new WaitForSeconds(8f);
+            yield return new WaitForSeconds(20f);
             PlayerPrefs.SetInt("canMultiply", 0);
         }
 

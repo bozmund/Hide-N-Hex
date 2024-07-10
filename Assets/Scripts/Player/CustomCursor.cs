@@ -21,8 +21,9 @@ public class CustomCursor : MonoBehaviour
 
     void Start()
     {
-        // Set the idle cursor as the default cursor and ensure it is visible
-        Cursor.SetCursor(idleCursor, Vector2.zero, CursorMode.Auto);
+        // Set the idle cursor as the default cursor with the hotspot at the center
+        Vector2 idleHotspot = new Vector2(idleCursor.width / 2, idleCursor.height / 2);
+        Cursor.SetCursor(idleCursor, idleHotspot, CursorMode.Auto);
         Cursor.visible = true; // Ensure the cursor is visible
     }
 
@@ -31,11 +32,13 @@ public class CustomCursor : MonoBehaviour
         // Example condition to change the cursor
         if (Input.GetMouseButton(0)) // Left mouse button pressed
         {
-            Cursor.SetCursor(pointerCursor, Vector2.zero, CursorMode.Auto);
+            Vector2 pointerHotspot = new Vector2(pointerCursor.width / 2, pointerCursor.height / 2);
+            Cursor.SetCursor(pointerCursor, pointerHotspot, CursorMode.Auto);
         }
         else
         {
-            Cursor.SetCursor(idleCursor, Vector2.zero, CursorMode.Auto);
+            Vector2 idleHotspot = new Vector2(idleCursor.width / 2, idleCursor.height / 2);
+            Cursor.SetCursor(idleCursor, idleHotspot, CursorMode.Auto);
         }
 
         // Ensure the cursor is visible

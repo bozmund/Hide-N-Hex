@@ -8,6 +8,7 @@ namespace PotionSystem
     {
         [SerializeField]public CatCalled CatCalled;
         // ReSharper disable Unity.PerformanceAnalysis
+        public PotionInHand potionInHand;
         public void Handle(string potionName)
         {
             var potionEffects = gameObject.AddComponent<PotionEffects>();
@@ -29,6 +30,7 @@ namespace PotionSystem
                     potionEffects.ApplyInvisibility();
                     break;
                 case "LevitationPotion":
+                    potionInHand.potionName = null;
                     potionEffects.ApplyLevitation();
                     break;
                 case "LiquidFlamePotion":

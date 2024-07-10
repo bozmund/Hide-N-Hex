@@ -123,8 +123,39 @@ namespace PotionSystem
             var top = GameObject.Find("Top");
             var playerGoesBehind = GameObject.Find("PlayerGoesBehind");
 
-            top.GetComponent<TilemapCollider2D>().enabled = false;
-            playerGoesBehind.GetComponent<TilemapRenderer>().sortingOrder = 1;
+            if (top != null)
+            {
+                // Disable TilemapCollider2D if it exists on 'top'
+                if (top.TryGetComponent<TilemapCollider2D>(out var tilemapCollider))
+                {
+                    tilemapCollider.enabled = false;
+                }
+                else
+                {
+                    Debug.LogWarning("'top' GameObject does not have a TilemapCollider2D component.");
+                }
+            }
+            else
+            {
+                Debug.LogWarning("'top' GameObject reference is not set.");
+            }
+
+            if (playerGoesBehind != null)
+            {
+                // Set sortingOrder to 1 if TilemapRenderer exists on 'playerGoesBehind'
+                if (playerGoesBehind.TryGetComponent<TilemapRenderer>(out var tilemapRenderer))
+                {
+                    tilemapRenderer.sortingOrder = 1;
+                }
+                else
+                {
+                    Debug.LogWarning("'playerGoesBehind' GameObject does not have a TilemapRenderer component.");
+                }
+            }
+            else
+            {
+                Debug.LogWarning("'playerGoesBehind' GameObject reference is not set.");
+            }
 
             StartCoroutine(RevertLevitation());
         }
