@@ -66,8 +66,9 @@ namespace PotionSystem
 
                 if (explosionEffect != null)
                 {
-                    particle.playOnAwake = true;
-                    GameObject particles = Instantiate(explosionEffect, transform.position, Quaternion.identity);
+                    var particleMain = particle.main;
+                    particleMain.playOnAwake = true;
+                    var particles = Instantiate(explosionEffect, transform.position, Quaternion.identity);
                     Destroy(particles, 0.5f);
                 }
 

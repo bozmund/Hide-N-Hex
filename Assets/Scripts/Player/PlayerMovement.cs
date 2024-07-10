@@ -10,8 +10,9 @@ namespace Player
     [RequireComponent(typeof(LineRenderer))]
     public class PlayerMovement : MonoBehaviour
     {
-        [Header("Attributes")]
-        [SerializeField] public float movementSpeed = 2.5f;
+        [Header("Attributes")] [SerializeField]
+        public float movementSpeed = 2.5f;
+
         [SerializeField] public int strength;
         [SerializeField] private float potionHeight = 1f;
         [SerializeField] private float throwDuration = 1f;
@@ -28,11 +29,10 @@ namespace Player
         public bool flying;
         public bool flamable;
         public bool frozen;
+        public bool invisible;
 
-        [Space(5)]
-        [Header("References")]
-        public GameObject Potion;
-        public LineRenderer trajectoryRenderer;
+        [Space(5)] [Header("References")] public GameObject Potion;
+        public LineRenderer lineRenderer;
         private PotionEffectHandler _potionEffectHandler;
         private Vector3 _crosshairPosition;
         public Animator animator;
@@ -41,6 +41,8 @@ namespace Player
         public Sprite[] potionDrinkSprites;
         public Sprite[] potionThrowSprites;
         public Sprite[] walkSprites;
+        [SerializeField] public PotionInHand PotionInHand;
+
 
         public List<Effect> ActiveEffects = new();
         private static readonly int Horizontal = Animator.StringToHash("Horizontal");
@@ -61,27 +63,31 @@ namespace Player
             animator = GetComponent<Animator>();
             spriteRenderer = GetComponent<SpriteRenderer>();
             SetupTrajectoryRenderer();
+            lineRenderer.enabled = false;
         }
 
         private void FixedUpdate()
         {
             rb2d.velocity = new Vector2(movementDirection.x * movementSpeed, movementDirection.y * movementSpeed);
+            if (PotionInHand.potionName != "") lineRenderer.enabled = true;
         }
 
         private void Update()
         {
             Movement();
             Animate();
-            Aim();
+            if (PotionInHand.potionName != "")
+            {
+                DrinkPotion();
+                Aim();
+            }
             UpdateTrajectoryLine();
-            DrinkPotion();
             HandleActiveEffects();
             CheckActiveSprite();
         }
 
         private void CheckActiveSprite()
         {
-
             Sprite currentSprite = spriteRenderer.sprite;
             foreach (Sprite sprite in potionDrinkSprites)
             {
@@ -127,17 +133,14 @@ namespace Player
         }
 
 
-
         // ReSharper disable Unity.PerformanceAnalysis
         private void DrinkPotion()
         {
-            if (Input.GetKeyDown(KeyCode.Q) && Potion is not null)
-            {
-                _potionEffectHandler.Handle(Potion.GetComponent<SpriteRenderer>().sprite.name);
-                _isDrinking = true;
-                animator.SetBool(IsDrink, true);
-                StartCoroutine(ResetAnim(0.3f));
-            }
+            if (!Input.GetKeyDown(KeyCode.Q) || Potion is null) return;
+            _potionEffectHandler.Handle(Potion.GetComponent<SpriteRenderer>().sprite.name);
+            _isDrinking = true;
+            animator.SetBool(IsDrink, true);
+            StartCoroutine(ResetAnim(0.3f));
         }
 
         public void Movement()
@@ -150,7 +153,7 @@ namespace Player
                 moveX = Input.GetAxisRaw("Vertical");
                 moveY = Input.GetAxisRaw("Horizontal");
             }
-            
+
             if (moveX == 0 && moveY == 0 && (movementDirection.x != 0 || movementDirection.y != 0))
                 _lastMoveDirection = movementDirection;
 
@@ -169,6 +172,7 @@ namespace Player
                         animator.SetFloat(Horizontal, movementDirection.x);
                         animator.SetFloat(Vertical, movementDirection.y);
                     }
+
                     animator.SetFloat(Speed, movementDirection.sqrMagnitude);
                 }
             }
@@ -180,25 +184,25 @@ namespace Player
                     animator.SetFloat(Horizontal, movementDirection.x);
                     animator.SetFloat(Vertical, movementDirection.y);
                 }
+
                 animator.SetFloat(Speed, movementDirection.sqrMagnitude);
             }
         }
 
         private void Aim()
         {
+            lineRenderer.enabled = true;
             _crosshairPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             _crosshairPosition.z = 0f;
 
-            if (Input.GetKeyDown(KeyCode.Mouse0) && Time.time >= _lastThrowTime + throwCd)
-            {
-                Vector3 throwTargetPosition = ClampThrowPosition(_crosshairPosition);
-                ThrowPotion(transform.position, throwTargetPosition);
-                _lastThrowTime = Time.time;
-                animator.SetBool(IsThrow, true);
-                _isThrowing = true;
-                FaceCrosshair();
-                StartCoroutine(ResetAnim(0.5f));
-            }
+            if (!Input.GetKeyDown(KeyCode.Mouse0) || !(Time.time >= _lastThrowTime + throwCd)) return;
+            Vector3 throwTargetPosition = ClampThrowPosition(_crosshairPosition);
+            ThrowPotion(transform.position, throwTargetPosition);
+            _lastThrowTime = Time.time;
+            animator.SetBool(IsThrow, true);
+            _isThrowing = true;
+            FaceCrosshair();
+            StartCoroutine(ResetAnim(0.5f));
         }
 
         void FaceCrosshair()
@@ -207,6 +211,7 @@ namespace Player
             animator.SetFloat(Horizontal, direction.x);
             animator.SetFloat(Vertical, direction.y);
         }
+
         void ThrowPotion(Vector3 firePosition, Vector3 targetPosition)
         {
             _startThrowPosition = firePosition;
@@ -284,9 +289,10 @@ namespace Player
 
         void SetupTrajectoryRenderer()
         {
-            trajectoryRenderer.positionCount = 30;
-            trajectoryRenderer.startWidth = 0.05f;
-            trajectoryRenderer.endWidth = 0.05f;
+            if (!lineRenderer) return;
+            lineRenderer.positionCount = 30;
+            lineRenderer.startWidth = 0.05f;
+            lineRenderer.endWidth = 0.05f;
         }
 
         Vector3 ThrowTrajectory(Vector3 firePosition, Vector3 targetPosition, float t)
@@ -297,18 +303,21 @@ namespace Player
             Vector3 trajectoryPosition = linearProgress + (Vector3.up * perspectiveOffset);
             return trajectoryPosition;
         }
+
         void UpdateTrajectoryLine()
         {
             Vector3 firePosition = transform.position;
             Vector3 targetPosition = ClampThrowPosition(_crosshairPosition);
 
-            Vector3[] positions = new Vector3[trajectoryRenderer.positionCount];
-            for (int i = 0; i < trajectoryRenderer.positionCount; i++)
+            if (!lineRenderer) return;
+            Vector3[] positions = new Vector3[lineRenderer.positionCount];
+            for (int i = 0; i < lineRenderer.positionCount; i++)
             {
-                float t = (float)i / (trajectoryRenderer.positionCount - 1);
+                float t = (float)i / (lineRenderer.positionCount - 1);
                 positions[i] = ThrowTrajectory(firePosition, targetPosition, t);
             }
-            trajectoryRenderer.SetPositions(positions);
+
+            lineRenderer.SetPositions(positions);
         }
 
         Vector3 ClampThrowPosition(Vector3 targetPosition)
@@ -319,6 +328,7 @@ namespace Player
                 clampedPosition = clampedPosition.normalized * throwRadius;
                 targetPosition = transform.position + clampedPosition;
             }
+
             return targetPosition;
         }
 

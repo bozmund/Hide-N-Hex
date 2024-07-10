@@ -54,7 +54,10 @@ namespace PotionSystem
 
         public void ApplyStrength()
         {
-            _player.strength = 1;
+            if (_player.strength != 2)
+            {
+                _player.strength = 1;
+            }
         }
 
         public static void ApplyRecall()
@@ -65,6 +68,9 @@ namespace PotionSystem
         public void ApplyPurification()
         {
             _player.ActiveEffects.Clear();
+            RevertLevitation(0);
+            RevertConfusion(0);
+            RevertInvisibility(0);
         }
 
         public void ApplyParalyticGas()
@@ -120,12 +126,14 @@ namespace PotionSystem
             top.GetComponent<TilemapCollider2D>().enabled = false;
             playerGoesBehind.GetComponent<TilemapRenderer>().sortingOrder = 1;
 
-            StartCoroutine(RevertLevitation(top, playerGoesBehind));
+            StartCoroutine(RevertLevitation());
         }
 
         // ReSharper disable Unity.PerformanceAnalysis
-        private IEnumerator RevertLevitation(GameObject top, GameObject playerGoesBehind)
+        private IEnumerator RevertLevitation(int seconds = 60)
         {
+            var playerGoesBehind = GameObject.Find("PlayerGoesBehind");
+            var top = GameObject.Find("Top");
             yield return new WaitForSeconds(60);
 
             top.GetComponent<TilemapCollider2D>().enabled = true;
@@ -135,19 +143,25 @@ namespace PotionSystem
 
         public void ApplyInvisibility()
         {
-            var color = GameObject.Find("Player").GetComponent<SpriteRenderer>().color;
+            var find = GameObject.Find("Player");
+            var color = find.GetComponent<SpriteRenderer>().color;
             color.a = 0.5f;
-            GameObject.Find("Player").GetComponent<SpriteRenderer>().color = color;
-
-            StartCoroutine(RevertInvisibility(color));
+            find.GetComponent<SpriteRenderer>().color = color;
+            var playerMovement = find.GetComponent<PlayerMovement>();
+            playerMovement.invisible = true;
+            StartCoroutine(RevertInvisibility());
         }
 
         // ReSharper disable Unity.PerformanceAnalysis
-        private IEnumerator RevertInvisibility(Color color)
+        private IEnumerator RevertInvisibility(int seconds = 10)
         {
-            yield return new WaitForSeconds(2);
+            var find = GameObject.Find("Player");
+            var playerMovement = find.GetComponent<PlayerMovement>();
+            var color = find.GetComponent<SpriteRenderer>().color;
+            yield return new WaitForSeconds(seconds);
             color.a = 1f;
             GameObject.Find("Player").GetComponent<SpriteRenderer>().color = color;
+            playerMovement.invisible = false;
         }
 
         public void ApplyHolyGrail()
@@ -159,7 +173,7 @@ namespace PotionSystem
         public static void ApplyHealing()
         {
             var healthBar = GameObject.Find("HealthBar").GetComponent<HealthBar>();
-            healthBar.IncreaseHealth(3f);
+            healthBar.IncreaseHealth(0.3f);
         }
 
         public void ApplyConfusion()
@@ -168,9 +182,9 @@ namespace PotionSystem
             StartCoroutine(RevertConfusion());
         }
 
-        private IEnumerator RevertConfusion()
+        private IEnumerator RevertConfusion(int seconds = 10)
         {
-            yield return new WaitForSeconds(10);
+            yield return new WaitForSeconds(seconds);
             _player._invertControls = false;
         }
 

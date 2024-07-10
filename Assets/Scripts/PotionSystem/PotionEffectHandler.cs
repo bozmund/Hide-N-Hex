@@ -1,10 +1,12 @@
-﻿using UnityEngine;
+﻿using Scriptable_Objects;
+using UnityEngine;
 using Utilities;
 
 namespace PotionSystem
 {
     public class PotionEffectHandler : Singleton<PotionEffectHandler>
     {
+        [SerializeField]public CatCalled CatCalled;
         // ReSharper disable Unity.PerformanceAnalysis
         public void Handle(string potionName)
         {
@@ -12,7 +14,7 @@ namespace PotionSystem
             switch (potionName)
             {
                 case "CatcallingPotion":
-                    potionEffects.ApplyCatcalling(null);
+                    potionEffects.ApplyCatcalling(CatCalled);
                     break;
                 case "ConfusionPotion":
                     potionEffects.ApplyConfusion();
