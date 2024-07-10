@@ -45,7 +45,7 @@ public class BearBossMan : MonoBehaviour
         playerInSightRange = Physics2D.OverlapCircle(transform.position, sightRange, attackable);
         playerInAttackRange = Physics2D.OverlapCircle(transform.position, attackRange, attackable);
 
-        if(!(bearHP.fillAmount == 0))
+        if(!(bearHP.fillAmount < 0.1f))
         {
             if (!playerInSightRange && !playerInAttackRange) return;
 
@@ -76,6 +76,7 @@ public class BearBossMan : MonoBehaviour
             {
                 pickUp = false;
                 poop.gameObject.SetActive(true);
+                poop.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 3;
             }
         }
     }

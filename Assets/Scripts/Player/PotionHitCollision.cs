@@ -4,6 +4,7 @@ using System.Drawing;
 using Items;
 using Player;
 using Unity.VisualScripting;
+using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -30,6 +31,7 @@ namespace PotionSystem
         //referenca na medvjeda scriptable object
         public HealthValue bossHP;
         public BearShit bearShit;
+        public NPCAttributes NPCAttributes;
 
         public bool dead;
 
@@ -94,6 +96,37 @@ namespace PotionSystem
         {
             if (gameObject.CompareTag("NPC"))
             {
+                NPCAttributes NPCAttributes = gameObject.GetComponent<NPCAttributes>();
+                if (_potionInHand.potionName == "HealingPotion")
+                {
+                    NPCAttributes.health.fillAmount += 0.3f;
+                    Invoke(nameof(DeletePotion), 31f);
+                }
+                if (_potionInHand.potionName == "InvisibilityPotion")
+                {
+                    var color = NPCAttributes.spriteRenderer.color;
+                    color.a = 0.5f;
+                    NPCAttributes.spriteRenderer.color = color;
+                    StartCoroutine(NPCVisibility());
+                    Invoke(nameof(DeletePotion), 31f);
+                }
+                if (_potionInHand.potionName == "LiquidFlamePotion")
+                {
+                    NPCAttributes.health.fillAmount -= 0.3f;
+                    Invoke(nameof(DeletePotion), 31f);
+                }
+                if (_potionInHand.potionName == "ParalyticGasPotion")
+                {
+                    NPCAttributes.movementSpeed = 0f;
+                    StartCoroutine(NPCLetMeIn());
+                    Invoke(nameof(DeletePotion), 31f);
+                }
+                if (_potionInHand.potionName == "SwiftnessPotion")
+                {
+                    NPCAttributes.movementSpeed *= 2f;
+                    StartCoroutine(NPCFastAFBoi());
+                    Invoke(nameof(DeletePotion), 31f);
+                }
                 if (_potionInHand.potionName == "ToxicGasPotion")
                 {
                     dead = true;
@@ -193,6 +226,38 @@ namespace PotionSystem
             }
         }
 
+        private IEnumerator NPCVisibility()
+        {
+            yield return new WaitForSeconds(5f);
+            var color = NPCAttributes.spriteRenderer.color;
+            color.a = 1f;
+            NPCAttributes.spriteRenderer.color = color;
+        }
+
+        private IEnumerator NPCPoison()
+        {
+            NPCAttributes.health.fillAmount -= 0.1f;
+            yield return new WaitForSeconds(1f);
+
+            NPCAttributes.health.fillAmount -= 0.1f;
+            yield return new WaitForSeconds(1f);
+
+            NPCAttributes.health.fillAmount -= 0.1f;
+            yield return new WaitForSeconds(1f);
+        }
+
+        private IEnumerator NPCFastAFBoi()
+        {
+            yield return new WaitForSeconds(5f);
+            NPCAttributes.movementSpeed /= 1f;
+        }
+
+        private IEnumerator NPCLetMeIn()
+        {
+            yield return new WaitForSeconds(5f);
+            NPCAttributes.movementSpeed = 1f;
+        }
+
         private IEnumerator Poison()
         {
             bossHP.fillAmount -= 0.1f;
@@ -219,10 +284,10 @@ namespace PotionSystem
 
         private IEnumerator Visibility()
         {
+            yield return new WaitForSeconds(5f);
             var color = bossMan.GetComponent<SpriteRenderer>().color;
             color.a = 1f;
-            GameObject.Find("Player").GetComponent<SpriteRenderer>().color = color;
-            yield return new WaitForSeconds(5f);
+            GameObject.Find("Player").GetComponent<SpriteRenderer>().color = color;          
         }
 
         private IEnumerator Confusion()

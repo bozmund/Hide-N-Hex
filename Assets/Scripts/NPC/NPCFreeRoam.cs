@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -5,9 +6,9 @@ public class NPCFreeRoam : MonoBehaviour
 {
     [Header("References")]
     public Rigidbody2D rb2d;
+    public NPCAttributes atribut;
 
     [Header("Variables")]
-    public float moveSpeed = 1f;
     [SerializeField] private float minX = -22f;
     [SerializeField] private float maxX = 22f;
     [SerializeField] private float minY = -15f;
@@ -22,6 +23,7 @@ public class NPCFreeRoam : MonoBehaviour
 
     void Start()
     {
+        atribut = GetComponent<NPCAttributes>();
         rb2d = GetComponent<Rigidbody2D>();
         _villagePosition = new Vector2(71, 8);
         SetRandomTargetPosition();
@@ -32,7 +34,7 @@ public class NPCFreeRoam : MonoBehaviour
         if (isMoving)
         {
             Vector2 direction = (targetPosition - rb2d.position).normalized;
-            rb2d.velocity = direction * moveSpeed;
+            rb2d.velocity = direction * atribut.movementSpeed;
 
             if (Vector2.Distance(transform.position, targetPosition) < 0.1f)
             {
@@ -47,8 +49,8 @@ public class NPCFreeRoam : MonoBehaviour
 
     public void SetRandomTargetPosition()
     {
-        float randomX = Random.Range(minX, maxX);
-        float randomY = Random.Range(minY, maxY);
+        float randomX = UnityEngine.Random.Range(minX, maxX);
+        float randomY = UnityEngine.Random.Range(minY, maxY);
         targetPosition = new Vector2(_villagePosition.x + randomX, _villagePosition.y + randomY);
     }
 }

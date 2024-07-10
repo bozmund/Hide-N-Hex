@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -8,9 +9,9 @@ namespace NPC
         [Header("References")]
         public NPCWaypoints waypoints;
         public Rigidbody2D rb2d;
+        public NPCAttributes atribut;
 
         [Header("Variables")]
-        public float moveSpeed = 1f;
         [SerializeField]private float waitTime = 2f;
         [SerializeField]private int currentWaypointIndex;
         private int _arraySize;
@@ -19,6 +20,7 @@ namespace NPC
 
         private void Start()
         {
+            atribut = GetComponent<NPCAttributes>();
             rb2d = GetComponent<Rigidbody2D>();
             _arraySize = waypoints.waypoints.Length;
         }
@@ -29,7 +31,7 @@ namespace NPC
             {
                 Vector2 targetPosition = waypoints.waypoints[currentWaypointIndex];
                 Vector2 direction = (targetPosition - rb2d.position).normalized;
-                rb2d.velocity = direction * moveSpeed;
+                rb2d.velocity = direction * atribut.movementSpeed;
                 
                 if (Vector2.Distance(rb2d.position, targetPosition) < 0.1f)
                 {

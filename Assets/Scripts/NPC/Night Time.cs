@@ -13,7 +13,7 @@ public class NightTime : MonoBehaviour
     public NpcWaypoint setHodanje;
     public GameObject[] npcs;
     public SuspicionValue sus;
-    //public PotionHitCollision potionHit;
+    public NPCAttributes atributi;
 
     [Header("Variables")]
     [SerializeField] private float waitTime = 1.5f;
@@ -24,8 +24,8 @@ public class NightTime : MonoBehaviour
 
     private void Start()
     {
+        atributi = GetComponent<NPCAttributes>();
         rb2d = GetComponent<Rigidbody2D>();
-        //potionHit = GetComponent<PotionHitCollision>();
         npcs = new GameObject[6];
         npcs[0] = GameObject.Find("FirstNPC");
         npcs[1] = GameObject.Find("SecondNPC");
@@ -42,26 +42,30 @@ public class NightTime : MonoBehaviour
     {
         if (WorldLight.percentOfDay >= 0.2f && WorldLight.percentOfDay <= 0.7f)
         {
-            //if(potionHit.dead) 
+            NPCFreeRoam chosenNPCRandomHodanje = npcs[chosenNPCIndex].GetComponent<NPCFreeRoam>();
             SetAllNPCsActive(true);
             npcIsChosen = false;
-            StopCoroutine(randomHodanje.MoveAndWait());
+            StopCoroutine(chosenNPCRandomHodanje.MoveAndWait());
             StartCoroutine(setHodanje.MoveToNextWaypoint());
         }
         else if (!npcIsChosen && (WorldLight.percentOfDay < 0.2f || WorldLight.percentOfDay > 0.7f))
         {
-            StopCoroutine(setHodanje.MoveToNextWaypoint());
             chosenNPCIndex = UnityEngine.Random.Range(0, npcs.Length);
-
             SetAllNPCsActive(false);
+            StopCoroutine(setHodanje.MoveToNextWaypoint());
             npcs[chosenNPCIndex].SetActive(true);
-            if (npcs[chosenNPCIndex] == isActiveAndEnabled) StartCoroutine(randomHodanje.MoveAndWait());
-            npcIsChosen = true;
-            Collider2D playerCollider = Physics2D.OverlapCircle(transform.position, detectionRadius, playerLayer);
-            if (playerCollider != null && playerCollider.CompareTag("Player"))
+            if (npcs[chosenNPCIndex].activeInHierarchy)
             {
-                sus.fillAmount += 0.05f * Time.deltaTime;
+                NPCFreeRoam chosenNPCRandomHodanje = npcs[chosenNPCIndex].GetComponent<NPCFreeRoam>();
+                StartCoroutine(chosenNPCRandomHodanje.MoveAndWait());
             }
+            npcIsChosen = true;
+        }
+
+        Collider2D playerCollider = Physics2D.OverlapCircle(transform.position, detectionRadius, playerLayer);
+        if (playerCollider != null && playerCollider.CompareTag("Player") && (WorldLight.percentOfDay < 0.2f || WorldLight.percentOfDay > 0.7f))
+        {
+            sus.fillAmount += 0.05f * Time.deltaTime;
         }
     }
 
@@ -71,10 +75,15 @@ public class NightTime : MonoBehaviour
         {
             if (npc != null)
             {
-                npc.SetActive(isActive);
+                NPCAttributes npcAttributes = npc.GetComponent<NPCAttributes>();
+                if (npcAttributes != null && !npcAttributes.dead)
+                {
+                    npc.SetActive(isActive);
+                }
             }
         }
     }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
