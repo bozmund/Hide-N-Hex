@@ -56,12 +56,41 @@ namespace Items
                     {
                         itemCount += 1;
                     }
+                    //Debug.Log(_player.strength);
+                    /*
+                     if (_player.strength == 0 && itemName != "starflower" && itemName != "stormvine" && itemName != "goldenLotus" && itemName != "blandfruit" && itemName != "starflower" && itemName != "starflower")
+                     {
+                         MainInventoryData.UpdateMainInventory(itemNumber, itemName, itemCount);
 
-                    if (_player.strength == 2)   // 0,1(strength) and 2(might)  
-                    {
-                        
-                    }
+                         // Refresh the inventory UI
+                         inventoryUIManager.LoadInventorySprites();
 
+                         // Make the object disappear after collecting it
+                         collision.gameObject.SetActive(false);
+                     }
+
+                     else if (_player.strength == 1 && itemName != "starflower" && itemName != "goldenLotus")
+                     {
+                         MainInventoryData.UpdateMainInventory(itemNumber, itemName, itemCount);
+
+                         // Refresh the inventory UI
+                         inventoryUIManager.LoadInventorySprites();
+
+                         // Make the object disappear after collecting it
+                         collision.gameObject.SetActive(false);
+                     }
+
+                     else 
+                     {
+                         MainInventoryData.UpdateMainInventory(itemNumber, itemName, itemCount);
+
+                         // Refresh the inventory UI
+                         inventoryUIManager.LoadInventorySprites();
+
+                         // Make the object disappear after collecting it
+                         collision.gameObject.SetActive(false);
+                     }
+                    */
                     MainInventoryData.UpdateMainInventory(itemNumber, itemName, itemCount);
 
                     // Refresh the inventory UI

@@ -83,53 +83,6 @@ namespace Player
             else lineRenderer.sortingOrder = -1;
             UpdateTrajectoryLine();
             HandleActiveEffects();
-            CheckActiveSprite();
-        }
-
-        private void CheckActiveSprite()
-        {
-            Sprite currentSprite = spriteRenderer.sprite;
-            foreach (Sprite sprite in potionDrinkSprites)
-            {
-                if (currentSprite == sprite)
-                {
-                    GameObject napitak = GameObject.Find("Potion");
-                    napitak.GetComponent<SpriteRenderer>().sortingOrder = 2;
-                }
-                else
-                {
-                    GameObject napitak = GameObject.Find("Potion");
-                    napitak.GetComponent<SpriteRenderer>().sortingOrder = 3;
-                }
-            }
-
-            foreach (Sprite sprite in potionThrowSprites)
-            {
-                if (currentSprite == sprite)
-                {
-                    GameObject napitak = GameObject.Find("Potion");
-                    napitak.GetComponent<SpriteRenderer>().sortingOrder = 2;
-                }
-                else
-                {
-                    GameObject napitak = GameObject.Find("Potion");
-                    napitak.GetComponent<SpriteRenderer>().sortingOrder = 3;
-                }
-            }
-
-            foreach (Sprite sprite in walkSprites)
-            {
-                if (currentSprite == sprite)
-                {
-                    GameObject napitak = GameObject.Find("Potion");
-                    napitak.GetComponent<SpriteRenderer>().sortingOrder = 2;
-                }
-                else
-                {
-                    GameObject napitak = GameObject.Find("Potion");
-                    napitak.GetComponent<SpriteRenderer>().sortingOrder = 3;
-                }
-            }
         }
 
 

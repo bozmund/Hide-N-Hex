@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Drawing;
+using Items;
 using Player;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -10,6 +11,9 @@ namespace PotionSystem
 {
     public class PotionHitCollision : MonoBehaviour
     {
+        public MainInventory MainInventoryData;
+        public InventoryUIManager inventoryUIManager;
+
         [Header("Potion Attributes")]
         public float explosionRadius;
         public LayerMask targetLayer;
@@ -76,6 +80,7 @@ namespace PotionSystem
                 if (hitColliders.Length == 0)
                 {
                     DeletePotion();
+                    deletePotionFromInventory(_potionInHand.potionName);
                 }
             }
 
@@ -94,6 +99,7 @@ namespace PotionSystem
                     dead = true;
                     gameObject.SetActive(false);
                     Invoke(nameof(aliveIt), 5f);
+                    deletePotionFromInventory("ToxicGasPotion");
                 }
             }
 
@@ -104,6 +110,7 @@ namespace PotionSystem
                     PlayerPrefs.SetInt("canColectFire", 1);
                     StartCoroutine(TimerColectFire());
                     Invoke(nameof(DeletePotion), 31f);
+                    deletePotionFromInventory("FrostPotion");
                 }
 
                 if (_potionInHand.potionName == "LiquidFlamePotion")
@@ -111,6 +118,7 @@ namespace PotionSystem
                     PlayerPrefs.SetInt("canColectFrozen", 1);
                     StartCoroutine(TimerColectFrozen());
                     Invoke(nameof(DeletePotion), 31f);
+                    deletePotionFromInventory("LiquidFlamePotion");
                 }
 
                 if (_potionInHand.potionName == "UsefulnessPotion")
@@ -118,6 +126,7 @@ namespace PotionSystem
                     PlayerPrefs.SetInt("canMultiply", 1);
                     StartCoroutine(TimerMultiply());
                     Invoke(nameof(DeletePotion), 21f);
+                    deletePotionFromInventory("UsefulnessPotion");
                 }
             }
 
@@ -125,6 +134,7 @@ namespace PotionSystem
             {
                 if (_potionInHand.potionName == "RepairPotion")
                 {
+                    deletePotionFromInventory("RepairPotion");
                     SceneManager.LoadScene("WinRepair");
                 }
             }
@@ -135,10 +145,12 @@ namespace PotionSystem
                 {
                     bossMan.confused = true;
                     StartCoroutine(Confusion());
+                    deletePotionFromInventory("ConfusionPotion");
                 }
                 if (_potionInHand.potionName == "HealingPotion")
                 {
                     bossHP.fillAmount += 0.3f;
+                    deletePotionFromInventory("HealingPotion");
                 }
                 if (_potionInHand.potionName == "InvisibilityPotion")
                 {
@@ -146,24 +158,29 @@ namespace PotionSystem
                     color.a = 0.5f;
                     GameObject.Find("BearBossMan").GetComponent<SpriteRenderer>().color = color;
                     StartCoroutine(Visibility());
+                    deletePotionFromInventory("InvisibilityPotion");
                 }
                 if (_potionInHand.potionName == "LiquidFlamePotion")
                 {
                     bossHP.fillAmount -= 0.3f;
+                    deletePotionFromInventory("LiquidFlamePotion");
                 }
                 if (_potionInHand.potionName == "ParalyticGasPotion")
                 {
                     bossMan.movementSpeed = 0f;
                     StartCoroutine(LetMeIn());
+                    deletePotionFromInventory("ParalyticGasPotion");
                 }
                 if (_potionInHand.potionName == "SwiftnessPotion")
                 {
                     bossMan.movementSpeed *= 2f;
                     StartCoroutine(FastAFBoi());
+                    deletePotionFromInventory("SwiftnessPotion");
                 }
                 if (_potionInHand.potionName == "ToxicGasPotion")
                 {
                     StartCoroutine(Poison());
+                    deletePotionFromInventory("ToxicGasPotion");
                 }
                 if (_potionInHand.potionName == "PurificationPotion")
                 {
@@ -171,6 +188,7 @@ namespace PotionSystem
                     shit.GetComponent<BearShit>();
                     shit.gameObject.SetActive(true);
                     shit.transform.localScale= new Vector3(5f, 5f, 0f);
+                    deletePotionFromInventory("PurificationPotion");
                 }
             }
         }
@@ -239,6 +257,27 @@ namespace PotionSystem
         public void DeletePotion()
         {
             Destroy(gameObject);
+        }
+
+        void deletePotionFromInventory(string potionName)
+        {
+            var potionCount = MainInventoryData.GetSlotAndCountForItem(potionName, out var itemNumber);
+            potionCount -= 1;
+
+            if (potionCount == 0)
+            {
+                _potionInHand.potionName = null;
+                MainInventoryData.UpdateMainInventory(itemNumber, "", potionCount);
+                inventoryUIManager.ClearUIElement(itemNumber);
+            }
+
+            else
+            {
+                MainInventoryData.UpdateMainInventory(itemNumber, potionName, potionCount);
+            }
+
+            inventoryUIManager.LoadInventorySprites();
+
         }
     }
 }
