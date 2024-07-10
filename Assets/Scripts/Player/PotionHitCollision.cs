@@ -125,7 +125,7 @@ namespace PotionSystem
             {
                 if (_potionInHand.potionName == "RepairPotion")
                 {
-                    SceneManager.LoadScene("WinScreen");
+                    SceneManager.LoadScene("WinRepair");
                 }
             }
 
