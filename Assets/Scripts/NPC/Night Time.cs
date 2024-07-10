@@ -13,7 +13,7 @@ public class NightTime : MonoBehaviour
     public NpcWaypoint setHodanje;
     public GameObject[] npcs;
     public SuspicionValue sus;
-    public PotionHitCollision potionHit;
+    //public PotionHitCollision potionHit;
 
     [Header("Variables")]
     [SerializeField] private float waitTime = 1.5f;
@@ -25,7 +25,7 @@ public class NightTime : MonoBehaviour
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
-        potionHit = GetComponent<PotionHitCollision>();
+        //potionHit = GetComponent<PotionHitCollision>();
         npcs = new GameObject[6];
         npcs[0] = GameObject.Find("FirstNPC");
         npcs[1] = GameObject.Find("SecondNPC");
@@ -42,7 +42,8 @@ public class NightTime : MonoBehaviour
     {
         if (WorldLight.percentOfDay >= 0.2f && WorldLight.percentOfDay <= 0.7f)
         {
-            if(potionHit.dead) SetAllNPCsActive(true);
+            //if(potionHit.dead) 
+            SetAllNPCsActive(true);
             npcIsChosen = false;
             StopCoroutine(randomHodanje.MoveAndWait());
             StartCoroutine(setHodanje.MoveToNextWaypoint());
@@ -56,10 +57,6 @@ public class NightTime : MonoBehaviour
             npcs[chosenNPCIndex].SetActive(true);
             if (npcs[chosenNPCIndex] == isActiveAndEnabled) StartCoroutine(randomHodanje.MoveAndWait());
             npcIsChosen = true;
-        }
-
-        if (WorldLight.percentOfDay < 0.2f || WorldLight.percentOfDay > 0.7f)
-        {
             Collider2D playerCollider = Physics2D.OverlapCircle(transform.position, detectionRadius, playerLayer);
             if (playerCollider != null && playerCollider.CompareTag("Player"))
             {

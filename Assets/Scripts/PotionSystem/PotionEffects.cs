@@ -73,7 +73,7 @@ namespace PotionSystem
                 "ParalyticGas",
                 5f,
                 player => player.movementSpeed = 0,
-                player => player.movementSpeed = 2.5f
+                player => player.movementSpeed = 3f
             ));
         }
 

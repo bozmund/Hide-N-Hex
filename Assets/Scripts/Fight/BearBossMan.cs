@@ -25,6 +25,7 @@ public class BearBossMan : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
     private bool pickUp;
+    public bool confused;
 
     private void Start()
     {
@@ -108,9 +109,25 @@ public class BearBossMan : MonoBehaviour
 
     private void ChasePlayer()
     {
-        Vector2 targetPos = new Vector2 (player.transform.position.x, player.transform.position.y);
+        if (!confused)
+        {
+            Vector2 targetPos = new Vector2(player.transform.position.x, player.transform.position.y);
+            Vector2 direction = (targetPos - rb2d.position).normalized;
+            rb2d.velocity = direction * movementSpeed;
+        }
+        else
+        {
+            StartCoroutine(dontSpazm());
+        }
+    }
+
+    private IEnumerator dontSpazm()
+    {
+        Vector2 targetPos = new Vector2(transform.position.x + UnityEngine.Random.Range(0f, 3f), transform.position.y + UnityEngine.Random.Range(0f, 3));
         Vector2 direction = (targetPos - rb2d.position).normalized;
         rb2d.velocity = direction * movementSpeed;
+        yield return new WaitForSeconds(1f);
+
     }
 
     private void AttackAnim()
