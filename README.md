@@ -79,8 +79,7 @@ Within the chamber lay the ancient potion book of her grandmother, its pages fil
 
 ## Asset List
 ### Music
-### VFX
-
+- [Bookshelf moving](https://freesound.org/people/RutgerMuller/sounds/51158/), [Levitation wind sound](https://freesound.org/people/deleted_user_3544904/sounds/194249/), [Win sound](https://freesound.org/people/Fupicat/sounds/521643/), [Cat](https://freesound.org/people/bagenzo/sounds/714179/), [Sad cutscene](https://freesound.org/people/melokacool/sounds/615454/), [Game over - health](https://freesound.org/people/Valo/sounds/717964/), [Click sound](https://uppbeat.io/sfx/digital-button-click-pop/13376/33425), [Potion brewing](https://freesound.org/people/Mateusz_Chenc/sounds/504139/), [Game over - suspicion](https://freesound.org/people/silencyo/sounds/81801/), [Main soundtrack](https://uppbeat.io/track/michael-grubb/floating-cat), [Bear soundtrack](https://uppbeat.io/track/danijel-zambo/game-over) and other
 ## Roles
 
 **Eva Pelko**
