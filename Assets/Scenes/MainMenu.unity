@@ -270,7 +270,64 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObjectToToggle: {fileID: 1455268630}
---- !u!21 &407958413
+--- !u!1001 &122416272
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1881682114713073362, guid: 96591819a1fdcf54ca6bb70db118b2d8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 4.783031
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881682114713073362, guid: 96591819a1fdcf54ca6bb70db118b2d8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.38743025
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881682114713073362, guid: 96591819a1fdcf54ca6bb70db118b2d8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.4637115
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881682114713073362, guid: 96591819a1fdcf54ca6bb70db118b2d8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881682114713073362, guid: 96591819a1fdcf54ca6bb70db118b2d8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881682114713073362, guid: 96591819a1fdcf54ca6bb70db118b2d8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881682114713073362, guid: 96591819a1fdcf54ca6bb70db118b2d8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881682114713073362, guid: 96591819a1fdcf54ca6bb70db118b2d8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881682114713073362, guid: 96591819a1fdcf54ca6bb70db118b2d8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881682114713073362, guid: 96591819a1fdcf54ca6bb70db118b2d8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7943673682216386890, guid: 96591819a1fdcf54ca6bb70db118b2d8, type: 3}
+      propertyPath: m_Name
+      value: Cursor
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 96591819a1fdcf54ca6bb70db118b2d8, type: 3}
+--- !u!21 &215596980
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -941,7 +998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 407958413}
+  m_Material: {fileID: 215596980}
   m_Color: {r: 0, g: 0.16862746, b: 0.5058824, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -1898,3 +1955,4 @@ SceneRoots:
   - {fileID: 1523839484}
   - {fileID: 768105511}
   - {fileID: 890925477}
+  - {fileID: 122416272}

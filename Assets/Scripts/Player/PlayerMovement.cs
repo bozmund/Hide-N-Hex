@@ -31,7 +31,8 @@ namespace Player
         public bool frozen;
         public bool invisible;
 
-        [Space(5)] [Header("References")] public GameObject Potion;
+        [Space(5)] [Header("References")] 
+        public GameObject Potion;
         public LineRenderer lineRenderer;
         private PotionEffectHandler _potionEffectHandler;
         private Vector3 _crosshairPosition;
@@ -50,13 +51,6 @@ namespace Player
         private static readonly int Speed = Animator.StringToHash("Speed");
         private static readonly int IsThrow = Animator.StringToHash("isThrow");
         private static readonly int IsDrink = Animator.StringToHash("isDrink");
-
-        private void Awake()
-        {
-            //Cursor.visible = false;
-            
-        }
-
         private void Start()
         {
             _potionEffectHandler = PotionEffectHandler.Instance;
@@ -77,6 +71,7 @@ namespace Player
             Animate();
             if (PotionInHand.potionName != "")
             {
+                Debug.Log(PotionInHand.potionName);
                 DrinkPotion();
                 Aim();
                 lineRenderer.sortingOrder = 2;

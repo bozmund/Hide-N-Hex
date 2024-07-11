@@ -1,10 +1,6 @@
-using System;
 using System.Collections;
-using System.Drawing;
 using Items;
 using Player;
-using Unity.VisualScripting;
-using UnityEditor.Build.Content;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -70,7 +66,7 @@ namespace PotionSystem
                     }
                 }
 
-                if (explosionEffect != null)
+                if (explosionEffect != null && _potionInHand.potionName != "")
                 {
                     var particleMain = particle.main;
                     particleMain.playOnAwake = true;

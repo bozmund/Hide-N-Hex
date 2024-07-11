@@ -42,23 +42,20 @@ public class NightTime : MonoBehaviour
     {
         if (WorldLight.percentOfDay >= 0.2f && WorldLight.percentOfDay <= 0.7f)
         {
-            NPCFreeRoam chosenNPCRandomHodanje = npcs[chosenNPCIndex].GetComponent<NPCFreeRoam>();
-            SetAllNPCsActive(true);
+            //SetAllNPCsActive(true);
             npcIsChosen = false;
-            StopCoroutine(chosenNPCRandomHodanje.MoveAndWait());
+            //NPCFreeRoam chosenNPCRandomHodanje = npcs[chosenNPCIndex].GetComponent<NPCFreeRoam>();
+            StopCoroutine(randomHodanje.MoveAndWait());
             StartCoroutine(setHodanje.MoveToNextWaypoint());
         }
         else if (!npcIsChosen && (WorldLight.percentOfDay < 0.2f || WorldLight.percentOfDay > 0.7f))
         {
-            chosenNPCIndex = UnityEngine.Random.Range(0, npcs.Length);
-            SetAllNPCsActive(false);
             StopCoroutine(setHodanje.MoveToNextWaypoint());
+            chosenNPCIndex = UnityEngine.Random.Range(0, npcs.Length);
+            //SetAllNPCsActive(false);
             npcs[chosenNPCIndex].SetActive(true);
-            if (npcs[chosenNPCIndex].activeInHierarchy)
-            {
-                NPCFreeRoam chosenNPCRandomHodanje = npcs[chosenNPCIndex].GetComponent<NPCFreeRoam>();
-                StartCoroutine(chosenNPCRandomHodanje.MoveAndWait());
-            }
+            //NPCFreeRoam chosenNPCRandomHodanje = npcs[chosenNPCIndex].GetComponent<NPCFreeRoam>();
+            StartCoroutine(randomHodanje.MoveAndWait());
             npcIsChosen = true;
         }
 
@@ -84,7 +81,6 @@ public class NightTime : MonoBehaviour
         }
     }
 
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         randomHodanje.isMoving = false;
@@ -95,7 +91,6 @@ public class NightTime : MonoBehaviour
 
     private IEnumerator HandleCollision()
     {
-
         yield return new WaitForSeconds(waitTime);
         randomHodanje.isMoving = true;
         setHodanje.isWaiting = false;

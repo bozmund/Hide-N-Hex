@@ -2,7 +2,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Text.RegularExpressions;
 using Player;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 namespace Items
 {
